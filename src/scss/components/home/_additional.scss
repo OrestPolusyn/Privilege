@@ -16,6 +16,7 @@
     max-width: 290px;
     width: 100%;
     margin-bottom: 24px;
+    overflow-x: hidden;
 
     &::before {
       position: absolute;
@@ -67,12 +68,35 @@
     letter-spacing: 0.2em;
     text-transform: uppercase;
     font: $font-btn;
-    @include hover;
+    @include hover-bl;
+    transition: background-position 0.7s ease, padding-left 0.5s ease-in-out;
 
     &:hover {
       @include hover-full;
+      padding-left: 50px;
 
-    
+      .additional__icon {
+        width: 0;
+      }
+
+      .additional__icon--hover {
+        width: 28px;
+        transform: translateX(0);
+      }
+    }
+
+    &:active {
+      @include hover-full;
+      padding-left: 50px;
+
+      .additional__icon {
+        width: 0;
+      }
+
+      .additional__icon--hover {
+        width: 28px;
+        transform: translateX(0);
+      }
     }
   }
 
@@ -80,5 +104,15 @@
     width: 28px;
     height: 16px;
     margin-left: 16px;
+    transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+
+    &--hover {
+      margin-left: 0;
+      position: absolute;
+      left: 0;
+      transition: transform 0.5s ease-in-out;
+      transform: translateX(-100%);
+    }
   }
 }

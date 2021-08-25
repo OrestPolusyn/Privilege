@@ -54,21 +54,23 @@
         </li>
       </ul>
 
-
-
       <ul class="header__action">
 
-        <li class="header__action-item">
+        <li class="header__action-item header__action-item--search ">
           <form class="search" action="#">
 
             <label class="sr-only" for="search__field">Search on site </label>
 
-            <svg class="header__action-icon">
+            <svg class="header__action-icon header__action-icon--search">
               <use xlink:href="img/sprite.svg#search"></use>
             </svg>
 
-            <input class="search__field js-focus-visible" id="search__field" type="search" 
-              placeholder="Search..." name="search">
+            <input class="search__field" id="search__field" type="search" placeholder="Search..." name="search">
+
+            <svg class="header__action-icon header__action-icon--close">
+              <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
+
           </form>
 
         </li>

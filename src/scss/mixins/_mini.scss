@@ -42,7 +42,20 @@
 }
 
 
-@mixin hover {
+@mixin hover-wh {
+  color: var(--color-black);
+  overflow: hidden;
+  background: linear-gradient(to right, var(--color-golden), var(--color-golden) 50%, #fff 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 0.3s ease;
+  text-decoration: none;
+}
+
+@mixin hover-bl {
   color: var(--color-black);
   overflow: hidden;
   background: linear-gradient(to right, var(--color-golden), var(--color-golden) 50%, var(--color-black) 50%);

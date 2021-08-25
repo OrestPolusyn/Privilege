@@ -1,11 +1,12 @@
 @import "./_mixins.scss";
 
 .header {
-
+  position: relative;
 
   &__nav {
     @include flex-all-sb;
     padding: 35px 0;
+    position: relative;
   }
 
   &__menu {
@@ -32,11 +33,31 @@
     &:first-child {
       margin-right: 40px;
     }
+
+    &--search {
+      transition: max-width 1s ease-in-out;
+
+      &.open {
+        position: absolute;
+        max-width: 436px;
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        transition: max-width 1s ease-in-out;
+
+      }
+
+      .search__field {
+        max-width: 100%;
+
+      }
+    }
   }
 
   &__link {
     position: relative;
-    @include hover;
+    @include hover-bl;
     font-size: 12px;
 
     &:hover {
@@ -47,6 +68,22 @@
   &__action-icon {
     width: 24px;
     height: 24px;
+
+    &--search {
+      position: absolute;
+      left: -34px;
+      top: 3px;
+    }
+
+    &--close {
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      width: 17px;
+      height: 16px;
+      opacity: 0;
+      visibility: hidden;
+    }
   }
 
   .haeder-adv {
@@ -66,17 +103,6 @@
 .search {
   position: relative;
 
-  &:active {
-    width: 100%;
-    position: absolute;
-  }
-
-  svg {
-    position: absolute;
-    left: -34px;
-    top: 3px;
-  }
-
   &__field {
     border: none;
     border-bottom: 2px solid var(--color-golden);
@@ -90,9 +116,5 @@
       font-size: 10px;
       line-height: 1.1;
     }
-
-
-
   }
-
 }

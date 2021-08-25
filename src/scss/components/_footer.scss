@@ -43,7 +43,7 @@
     border-bottom: 2px solid var(--color-golden);
     padding-bottom: 10px;
     width: 100%;
-    color: var(--color-golden);
+    color: var(--color-white);
     outline: transparent;
 
     &::placeholder {
@@ -52,21 +52,27 @@
     }
   }
 
+  &__btn {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    background-color: transparent;
+    border: none;
+  }
+
   &__subscribe-icon {
     width: 25px;
     height: 10px;
-    position: absolute;
     fill: #fff;
     stroke: #fff;
-    bottom: 20%;
-    right: 0;
+    cursor: pointer;
+
   }
 
   &__link {
-
-    background-position: 0;
     font-size: 13px;
     line-height: 1.7;
+    @include hover-wh;
 
 
     &:hover {
@@ -74,7 +80,6 @@
 
       svg {
         fill: var(--color-golden);
-
       }
     }
   }

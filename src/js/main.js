@@ -15,13 +15,51 @@ const swiper = new Swiper('.swiper-slider', {
   slidesPerView: 1
 });
 
-const designersBtn = document.querySelectorAll('.designers-aside__item');
+let tab, // заголовок вкладки
+  tabContent; // блок содержащий контент вкладки
 
-designersBtn.forEach(item => {
-  item.addEventListener('click', function (e) {
-    designersBtn.forEach(el => {
-      el.classList.remove("designers-aside__item--active");
-    });
-    this.classList.add("designers-aside__item--active");
-  });
+
+window.onload = function () {
+  tabContent = document.getElementsByClassName('designers__tab');
+  tab = document.getElementsByClassName('designers-aside__item');
+  hideTabsContent(1);
+}
+
+document.querySelector('.designers-aside__list').onclick = function (event) {
+  var target = event.target;
+  if (target.className == 'designers-aside__item') {
+    for (var i = 0; i < tab.length; i++) {
+      if (target == tab[i]) {
+        showTabsContent(i);
+        break;
+      }
+    }
+  }
+}
+
+function hideTabsContent(a) {
+  for (var i = a; i < tabContent.length; i++) {
+    tabContent[i].classList.remove('active');
+    tab[i].classList.remove('designers-aside__item--active');
+  }
+}
+
+function showTabsContent(b) {
+  if (tabContent[b].className == 'designers__tab') {
+    hideTabsContent(0);
+    tab[b].classList.add('designers-aside__item--active');
+    tabContent[b].classList.add('active');
+  }
+}
+
+const searchBtn = document.querySelector('.search__field'),
+  itemSearch = document.querySelector('.header__action-item--search')
+
+window.addEventListener('click', (e) => {
+  e.preventDefault();
+  if (e.target.classList.contains('search__field')) {
+    itemSearch.classList.add('open')
+  } else {
+    itemSearch.classList.remove('open')
+  }
 });

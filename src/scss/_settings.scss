@@ -14,11 +14,6 @@ body {
   max-width: 1284px;
 }
 
-.wrapper {
-
-}
-
-
 .for-mobile {
   display: none;
 
@@ -39,6 +34,7 @@ body {
 
 .logo {
   max-width: 163px;
+  z-index: 5;
 }
 
 
@@ -68,9 +64,25 @@ body {
   background-color: var(--color-black);
   padding: 13px 70px;
   display: inline-block;
+  position: relative;
+  transition: all 0.35s ease-in-out;
+  z-index: 1;
 
-  &:hover {
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    bottom: 0;
     background-color: var(--color-btn-hover);
+    transition: all 0.35s ease-in-out;
+    color: #fff;
+    z-index: -1;
+  }
+
+  &:hover:after {
+    width: 100%;
   }
 
   &:active {
@@ -95,8 +107,7 @@ body {
     img {
       object-fit: contain;
       width: 100%;
-      height: 600px;
-
+      height: 604px;
     }
   }
 }

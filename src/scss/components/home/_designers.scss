@@ -3,14 +3,26 @@
 
   &__wrap {
     @include flex-all-sb;
+    position: relative;
   }
 
-  &__tab{
+  &__tab {
     display: grid;
     grid-template-columns: 424px 332px;
     grid-gap: 26px 30px;
     max-width: 768px;
     width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    top: 0;
+    height: 0;
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+      height: 100%;
+    }
   }
 }
 
