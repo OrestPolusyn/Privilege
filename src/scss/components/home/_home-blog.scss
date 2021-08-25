@@ -1,0 +1,54 @@
+.home-blog {
+
+  margin-bottom: 170px;
+
+  &__wrap {
+    @include flex-s-sb;
+  }
+
+  &__inner {
+
+    &:first-child {
+      max-width: 385px;
+      width: 100%;
+    }
+
+    &:last-child {
+      display: flex;
+    }
+
+    h2 {
+      @include H3;
+      margin-bottom: 25px;
+    }
+
+    p {
+      margin-bottom: 25px;
+      @include body;
+    }
+  }
+
+  &__article {
+    max-width: 300px;
+    width: 100%;
+
+    &:first-child {
+      margin-right: 30px;
+    }
+
+    img {
+      margin-bottom: 24px;
+    }
+
+    span {
+      color: var(--color-golden);
+      display: block;
+      @include body-sec;
+      margin-bottom: 8px;
+    }
+
+    h3 {
+      @include H4;
+    }
+  }
+}

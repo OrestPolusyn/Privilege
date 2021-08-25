@@ -1,0 +1,110 @@
+.footer {
+  background-color: var(--color-black);
+  padding: 48px 0 30px;
+
+  .logo {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  &__wrap {
+    @include flex-s-sb;
+    margin-bottom: 48px;
+  }
+
+  &__inner {
+    color: #fff;
+
+    &:first-child {
+      max-width: 350px;
+      width: 100%;
+    }
+
+    p {
+      margin-bottom: 12px;
+      font-size: 16px;
+    }
+  }
+
+  &__subscribe {
+    margin-bottom: 30px;
+    position: relative;
+
+    label {
+      display: block;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+  }
+
+  &__field {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--color-golden);
+    padding-bottom: 10px;
+    width: 100%;
+    color: var(--color-golden);
+    outline: transparent;
+
+    &::placeholder {
+      font-size: 12px;
+      line-height: 1.2;
+    }
+  }
+
+  &__subscribe-icon {
+    width: 25px;
+    height: 10px;
+    position: absolute;
+    fill: #fff;
+    stroke: #fff;
+    bottom: 20%;
+    right: 0;
+  }
+
+  &__link {
+
+    background-position: 0;
+    font-size: 13px;
+    line-height: 1.7;
+
+
+    &:hover {
+      @include hover-full;
+
+      svg {
+        fill: var(--color-golden);
+
+      }
+    }
+  }
+
+  &__icon {
+    height: 14px;
+    width: 16px;
+    fill: #fff;
+    transition: fill 0.3s ease-in-out;
+  }
+
+  &__socials {
+    @include flex-s;
+
+    .footer__link {
+      &:first-child {
+        margin-right: 22px;
+      }
+    }
+  }
+
+  &__terms {
+    @include flex-s;
+    color: #fff;
+
+    .footer__link {
+      &:first-child {
+        margin-right: 33px;
+        letter-spacing: -0.02em;
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@mixin H {
+  font-weight: 700;
+  font-size: 68px;
+  line-height: 1.2;
+  text-transform: capitalize;
+  font-feature-settings: 'cpsp'on;
+}
+
+@mixin H2 {
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 1.2;
+  text-transform: capitalize;
+  font-feature-settings: 'cpsp'on;
+}
+
+@mixin H3 {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.2;
+  font-feature-settings: 'cpsp'on;
+}
+
+@mixin H4 {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+@mixin H5 {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+@mixin body {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+@mixin body-sec {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+@mixin subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+@mixin subtitle-sec {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+@mixin subtitle-cervo {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  text-transform: capitalize;
+  font-feature-settings: 'cpsp'on;
+}

@@ -1,0 +1,98 @@
+@import "./_mixins.scss";
+
+.header {
+
+
+  &__nav {
+    @include flex-all-sb;
+    padding: 35px 0;
+  }
+
+  &__menu {
+    @include flex-all-sb;
+    transform: translateX(26px);
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 32px;
+    }
+  }
+
+  &__action {
+    @include flex-all-sb;
+  }
+
+  &__action-item {
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+
+    &:first-child {
+      margin-right: 40px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    @include hover;
+    font-size: 12px;
+
+    &:hover {
+      @include hover-full;
+    }
+  }
+
+  &__action-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .haeder-adv {
+    background-color: var(--color-black);
+    font: $font-medium;
+    font-size: 16px;
+    line-height: 1.1;
+    letter-spacing: 0.23em;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 0;
+  }
+}
+
+.search {
+  position: relative;
+
+  &:active {
+    width: 100%;
+    position: absolute;
+  }
+
+  svg {
+    position: absolute;
+    left: -34px;
+    top: 3px;
+  }
+
+  &__field {
+    border: none;
+    border-bottom: 2px solid var(--color-golden);
+    outline: transparent;
+    padding: 0 4px 4px 0;
+    max-width: 105px;
+    width: 100%;
+
+    &::placeholder {
+      color: #9d9d9d;
+      font-size: 10px;
+      line-height: 1.1;
+    }
+
+
+
+  }
+
+}

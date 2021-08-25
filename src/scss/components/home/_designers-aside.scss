@@ -1,0 +1,69 @@
+.designers-aside {
+  transform: translate(-35px, -30px);
+
+  h2 {
+    @include H2;
+    margin-bottom: 24px;
+  }
+
+  &__item {
+    position: relative;
+    cursor: pointer;
+    @include hover;
+    @include H4;
+    transition: background 0.3s ease-in-out,
+      padding 0.3s ease-in-out;
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+
+    &:last-child {
+      @include hover-full;
+      display: inline-block;
+      text-decoration: underline;
+    }
+
+    &:hover {
+      @include hover-full;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: var(--color-golden);
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: width 0.3s ease-in-out;
+    }
+
+    &--active {
+      @include hover-full;
+      padding-left: 48px;
+
+
+      &::before {
+        width: 40px;
+      }
+
+    }
+  }
+
+  &__link {
+    text-transform: uppercase;
+    font: $font-medium;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: var(--color-golden);
+      left: 0;
+      height: 2px;
+    }
+  }
+}

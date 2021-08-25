@@ -1,0 +1,123 @@
+@font-face {
+  font-family: "Adieu";
+  src: url("../fonts/Adieu-Light.woff2") format("woff2"), url("../fonts/Adieu-Light.woff") format("woff");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Adieu";
+  src: url("../fonts/Adieu-Bold.woff2") format("woff2"), url("../fonts/Adieu-Bold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal; }
+
+@font-face {
+  font-family: "CervoNeue";
+  src: url("../fonts/CervoNeue-Regular.woff2") format("woff2"), url("../fonts/CervoNeue-Regular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal; }
+
+@font-face {
+  font-family: "CervoNeue";
+  src: url("../fonts/CervoNeue-Medium.woff2") format("woff2"), url("../fonts/CervoNeue-Medium.woff") format("woff");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal; }
+
+:root {
+  --color-white: #fffff;
+  --color-golden: #bf9366;
+  --color-black: #000000;
+  --color-btn-hover: #c09d79;
+  --color-disabled: #e2e2e2;
+  --color-silver: #9d9d9d;
+  --color-red: #bb0d0d; }
+
+.custom-checkbox__field:checked + .custom-checkbox__content::after {
+  opacity: 1; }
+
+.custom-checkbox__field:focus + .custom-checkbox__content::before {
+  outline: 2px solid #f00;
+  outline-offset: 2px; }
+
+.custom-checkbox__field:disabled + .custom-checkbox__content {
+  opacity: 0.4;
+  pointer-events: none; }
+
+body {
+  font: normal 300 14px/1.7 "Adieu", sans-serif;
+  background-color: var(--color-white);
+  color: var(--color-white); }
+
+.site-container {
+  overflow: hidden; }
+
+.container {
+  margin: 0 auto;
+  padding: 0 22px;
+  max-width: 1284px; }
+
+.for-mobile {
+  display: none; }
+  @media (max-width: 768px) {
+    .for-mobile {
+      display: block; } }
+
+.error {
+  border: 2px #ff4019 solid; }
+
+.btn-reset {
+  border: none;
+  background: transparent;
+  cursor: pointer; }
+
+.logo {
+  max-width: 163px; }
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: transparent; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
+.btn-shop {
+  color: #fff;
+  font: normal 400 20px/1.2 "CervoNeue", sans-serif;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background-color: var(--color-black);
+  padding: 13px 70px;
+  display: inline-block; }
+  .btn-shop:hover {
+    background-color: var(--color-btn-hover); }
+  .btn-shop:active {
+    background-color: var(--color-btn-hover); }
+  .btn-shop button:disabled,
+  .btn-shop button[disabled] {
+    background-color: var(--color-disabled); }
+
+.disabled {
+  background-color: var(--color-disabled); }
+
+.main__baner {
+  margin-bottom: 150px; }
+  .main__baner img {
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 100%;
+    height: 600px; }
+
+/*# sourceMappingURL=global.css.map */

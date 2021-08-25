@@ -1,0 +1,84 @@
+.additional {
+
+  margin-bottom: 135px;
+
+  &__title {
+    @include H4;
+    margin-bottom: 12px;
+  }
+
+  &__list {
+    @include flex-all-sb;
+  }
+
+  &__item {
+    position: relative;
+    max-width: 290px;
+    width: 100%;
+    margin-bottom: 24px;
+
+    &::before {
+      position: absolute;
+      content: '';
+      @include bg-cover;
+      height: 50px;
+      width: 50px;
+      top: 0;
+      left: 0;
+    }
+
+    &--track::before {
+      background-image: url('/img/sprite.svg#track');
+    }
+
+    &--shirt {
+      .additional__item-inner {
+        padding-left: 84px;
+      }
+
+      &::before {
+        background-image: url('/img/sprite.svg#shirt');
+      }
+    }
+
+    &--like::before {
+      background-image: url('/img/sprite.svg#like');
+    }
+  }
+
+  &__item-inner {
+    padding-left: 76px;
+    border-bottom: 2px solid var(--color-golden);
+    margin-bottom: 24px;
+
+  }
+
+  &__text {
+    display: block;
+    @include body-sec;
+    margin-bottom: 24px;
+  }
+
+  &__link {
+    @include flex-all-center;
+    justify-content: flex-start;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font: $font-btn;
+    @include hover;
+
+    &:hover {
+      @include hover-full;
+
+    
+    }
+  }
+
+  &__icon {
+    width: 28px;
+    height: 16px;
+    margin-left: 16px;
+  }
+}
