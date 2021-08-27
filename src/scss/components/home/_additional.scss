@@ -26,10 +26,11 @@
       width: 50px;
       top: 0;
       left: 0;
+      background-image: url('../img/sprite.svg#shirt');
     }
 
     &--track::before {
-      background-image: url('/img/sprite.svg#track');
+      background-image: url('../img/sprite.svg#track');
     }
 
     &--shirt {
@@ -38,12 +39,12 @@
       }
 
       &::before {
-        background-image: url('/img/sprite.svg#shirt');
+        background-image: url('../img/sprite.svg#shirt');
       }
     }
 
     &--like::before {
-      background-image: url('/img/sprite.svg#like');
+      background-image: url('../img/sprite.svg#like');
     }
   }
 
