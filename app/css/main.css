@@ -372,15 +372,16 @@
       height: 50px;
       width: 50px;
       top: 0;
-      left: 0; }
+      left: 0;
+      background-image: url("../img/sprite.svg#shirt"); }
     .additional__item--track::before {
-      background-image: url("/img/sprite.svg#track"); }
+      background-image: url("../img/sprite.svg#track"); }
     .additional__item--shirt .additional__item-inner {
       padding-left: 84px; }
     .additional__item--shirt::before {
-      background-image: url("/img/sprite.svg#shirt"); }
+      background-image: url("../img/sprite.svg#shirt"); }
     .additional__item--like::before {
-      background-image: url("/img/sprite.svg#like"); }
+      background-image: url("../img/sprite.svg#like"); }
   .additional__item-inner {
     padding-left: 76px;
     border-bottom: 2px solid var(--color-golden);
