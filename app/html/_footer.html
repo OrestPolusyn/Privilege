@@ -8,32 +8,30 @@
     <div class="footer__wrap">
       <div class="footer__inner">
 
-        <form class="footer__subscribe" action="#">
+        <form class="subscribe" action="#">
 
-          <label class="footer__text" for="subscription">
+          <label class="subscribe__text" for="subscription">
             Sing up for style news
           </label>
 
-          <input class="footer__field" id="subscription" name="subscription" type="email" required
+          <input class="subscribe__field" id="subscription" name="subscription" type="email" required
             placeholder="Email address">
 
-          <button class="footer__btn" type="submit">
+          <button class="subscribe__btn" type="submit">
             <span class="sr-only">
               Send email address
             </span>
-            <svg class="footer__subscribe-icon ">
-              <use xlink:href="img/sprite.svg#arrow-white"></use>
-            </svg>
           </button>
-
-
         </form>
+
         <ul class="footer__socials">
 
           <li class="footer__item">
             <a class="footer__link" href="#">
 
-              <span class="sr-only">facebook</span>
+              <span class="sr-only">
+                facebook
+              </span>
 
               <svg class="footer__icon">
                 <use xlink:href="img/sprite.svg#facebook"></use>
@@ -44,7 +42,9 @@
           <li class="footer__item">
             <a class="footer__link" href="#">
 
-              <span class="sr-only">twitter</span>
+              <span class="sr-only">
+                twitter
+              </span>
 
               <svg class="footer__icon">
                 <use xlink:href="img/sprite.svg#twitter"></use>
@@ -55,7 +55,9 @@
           <li class="footer__item">
             <a class="footer__link" href="#">
 
-              <span class="sr-only">instagram</span>
+              <span class="sr-only">
+                instagram
+              </span>
 
               <svg class="footer__icon">
                 <use xlink:href="img/sprite.svg#instagram"></use>
@@ -66,7 +68,9 @@
           <li class="footer__item">
             <a class="footer__link" href="#">
 
-              <span class="sr-only">youtube</span>
+              <span class="sr-only">
+                youtube
+              </span>
 
               <svg class="footer__icon">
                 <use xlink:href="img/sprite.svg#youtube"></use>
@@ -78,19 +82,71 @@
       </div>
 
       <div class="footer__inner ">
-        <select name="select">
-          <!--Supplement an id here instead of using 'name'-->
-          <option value="Eng" selected>Eng</option>
-          <option value="Ru">Ru</option>
-          <option value="Arab">Arab</option>
-        </select>
 
-        <select name="select">
-          <!--Supplement an id here instead of using 'name'-->
-          <option value="Eng" selected>Eng</option>
-          <option value="Ru">Ru</option>
-          <option value="Arab">Arab</option>
-        </select>
+        <div class="footer__choose footer__choose--language">
+          <span class="footer__choose-name">
+            Language:
+          </span>
+
+          <div class="footer__choose-item dropdown-item">
+            <span class="dropdown-item__active">
+              Eng
+            </span>
+            <ul class="footer__choose-list dropdown-choose">
+              <li class="dropdown-choose__item">
+                <a class="dropdown-choose__link" href="#">
+                  Eng
+                </a>
+              </li>
+              <li class="dropdown-choose__item">
+                <a class="dropdown-choose__link" href="#">
+                  Rus
+                </a>
+
+              </li>
+              <li class="dropdown-choose__item">
+                <a class="dropdown-choose__link" href="#">
+                  Arab
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__choose footer__choose--currency">
+          <span class="footer__choose-name">
+            Currency:
+          </span>
+
+          <div class="footer__choose-item dropdown-item">
+            <span class="dropdown-item__active">
+              $
+            </span>
+
+            <ul class="footer__choose-list dropdown-choose">
+              <li class="dropdown-choose__item">
+                <a class="dropdown-choose__link" href="#">
+                  $
+                </a>
+              </li>
+
+              <li class="dropdown-choose__item">
+                <a class="dropdown-choose__link" href="#">
+                  &#8381;
+                </a>
+              </li>
+
+              <li class="dropdown-choose__item">
+                <a class="dropdown-choose__link" href="#">
+                  &#1583;
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+
       </div>
 
       <div class="footer__inner">
@@ -124,6 +180,7 @@
           </li>
         </ul>
       </div>
+
       <div class="footer__inner">
         <p>
           Company
@@ -131,7 +188,7 @@
 
         <ul class="footer__list">
           <li class="footer__item">
-            <a class="footer__link" href="#" data-content="  About Us">
+            <a class="footer__link" href="#">
               About Us
             </a>
           </li>
@@ -175,4 +232,5 @@
     </ul>
 
   </div>
+
 </footer>

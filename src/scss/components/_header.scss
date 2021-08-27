@@ -1,7 +1,10 @@
 @import "./_mixins.scss";
 
 .header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  width: 100%;z-index: 10;
+  background-color: #fff;
 
   &__nav {
     @include flex-all-sb;
@@ -11,7 +14,6 @@
 
   &__menu {
     @include flex-all-sb;
-    transform: translateX(26px);
   }
 
   &__item {
@@ -28,30 +30,6 @@
 
     &:not(:last-child) {
       margin-right: 16px;
-    }
-
-    &:first-child {
-      margin-right: 40px;
-    }
-
-    &--search {
-      transition: max-width 1s ease-in-out;
-
-      &.open {
-        position: absolute;
-        max-width: 436px;
-        width: 100%;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        transition: max-width 1s ease-in-out;
-
-      }
-
-      .search__field {
-        max-width: 100%;
-
-      }
     }
   }
 
@@ -110,6 +88,8 @@
     padding: 0 4px 4px 0;
     max-width: 105px;
     width: 100%;
+    transition: max-width 1s ease-in;
+
 
     &::placeholder {
       color: #9d9d9d;
@@ -117,4 +97,7 @@
       line-height: 1.1;
     }
   }
+}
+
+.open {
 }

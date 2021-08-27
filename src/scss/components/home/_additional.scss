@@ -69,18 +69,43 @@
     text-transform: uppercase;
     font: $font-btn;
     @include hover-bl;
-    transition: background-position 0.7s ease, padding-left 0.5s ease-in-out;
+    transition: transform 0.7s ease,
+      padding-left 0.5s ease-in-out;
+    position: relative;
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      background-color: #000;
+      mask-image: url('../img/sprite.svg#arrow');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      transform: translateX(-4px);
+      width: 28px;
+      height: 28px;
+      left: 50%;
+      transition: transform 0.7s ease,
+        padding-left 0.5s ease-in-out;
+    }
+
+    &::before {
+      background-color: var(--color-golden);
+      mask-image: url('../img/sprite.svg#arrow');
+      left: 0;
+      transform: translateX(-100%);
+    }
 
     &:hover {
       @include hover-full;
       padding-left: 50px;
 
-      .additional__icon {
-        width: 0;
+      &::after {
+        transform: translateX(1000%);
       }
 
-      .additional__icon--hover {
-        width: 28px;
+      &::before {
         transform: translateX(0);
       }
     }
@@ -88,31 +113,6 @@
     &:active {
       @include hover-full;
       padding-left: 50px;
-
-      .additional__icon {
-        width: 0;
-      }
-
-      .additional__icon--hover {
-        width: 28px;
-        transform: translateX(0);
-      }
-    }
-  }
-
-  &__icon {
-    width: 28px;
-    height: 16px;
-    margin-left: 16px;
-    transition: width 0.5s ease-in-out;
-    transition: width 0.5s ease-in-out;
-
-    &--hover {
-      margin-left: 0;
-      position: absolute;
-      left: 0;
-      transition: transform 0.5s ease-in-out;
-      transform: translateX(-100%);
     }
   }
 }

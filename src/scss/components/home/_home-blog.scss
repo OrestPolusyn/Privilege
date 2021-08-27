@@ -6,6 +6,8 @@
     @include flex-s-sb;
   }
 
+
+
   &__inner {
 
     &:first-child {
@@ -31,6 +33,7 @@
   &__article {
     max-width: 300px;
     width: 100%;
+    position: relative;
 
     &:first-child {
       margin-right: 30px;
@@ -50,5 +53,14 @@
     h3 {
       @include H4;
     }
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    cursor: pointer;
   }
 }

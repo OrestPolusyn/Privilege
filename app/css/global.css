@@ -46,18 +46,24 @@
   opacity: 0.4;
   pointer-events: none; }
 
+html,
+body {
+  height: 100%; }
+
 body {
   font: normal 300 14px/1.7 "Adieu", sans-serif;
   background-color: var(--color-white);
-  color: var(--color-white); }
-
-.site-container {
-  overflow: hidden; }
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column; }
 
 .container {
   margin: 0 auto;
   padding: 0 22px;
   max-width: 1284px; }
+
+.main {
+  flex-grow: 1; }
 
 .for-mobile {
   display: none; }
@@ -127,12 +133,113 @@ body {
 .disabled {
   background-color: var(--color-disabled); }
 
-.main__baner {
-  margin-bottom: 150px; }
-  .main__baner img {
-    -o-object-fit: contain;
-    object-fit: contain;
+.title-main {
+  font-weight: 700;
+  font-size: 68px;
+  line-height: 1.2;
+  text-transform: capitalize;
+  font-feature-settings: 'cpsp'on;
+  text-align: center;
+  margin-bottom: 40px; }
+
+.main {
+  margin-top: 136px; }
+  .main__baner {
+    margin-bottom: 150px; }
+    .main__baner img {
+      -o-object-fit: contain;
+      object-fit: contain;
+      width: 100%;
+      height: 604px; }
+
+.swiper-nav .swiper-btns {
+  position: relative;
+  max-width: 124px;
+  width: 100%;
+  height: 50px;
+  left: 0; }
+
+.swiper-nav .swiper-btn {
+  border: 2px solid var(--color-black);
+  padding: 2px 10px;
+  transition: border-color 0.3s ease-in-out;
+  height: 50px;
+  width: 50px; }
+  .swiper-nav .swiper-btn svg {
+    height: 50px;
+    transition: fill 0.3s ease-in-out; }
+  .swiper-nav .swiper-btn.swiper-button-next {
+    right: 0; }
+  .swiper-nav .swiper-btn.swiper-button-prev {
+    left: 0; }
+    .swiper-nav .swiper-btn.swiper-button-prev svg {
+      transform: rotate(180deg); }
+  .swiper-nav .swiper-btn:hover {
+    border-color: var(--color-btn-hover); }
+    .swiper-nav .swiper-btn:hover svg {
+      fill: var(--color-btn-hover); }
+
+.swiper-nav .swiper-button-prev:after,
+.swiper-nav .swiper-container-rtl .swiper-button-next:after,
+.swiper-nav .swiper-button-next:after,
+.swiper-nav .swiper-container-rtl .swiper-button-prev:after {
+  display: none; }
+
+.popup {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  transition: visibility 0.3s linear, opacity 0.3s linear; }
+  .popup::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7); }
+  .popup__box {
+    max-width: 490px;
     width: 100%;
-    height: 604px; }
+    height: 410px;
+    border: 1px solid var(--color-golden);
+    z-index: 13;
+    position: absolute;
+    opacity: 1;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    right: 0;
+    background-color: #fff;
+    margin: 0 auto; }
+  .popup .subscribe {
+    max-width: 350px;
+    width: 100%;
+    padding-top: 50px;
+    margin-bottom: 50px;
+    margin: 0 auto; }
+    .popup .subscribe p {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.2; }
+    .popup .subscribe__btn {
+      background-image: url("../img/sprite.svg#arrow"); }
+    .popup .subscribe__close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #fff;
+      width: 40px;
+      height: 40px;
+      padding: 12px;
+      cursor: pointer; }
+  .popup--active {
+    visibility: visible;
+    opacity: 1; }
 
 /*# sourceMappingURL=global.css.map */

@@ -2,6 +2,7 @@
 @import "vars";
 @import "mixins";
 @import "components/header";
+@import "components/dropdown";
 @import "components/home/hero";
 @import "components/home/article-slider";
 @import "components/home/purpose";
@@ -9,4 +10,8 @@
 @import "components/home/additional";
 @import "components/home/designers-aside";
 @import "components/home/home-blog";
+@import "components/catalog/catalog-slider";
+@import "components/catalog/catalog-aside";
+@import "components/pagination";
+@import "components/subscribe";
 @import "components/footer";
