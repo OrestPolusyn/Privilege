@@ -33,7 +33,8 @@
   --color-btn-hover: #c09d79;
   --color-disabled: #e2e2e2;
   --color-silver: #9d9d9d;
-  --color-red: #bb0d0d; }
+  --color-red: #bb0d0d;
+  --color-filter:#dadada; }
 
 .custom-checkbox__field:checked + .custom-checkbox__content::after {
   opacity: 1; }
@@ -46,8 +47,11 @@
   opacity: 0.4;
   pointer-events: none; }
 
-html,
-body {
+.custom-checkbox__field[disabled] + .custom-checkbox__content::before {
+  border-color: var(--color-disabled);
+  color: var(--color-disabled); }
+
+html {
   height: 100%; }
 
 body {
@@ -55,7 +59,9 @@ body {
   background-color: var(--color-white);
   color: var(--color-white);
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  position: relative;
+  height: 100%; }
 
 .container {
   margin: 0 auto;
@@ -110,7 +116,8 @@ body {
   display: inline-block;
   position: relative;
   transition: all 0.35s ease-in-out;
-  z-index: 1; }
+  z-index: 1;
+  border: none; }
   .btn-shop::after {
     position: absolute;
     content: "";
@@ -130,8 +137,31 @@ body {
   .btn-shop button[disabled] {
     background-color: var(--color-disabled); }
 
+.btn-favorite {
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 10px;
+  position: relative;
+  transition: all 0.35s ease-in-out;
+  background-color: transparent;
+  z-index: 1;
+  border: none;
+  fill: transparent;
+  stroke: var(--color-black);
+  stroke-width: 2px; }
+  .btn-favorite:hover {
+    stroke: var(--color-golden); }
+  .btn-favorite:active {
+    stroke: var(--color-golden); }
+  .btn-favorite button:disabled,
+  .btn-favorite button[disabled] {
+    background-color: var(--color-disabled); }
+
 .disabled {
-  background-color: var(--color-disabled); }
+  background-color: var(--color-disabled);
+  cursor: not-allowed;
+  pointer-events: all !important; }
 
 .title-main {
   font-weight: 700;
@@ -202,7 +232,25 @@ body {
     bottom: 0;
     right: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.7); }
+    background: rgba(0, 0, 0, 0.7);
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px); }
+
+@-moz-document url-prefix() {
+  .popup .popup {
+    background: rgba(0, 0, 0, 0.7);
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background-attachment: fixed;
+    filter: blur(25px); }
+    .popup .popup::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7); } }
   .popup__box {
     max-width: 490px;
     width: 100%;
@@ -241,5 +289,68 @@ body {
   .popup--active {
     visibility: visible;
     opacity: 1; }
+
+.search {
+  position: relative; }
+  .search__icon {
+    width: 24px;
+    height: 24px; }
+    .search__icon--search {
+      position: absolute;
+      left: -34px;
+      top: 3px; }
+    .search__icon--close {
+      cursor: pointer;
+      position: absolute;
+      width: 17px;
+      height: 16px;
+      top: 6px;
+      opacity: 0;
+      visibility: hidden; }
+  .search__field {
+    border: none;
+    border-bottom: 2px solid var(--color-golden);
+    outline: transparent;
+    padding: 0 4px 4px 0;
+    max-width: 105px;
+    width: 100%;
+    padding-right: 20px;
+    transition: all 0.5s ease-in; }
+    .search__field::-moz-placeholder {
+      color: #9d9d9d;
+      font-size: 10px;
+      line-height: 1.1; }
+    .search__field:-ms-input-placeholder {
+      color: #9d9d9d;
+      font-size: 10px;
+      line-height: 1.1; }
+    .search__field::placeholder {
+      color: #9d9d9d;
+      font-size: 10px;
+      line-height: 1.1; }
+
+input[type=search]::-ms-clear,
+input[type=search]::-ms-reveal {
+  -webkit-appearance: none;
+  display: none;
+  width: 0;
+  height: 0; }
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  display: none;
+  width: 0;
+  height: 0; }
+
+.product-article {
+  cursor: pointer; }
+  .product-article h3 {
+    transition: color 0.3s ease-in-out; }
+  .product-article:hover h3 {
+    color: var(--color-golden);
+    filter: drop-shadow(0px 16px 24px rgba(0, 0, 0, 0.06)) drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.04)) drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.04)); }
 
 /*# sourceMappingURL=global.css.map */

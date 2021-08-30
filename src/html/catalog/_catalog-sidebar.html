@@ -1,0 +1,59 @@
+<aside class="sidebar ">
+
+  <h2 class="sr-only">
+    Catalog filters
+  </h2>
+
+  <div class="sidebar__content">
+
+    <button class="sidebar__close" type="button">
+      Close Filters
+      <svg class="sidebar__icon">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+
+    <ul class="sidebar__filters accordion">
+
+      <li class="accordion__item ">
+
+        <span class="accordion__name">
+          Price
+        </span>
+
+        @include('../filters/_filter-price.html')
+
+      </li>
+
+      <li class="accordion__item ">
+
+        <span class="accordion__name">
+          Designer
+        </span>
+
+        @include('../filters/_filter-designers.html')
+      </li>
+
+      <li class="accordion__item ">
+
+        <span class="accordion__name">
+          Size
+        </span>
+
+        @include('../filters/_filter-size.html',{
+        class:"accordion__filter"
+        })
+      </li>
+
+      <li class="accordion__item ">
+        <span class="accordion__name">
+          Color
+        </span>
+
+        @include('../filters/_filter-colors.html')
+
+      </li>
+    </ul>
+
+  </div>
+</aside>

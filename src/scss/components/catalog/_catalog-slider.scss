@@ -1,5 +1,5 @@
 .catalog {
-  margin: 10px 0;
+  margin: 20px 0 5px;
 
   .catalog-slider {
     margin-bottom: 40px;
@@ -8,7 +8,7 @@
   .swiper-nav .swiper-btns {
     margin-left: auto;
     right: 0;
-    bottom: 4px;
+    bottom: 7px;
     z-index: 12;
   }
 
@@ -19,43 +19,28 @@
     background-color: #000;
   }
 
+
+  .swiper-pagination-fraction,
+  .swiper-pagination-custom,
+  .swiper-container-horizontal>.swiper-pagination-bullets {
+    transform: translateY(-50%);
+
+
+    .swiper-pagination-bullet {
+      &:not(:last-child) {
+        margin-right: 18px;
+      }
+    }
+  }
 }
 
 .catalog-list {
-  &__nav {
-    margin-bottom: 40px;
-
-    .btn-shop {
-      border: none;
-    }
-  }
-
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 122px;
-    row-gap: 60px;
-    margin-bottom: 60px;
+    row-gap: 56px;
+    margin-bottom: 100px;
   }
 
-  &__item {
-
-    img {
-      margin-bottom: 24px;
-    }
-
-    h3 {
-      @include H4;
-      margin-bottom: 12px;
-    }
-
-    p {
-      margin-bottom: 12px;
-    }
-
-    span {
-      @include subtitle-sec;
-
-    }
-  }
 }

@@ -1,0 +1,123 @@
+.product {
+  @include flex-s-sb;
+  margin-top: 10px;
+
+  &__gallery {
+    max-width: 815px;
+    width: 100%;
+    display: flex;
+    position: relative;
+  }
+
+  .gallery-thumbs {
+    width: 150px;
+    height: 864px;
+    margin-right: 20px;
+
+    .swiper-slide {
+      cursor: pointer;
+      width: 150px;
+      height: 194px;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    .swiper-slide-active {
+      border: 1px solid var(--color-golden);
+
+      &::before {
+        background: none;
+      }
+    }
+  }
+
+  .gallery-preview {
+    max-width: 635px;
+    width: 100%;
+    position: relative;
+
+    &__pagination {
+      position: absolute;
+      bottom: -110px;
+      height: 40px;
+      z-index: 10;
+      width: 100%;
+      margin: 0 auto;
+      left: 0;
+      @include flex-all-center;
+      max-width: 140px;
+      width: 100%;
+      right: 0;
+
+      .swiper-pagination {
+        position: relative;
+        @include flex-all-center;
+        max-width: 75px;
+        width: 100%;
+      }
+
+      .swiper-pagination-bullet {
+        width: 5px;
+        height: 5px;
+
+        &:not(:last-child) {
+          margin-right: 8px;
+        }
+      }
+
+      .swiper-pagination-bullet-active {
+        width: 10px;
+        height: 10px;
+        background-color: var(--color-black);
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        top: 95%;
+        height: 8px;
+        width: 14px;
+      }
+
+      .swiper-button-prev:after,
+      .swiper-button-next:after {
+        content: '';
+        background-color: #000;
+        mask-image: url('../img/sprite.svg#arrow-footer');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        height: 8px;
+        width: 14px;
+      }
+
+      .swiper-button-next {
+        &:after {
+          transform: rotate(-90deg);
+        }
+      }
+
+      .swiper-button-prev:after {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  .gallery-preview .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+
+
+}

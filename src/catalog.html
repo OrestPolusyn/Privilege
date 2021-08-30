@@ -16,8 +16,6 @@
 <body>
   @include('html/_header.html')
 
-  @include('html/catalog/_catalog-aside.html')
-
   <main class="main">
     <div class="container">
 
@@ -27,6 +25,9 @@
         Shoes
       </h1>
 
+      <h2 class="sr-only">
+        Catalog list
+      </h2>
       @include('html/catalog/_catalog-list.html')
 
       @include('html/_pagination.html')
@@ -36,8 +37,7 @@
 
   @include('html/_footer.html')
 
-
-
+  @include('html/catalog/_catalog-sidebar.html')
 
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>

@@ -70,26 +70,22 @@
         </li>
       </ul>
 
+      <form class="search" action="#">
+
+        <label class="sr-only" for="search__field">Search on site </label>
+
+        <svg class="search__icon search__icon--search">
+          <use xlink:href="img/sprite.svg#search"></use>
+        </svg>
+
+        <input class="search__header search__field" id="search__field" type="search" placeholder="Search..." name="search">
+
+        <svg class="search__icon search__icon--close">
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </form>
+
       <ul class="header__action">
-
-        <li class="header__action-item header__action-item--search ">
-          <form class="search" action="#">
-
-            <label class="sr-only" for="search__field">Search on site </label>
-
-            <svg class="header__action-icon header__action-icon--search">
-              <use xlink:href="img/sprite.svg#search"></use>
-            </svg>
-
-            <input class="search__field" id="search__field" type="search" placeholder="Search..." name="search">
-
-            <svg class="header__action-icon header__action-icon--close">
-              <use xlink:href="img/sprite.svg#close"></use>
-            </svg>
-
-          </form>
-
-        </li>
 
         <li class="header__action-item">
 
@@ -119,10 +115,6 @@
   </div>
 
 </header>
-
-  <aside class="catalog-filters">
-  Filters
-</aside>
 
   <main class="main">
     <div class="container">
@@ -308,12 +300,46 @@
         Shoes
       </h1>
 
+      <h2 class="sr-only">
+        Catalog list
+      </h2>
       <section class="catalog-list">
+  <h2 class="sr-only">
+    Product items
+  </h2>
 
-  <div class="catalog-list__nav">
-    <button class="btn-shop filters-btn">
+    <div class="filters">
+    <button class="btn-shop filters__btn">
       Show filters
     </button>
+
+
+    <div class="filters__selectors">
+
+      <label class="sr-only" for="numbers">
+        Number of item
+      </label>
+      <select class="js-choice" name="number" id="numbers">
+        <option value="12">12</option>
+        <option value="16">16</option>
+        <option value="32">32</option>
+        <option value="64">64</option>
+        <option value="128">128</option>
+      </select>
+      
+      <label class="sr-only" for="numbers">
+        filter by
+      </label>
+      <select class="js-choice" name="filter by" id="filter-by">
+        <option value="Popularity">Popularity </option>
+        <option value="Popularity 1">Popularity 1</option>
+        <option value="Popularity 2">Popularity 2</option>
+        <option value="Popularity 3">Popularity 3</option>
+        <option value="Popularity 4">Popularity 4</option>
+      </select>
+
+    </div>
+
   </div>
 
   <ul class="catalog-list__grid">
@@ -343,6 +369,7 @@
   <span> $ 250.00</span>
 </article>
     </li>
+    
     <li class="catalog-list__item">
       <article class="product-article">
   <img src="img/catalog-list/shoes.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="440">
@@ -597,65 +624,26 @@
       <div class="footer__inner ">
 
         <div class="footer__choose footer__choose--language">
-          <span class="footer__choose-name">
+          <label class="footer__choose-name" for="language">
             Language:
-          </span>
-
-          <div class="footer__choose-item dropdown-item">
-            <span class="dropdown-item__active">
-              Eng
-            </span>
-            <ul class="footer__choose-list dropdown-choose">
-              <li class="dropdown-choose__item">
-                <a class="dropdown-choose__link" href="#">
-                  Eng
-                </a>
-              </li>
-              <li class="dropdown-choose__item">
-                <a class="dropdown-choose__link" href="#">
-                  Rus
-                </a>
-
-              </li>
-              <li class="dropdown-choose__item">
-                <a class="dropdown-choose__link" href="#">
-                  Arab
-                </a>
-              </li>
-            </ul>
-          </div>
+          </label>
+          <select class="footer__choose-item dropdown-item js-choice" name="number" id="language">
+            <option class="dropdown-choose__item" value=" Eng"> Eng</option>
+            <option class="dropdown-choose__item" value=" Rus"> Rus</option>
+            <option class="dropdown-choose__item" value="Arab"> Arab</option>
+          </select>
         </div>
 
         <div class="footer__choose footer__choose--currency">
-          <span class="footer__choose-name">
+          <label class="footer__choose-name" for="currency">
             Currency:
-          </span>
-
-          <div class="footer__choose-item dropdown-item">
-            <span class="dropdown-item__active">
-              $
-            </span>
-
-            <ul class="footer__choose-list dropdown-choose">
-              <li class="dropdown-choose__item">
-                <a class="dropdown-choose__link" href="#">
-                  $
-                </a>
-              </li>
-
-              <li class="dropdown-choose__item">
-                <a class="dropdown-choose__link" href="#">
-                  &#8381;
-                </a>
-              </li>
-
-              <li class="dropdown-choose__item">
-                <a class="dropdown-choose__link" href="#">
-                  &#1583;
-                </a>
-              </li>
-            </ul>
-          </div>
+          </label>
+          <select class="footer__choose-item dropdown-item js-choice" name="currency" id="currency">
+            <option class="dropdown-choose__item" value=" $"> $</option>
+            <option class="dropdown-choose__item" value=" &#8381;"> &#8381;</option>
+            <option class="dropdown-choose__item" value="&#1583;"> &#1583;</option>
+          </select>
+        
         </div>
 
 
@@ -748,8 +736,451 @@
 
 </footer>
 
+  <aside class="sidebar ">
+
+  <h2 class="sr-only">
+    Catalog filters
+  </h2>
+
+  <div class="sidebar__content">
+
+    <button class="sidebar__close" type="button">
+      Close Filters
+      <svg class="sidebar__icon">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+
+    <ul class="sidebar__filters accordion">
+
+      <li class="accordion__item ">
+
+        <span class="accordion__name">
+          Price
+        </span>
+
+        <form class="accordion__filter filter-price" action="#">
+  <div class="filter-price__inner">
+
+    <div class="filter-price__box">
+      <label class="filter-price__text" for="price-from">From</label>
+      <input class="filter-price__num" id="price-from">
+    </div>
+
+    <div class="filter-price__box">
+
+      <label class="filter-price__text" for="price-to">To</label>
+      <input class="filter-price__num" id="price-to">
+
+    </div>
+  </div>
+  <div class="filter-price__slider">
+    <span class="filter-price__slider-num">
+      $0
+    </span>
+
+    <span class="sr-only">
+      Change price by moving
+    </span>
+
+    <span class="filter-price__slider-num">
+      $10.000
+    </span>
+  </div>
+
+</form>
+
+      </li>
+
+      <li class="accordion__item ">
+
+        <span class="accordion__name">
+          Designer
+        </span>
+
+        <form class="accordion__filter filter-designers" action="#">
+
+  <div class="accordion__filter-search search">
+
+    <label class="sr-only" for="search__field-filter">
+      Search on site
+    </label>
+
+    <svg class="search__icon search__icon--search">
+      <use xlink:href="img/sprite.svg#search"></use>
+    </svg>
+
+    <input class="search__field" id="search__field-filter" type="search" placeholder="Search..." name="search">
+
+    <svg class="search__icon search__icon--close ">
+      <use xlink:href="img/sprite.svg#close"></use>
+    </svg>
+
+  </div>
+
+  <ul class="accordion__filter-checkboxes">
+
+    <li class="accordion__filter-checkbox">
+      <label class="custom-checkbox">
+        <input type="checkbox" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          agr
+        </span>
+      </label>
+    </li>
+
+    <li class="accordion__filter-checkbox">
+      <label class="custom-checkbox">
+        <input type="checkbox" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          ambush
+        </span>
+      </label>
+    </li>
+
+    <li class="accordion__filter-checkbox">
+      <label class="custom-checkbox">
+        <input type="checkbox" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          AMI Paris
+        </span>
+      </label>
+    </li>
+
+    <li class="accordion__filter-checkbox">
+      <label class="custom-checkbox">
+        <input type="checkbox" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          Amiri
+        </span>
+      </label>
+    </li>
+
+    <li class="accordion__filter-checkbox">
+      <label class="custom-checkbox">
+        <input type="checkbox" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          ASICS
+        </span>
+      </label>
+    </li>
+
+    <li class="accordion__filter-checkbox">
+      <label class="custom-checkbox">
+        <input type="checkbox" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          AV Vatter
+        </span>
+      </label>
+    </li>
+
+    <li class="accordion__filter-checkbox">
+      <label class="custom-checkbox">
+        <input type="checkbox" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          agr
+        </span>
+      </label>
+    </li>
+
+  </ul>
 
 
+</form>
+      </li>
+
+      <li class="accordion__item ">
+
+        <span class="accordion__name">
+          Size
+        </span>
+
+        <form class="filter-size accordion__filter" action="#">
+
+  <ul class="filter-size__list">
+    <li class="filter-size__item">
+      <label class="custom-checkbox">
+        <input type="checkbox" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          36
+        </span>
+      </label>
+    </li>
+
+    <li class="filter-size__item">
+      <label class="custom-checkbox">
+        <input type="checkbox" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          36,5
+        </span>
+      </label>
+    </li>
+
+    <li class="filter-size__item">
+      <label class="custom-checkbox">
+        <input type="checkbox" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          37
+        </span>
+      </label>
+    </li>
+
+    <li class="filter-size__item">
+      <label class="custom-checkbox">
+        <input type="checkbox" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          37,5 </span>
+      </label>
+    </li>
+
+    <li class="filter-size__item">
+      <label class="custom-checkbox">
+        <input type="checkbox" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          38
+        </span>
+      </label>
+    </li>
+
+    <li class="filter-size__item">
+      <label class="custom-checkbox">
+        <input type="checkbox" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          38,5
+        </span>
+      </label>
+    </li>
+
+    <li class="filter-size__item">
+      <label class="custom-checkbox">
+        <input type="checkbox" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          39
+        </span>
+      </label>
+    </li>
+
+    <li class="filter-size__item">
+      <label class="custom-checkbox">
+        <input type="checkbox" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          39,5
+        </span>
+      </label>
+    </li>
+
+    <li class="filter-size__item">
+      <label class="custom-checkbox">
+        <input type="checkbox" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          40
+        </span>
+      </label>
+    </li>
+
+    <li class="filter-size__item">
+      <label class="custom-checkbox">
+        <input type="checkbox" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          40,5
+        </span>
+      </label>
+    </li>
+
+    <li class="filter-size__item">
+      <label class="custom-checkbox">
+        <input type="checkbox" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          41
+        </span>
+      </label>
+    </li>
+
+    <li class="filter-size__item">
+      <label class="custom-checkbox">
+        <input type="checkbox" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          41,5
+        </span>
+      </label>
+    </li>
+
+
+    <li class="filter-size__item">
+      <label class="custom-checkbox">
+        <input type="checkbox" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          42
+        </span>
+      </label>
+    </li>
+
+    <li class="filter-size__item">
+      <label class="custom-checkbox">
+        <input type="checkbox" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          42,5
+        </span>
+      </label>
+    </li>
+
+    <li class="filter-size__item">
+      <label class="custom-checkbox">
+        <input type="checkbox" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          43
+        </span>
+      </label>
+    </li>
+
+    <li class="filter-size__item filter-size__item--disabled">
+      <label class="custom-checkbox">
+        <input type="checkbox" class="custom-checkbox__field" disabled>
+        <span class="custom-checkbox__content">
+          44
+        </span>
+      </label>
+    </li>
+
+    <li class="filter-size__item filter-size__item--disabled">
+      <label class="custom-checkbox custom-checkbox--disabled">
+        <input type="checkbox" class="custom-checkbox__field" disabled>
+        <span class="custom-checkbox__content">
+          45
+        </span>
+      </label>
+    </li>
+  </ul>
+
+</form>
+      </li>
+
+      <li class="accordion__item ">
+        <span class="accordion__name">
+          Color
+        </span>
+
+          <form class="accordion__filter filter-colors" action="#">
+
+    <ul class="accordion__filter-checkboxes">
+
+      <li class="accordion__filter-checkbox">
+        <label class="custom-checkbox">
+          <input type="checkbox" class="custom-checkbox__field">
+          <span class="custom-checkbox__content">
+            Black
+          </span>
+        </label>
+      </li>
+
+      <li class="accordion__filter-checkbox">
+        <label class="custom-checkbox">
+          <input type="checkbox" class="custom-checkbox__field">
+          <span class="custom-checkbox__content">
+            White
+          </span>
+        </label>
+      </li>
+
+      <li class="accordion__filter-checkbox">
+        <label class="custom-checkbox">
+          <input type="checkbox" class="custom-checkbox__field">
+          <span class="custom-checkbox__content">
+            Brown
+          </span>
+        </label>
+      </li>
+
+      <li class="accordion__filter-checkbox">
+        <label class="custom-checkbox">
+          <input type="checkbox" class="custom-checkbox__field">
+          <span class="custom-checkbox__content">
+            Grey
+          </span>
+        </label>
+      </li>
+
+      <li class="accordion__filter-checkbox">
+        <label class="custom-checkbox">
+          <input type="checkbox" class="custom-checkbox__field">
+          <span class="custom-checkbox__content">
+            Green
+          </span>
+        </label>
+      </li>
+
+      <li class="accordion__filter-checkbox">
+        <label class="custom-checkbox">
+          <input type="checkbox" class="custom-checkbox__field">
+          <span class="custom-checkbox__content">
+            Blue
+          </span>
+        </label>
+      </li>
+
+      <li class="accordion__filter-checkbox">
+        <label class="custom-checkbox">
+          <input type="checkbox" class="custom-checkbox__field">
+          <span class="custom-checkbox__content">
+            Neutrals
+          </span>
+        </label>
+      </li>
+
+      <li class="accordion__filter-checkbox">
+        <label class="custom-checkbox">
+          <input type="checkbox" class="custom-checkbox__field">
+          <span class="custom-checkbox__content">
+            Gold
+          </span>
+        </label>
+      </li>
+
+      <li class="accordion__filter-checkbox">
+        <label class="custom-checkbox">
+          <input type="checkbox" class="custom-checkbox__field">
+          <span class="custom-checkbox__content">
+            Red
+          </span>
+        </label>
+      </li>
+
+      <li class="accordion__filter-checkbox">
+        <label class="custom-checkbox">
+          <input type="checkbox" class="custom-checkbox__field">
+          <span class="custom-checkbox__content">
+            Orange
+          </span>
+        </label>
+      </li>
+
+      <li class="accordion__filter-checkbox">
+        <label class="custom-checkbox">
+          <input type="checkbox" class="custom-checkbox__field">
+          <span class="custom-checkbox__content">
+            Pink
+          </span>
+        </label>
+      </li>
+
+      <li class="accordion__filter-checkbox">
+        <label class="custom-checkbox">
+          <input type="checkbox" class="custom-checkbox__field">
+          <span class="custom-checkbox__content">
+            Yellow
+          </span>
+        </label>
+      </li>
+
+    </ul>
+
+  </form>
+
+      </li>
+    </ul>
+
+  </div>
+</aside>
 
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>

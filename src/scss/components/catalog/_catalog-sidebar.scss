@@ -1,0 +1,60 @@
+.sidebar {
+  width: 100%;
+  transition: visibility 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    z-index: -1;
+  }
+
+  &__content {
+    max-width: 402px;
+    width: 100%;
+    z-index: 11;
+    height: 100%;
+    background-color: $white;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(-100%);
+    padding: 60px;
+  }
+
+  &.sidebar-active {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+
+    .sidebar__content {
+      transform: translateX(0);
+    }
+  }
+
+  &__close {
+    @include H4;
+    border: none;
+    background-color: transparent;
+    @include flex-all-sb;
+    margin-bottom: 40px;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    padding: 5px;
+    margin-left: 15px;
+  }
+
+}

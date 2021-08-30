@@ -71,26 +71,22 @@
         </li>
       </ul>
 
+      <form class="search" action="#">
+
+        <label class="sr-only" for="search__field">Search on site </label>
+
+        <svg class="search__icon search__icon--search">
+          <use xlink:href="img/sprite.svg#search"></use>
+        </svg>
+
+        <input class="search__header search__field" id="search__field" type="search" placeholder="Search..." name="search">
+
+        <svg class="search__icon search__icon--close">
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </form>
+
       <ul class="header__action">
-
-        <li class="header__action-item header__action-item--search ">
-          <form class="search" action="#">
-
-            <label class="sr-only" for="search__field">Search on site </label>
-
-            <svg class="header__action-icon header__action-icon--search">
-              <use xlink:href="img/sprite.svg#search"></use>
-            </svg>
-
-            <input class="search__field" id="search__field" type="search" placeholder="Search..." name="search">
-
-            <svg class="header__action-icon header__action-icon--close">
-              <use xlink:href="img/sprite.svg#close"></use>
-            </svg>
-
-          </form>
-
-        </li>
 
         <li class="header__action-item">
 
@@ -690,11 +686,11 @@
       <img class="banner" src="img/baner-home.jpeg" alt="PRIVILEGE banner" height="600">
     </div>
 
-    <section class="home-blog">
+    <section class="blog">
   <div class="container">
-    <div class="home-blog__wrap">
+    <div class="blog__wrap">
 
-      <div class="home-blog__inner">
+      <div class="blog__inner">
         <h2>
           Want to keep researching?
         </h2>
@@ -704,33 +700,44 @@
         <a class="btn-shop" href="#">Shop now</a>
       </div>
 
-      <div class="home-blog__inner">
+      <ul class="blog__inner">
+        <li class="block__item">
+          <atricle class="blog-article">
+            <a class="blog-article__link" href="#">
+              <span class="sr-only">
+                The best dressed men of November 2020
+              </span>
+            </a>
+            <img src="img/researching/shoes.jpg" alt="The best dressed men of November 2020" width="300" height="400">
 
-        <atricle class="home-blog__article">
-          <a class="home-blog__link" href="#"></a>
-          <img src="img/researching/shoes.jpg" alt="The best dressed men of November 2020" width="300" height="400">
-          
-          <span>12.03.2021</span>
+            <span>12.03.2021</span>
 
-          <h3>
-            The best dressed men of November 2020
-          </h3>
-        </atricle>
+            <h3>
+              The best dressed men of November 2020
+            </h3>
+          </atricle>
+        </li>
 
-        <atricle class="home-blog__article">
-          <a class="home-blog__link" href="#"></a>
+        <li class="block__item">
+          <atricle class="blog-article">
+            <a class="blog-article__link" href="#">
+              <span class="sr-only">
+                The stylish man’s guide to wearing a turtleneck
+              </span>
+            </a>
 
-          <img src="img/researching/guy-glasses.jpg" alt="The stylish man’s guide to wearing a turtleneck" width="300"
-            height="400">
+            <img src="img/researching/guy-glasses.jpg" alt="The stylish man’s guide to wearing a turtleneck" width="300"
+              height="400">
 
-          <span>08.03.2021</span>
+            <span>08.03.2021</span>
 
-          <h3>
-            The stylish man’s guide to wearing a turtleneck
-          </h3>
-        </atricle>
+            <h3>
+              The stylish man’s guide to wearing a turtleneck
+            </h3>
+          </atricle>
+        </li>
 
-      </div>
+      </ul>
 
     </div>
   </div>
@@ -743,11 +750,11 @@
 
     <form class="subscribe" action="#">
 
-      <label class="subscribe__text" for="subscription">
+      <label class="subscribe__text" for="subscription-popup">
         Sing up for style news
       </label>
 
-      <input class="subscribe__field" id="subscription" name="subscription" type="email" required
+      <input class="subscribe__field" id="subscription-popup" name="subscription" type="email" required
         placeholder="Email address">
 
       <button class="subscribe__btn" type="submit">
@@ -848,65 +855,26 @@
       <div class="footer__inner ">
 
         <div class="footer__choose footer__choose--language">
-          <span class="footer__choose-name">
+          <label class="footer__choose-name" for="language">
             Language:
-          </span>
-
-          <div class="footer__choose-item dropdown-item">
-            <span class="dropdown-item__active">
-              Eng
-            </span>
-            <ul class="footer__choose-list dropdown-choose">
-              <li class="dropdown-choose__item">
-                <a class="dropdown-choose__link" href="#">
-                  Eng
-                </a>
-              </li>
-              <li class="dropdown-choose__item">
-                <a class="dropdown-choose__link" href="#">
-                  Rus
-                </a>
-
-              </li>
-              <li class="dropdown-choose__item">
-                <a class="dropdown-choose__link" href="#">
-                  Arab
-                </a>
-              </li>
-            </ul>
-          </div>
+          </label>
+          <select class="footer__choose-item dropdown-item js-choice" name="number" id="language">
+            <option class="dropdown-choose__item" value=" Eng"> Eng</option>
+            <option class="dropdown-choose__item" value=" Rus"> Rus</option>
+            <option class="dropdown-choose__item" value="Arab"> Arab</option>
+          </select>
         </div>
 
         <div class="footer__choose footer__choose--currency">
-          <span class="footer__choose-name">
+          <label class="footer__choose-name" for="currency">
             Currency:
-          </span>
-
-          <div class="footer__choose-item dropdown-item">
-            <span class="dropdown-item__active">
-              $
-            </span>
-
-            <ul class="footer__choose-list dropdown-choose">
-              <li class="dropdown-choose__item">
-                <a class="dropdown-choose__link" href="#">
-                  $
-                </a>
-              </li>
-
-              <li class="dropdown-choose__item">
-                <a class="dropdown-choose__link" href="#">
-                  &#8381;
-                </a>
-              </li>
-
-              <li class="dropdown-choose__item">
-                <a class="dropdown-choose__link" href="#">
-                  &#1583;
-                </a>
-              </li>
-            </ul>
-          </div>
+          </label>
+          <select class="footer__choose-item dropdown-item js-choice" name="currency" id="currency">
+            <option class="dropdown-choose__item" value=" $"> $</option>
+            <option class="dropdown-choose__item" value=" &#8381;"> &#8381;</option>
+            <option class="dropdown-choose__item" value="&#1583;"> &#1583;</option>
+          </select>
+        
         </div>
 
 

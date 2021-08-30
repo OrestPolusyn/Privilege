@@ -117,7 +117,7 @@ const images = () => {
 };
 
 const htmlInclude = () => {
-  return src(['./src/**/*.html'])
+  return src(['./src/*.html'])
     .pipe(fileInclude({
       prefix: '@',
       basepath: '@file'

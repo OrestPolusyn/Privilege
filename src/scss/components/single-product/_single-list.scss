@@ -1,0 +1,19 @@
+.products {
+  margin-bottom: 100px;
+
+  h2 {
+    @include H2;
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    @include flex-all-sb;
+  }
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}

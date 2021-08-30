@@ -8,8 +8,7 @@
 
   &__item {
     position: relative;
-    height: 50px;
-    width: 50px;
+
     transition: color 0.3s ease-in-out,
       background-color 0.3s ease-in-out;
     cursor: pointer;
@@ -17,6 +16,8 @@
     &:first-child,
     &:last-child {
       background-color: var(--color-black);
+      height: 50px;
+      width: 50px;
 
       &:hover {
         background-color: var(--color-golden);
@@ -24,8 +25,8 @@
     }
 
     &:first-child {
-      margin-right: 10px;
       transform: scale(-1, 1);
+      margin-right: 10px;
     }
 
     &:last-child {
@@ -46,6 +47,7 @@
   &__link {
     padding: 13px 20px;
     display: block;
+    letter-spacing: 0.17em;
   }
 
   &__link-icon {

@@ -1,10 +1,9 @@
 <section class="catalog-list">
+  <h2 class="sr-only">
+    Product items
+  </h2>
 
-  <div class="catalog-list__nav">
-    <button class="btn-shop filters-btn">
-      Show filters
-    </button>
-  </div>
+  @include('../filters/_filter-main.html')
 
   <ul class="catalog-list__grid">
     <li class="catalog-list__item">
@@ -39,6 +38,7 @@
       height:"440"
       })
     </li>
+    
     <li class="catalog-list__item">
       @include('../_product-article.html',{
       image:"catalog-list/shoes.jpg",

@@ -84,65 +84,26 @@
       <div class="footer__inner ">
 
         <div class="footer__choose footer__choose--language">
-          <span class="footer__choose-name">
+          <label class="footer__choose-name" for="language">
             Language:
-          </span>
-
-          <div class="footer__choose-item dropdown-item">
-            <span class="dropdown-item__active">
-              Eng
-            </span>
-            <ul class="footer__choose-list dropdown-choose">
-              <li class="dropdown-choose__item">
-                <a class="dropdown-choose__link" href="#">
-                  Eng
-                </a>
-              </li>
-              <li class="dropdown-choose__item">
-                <a class="dropdown-choose__link" href="#">
-                  Rus
-                </a>
-
-              </li>
-              <li class="dropdown-choose__item">
-                <a class="dropdown-choose__link" href="#">
-                  Arab
-                </a>
-              </li>
-            </ul>
-          </div>
+          </label>
+          <select class="footer__choose-item dropdown-item js-choice" name="number" id="language">
+            <option class="dropdown-choose__item" value=" Eng"> Eng</option>
+            <option class="dropdown-choose__item" value=" Rus"> Rus</option>
+            <option class="dropdown-choose__item" value="Arab"> Arab</option>
+          </select>
         </div>
 
         <div class="footer__choose footer__choose--currency">
-          <span class="footer__choose-name">
+          <label class="footer__choose-name" for="currency">
             Currency:
-          </span>
-
-          <div class="footer__choose-item dropdown-item">
-            <span class="dropdown-item__active">
-              $
-            </span>
-
-            <ul class="footer__choose-list dropdown-choose">
-              <li class="dropdown-choose__item">
-                <a class="dropdown-choose__link" href="#">
-                  $
-                </a>
-              </li>
-
-              <li class="dropdown-choose__item">
-                <a class="dropdown-choose__link" href="#">
-                  &#8381;
-                </a>
-              </li>
-
-              <li class="dropdown-choose__item">
-                <a class="dropdown-choose__link" href="#">
-                  &#1583;
-                </a>
-              </li>
-            </ul>
-          </div>
+          </label>
+          <select class="footer__choose-item dropdown-item js-choice" name="currency" id="currency">
+            <option class="dropdown-choose__item" value=" $"> $</option>
+            <option class="dropdown-choose__item" value=" &#8381;"> &#8381;</option>
+            <option class="dropdown-choose__item" value="&#1583;"> &#1583;</option>
+          </select>
+        
         </div>
 
 

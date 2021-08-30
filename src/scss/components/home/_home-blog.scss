@@ -1,4 +1,4 @@
-.home-blog {
+.blog {
 
   margin-bottom: 170px;
 
@@ -29,31 +29,32 @@
       @include body;
     }
   }
+}
 
-  &__article {
-    max-width: 300px;
-    width: 100%;
-    position: relative;
+.blog-article {
+  max-width: 300px;
+  width: 100%;
+  position: relative;
 
-    &:first-child {
-      margin-right: 30px;
-    }
-
-    img {
-      margin-bottom: 24px;
-    }
-
-    span {
-      color: var(--color-golden);
-      display: block;
-      @include body-sec;
-      margin-bottom: 8px;
-    }
-
-    h3 {
-      @include H4;
-    }
+  &:first-child {
+    margin-right: 30px;
   }
+
+  img {
+    margin-bottom: 24px;
+  }
+
+  span {
+    color: var(--color-golden);
+    display: block;
+    @include body-sec;
+    margin-bottom: 8px;
+  }
+
+  h3 {
+    @include H4;
+  }
+
 
   &__link {
     position: absolute;

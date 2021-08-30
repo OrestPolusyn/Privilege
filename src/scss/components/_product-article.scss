@@ -1,0 +1,23 @@
+.product-article {
+  max-width: 332px;
+  width: 100%;
+
+  img {
+    margin-bottom: 22px;
+  }
+
+  h3 {
+    @include H4;
+    margin-bottom: 12px;
+  }
+
+  p {
+    margin-bottom: 17px;
+    @include body-sec;
+  }
+
+  span {
+    @include subtitle-sec;
+    letter-spacing: -0.03em;
+  }
+}

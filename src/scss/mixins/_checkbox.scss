@@ -1,4 +1,4 @@
-@mixin custom-checkbox {
+@mixin checkbox {
   position: relative;
 
   &__field {
@@ -29,9 +29,9 @@
       width: 15px;
       height: 15px;
       box-sizing: border-box;
-      background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='fi_32282' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='405.272px' height='405.272px' viewBox='0 0 405.272 405.272' style='enable-background:new 0 0 405.272 405.272;' xml:space='preserve'%3E%3Cg%3E%3Cpath d='M393.401,124.425L179.603,338.208c-15.832,15.835-41.514,15.835-57.361,0L11.878,227.836 c-15.838-15.835-15.838-41.52,0-57.358c15.841-15.841,41.521-15.841,57.355-0.006l81.698,81.699L336.037,67.064 c15.841-15.841,41.523-15.829,57.358,0C409.23,82.902,409.23,108.578,393.401,124.425z'%3E%3C/path%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg width='8' height='5' viewBox='0 0 8 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.73675 0.41916L4.00009 2.68249L6.26342 0.41916C6.49092 0.19166 6.85842 0.19166 7.08592 0.41916C7.31342 0.64666 7.31342 1.01416 7.08592 1.24166L4.40842 3.91916C4.18092 4.14666 3.81342 4.14666 3.58592 3.91916L0.908418 1.24166C0.680918 1.01416 0.680918 0.64666 0.908418 0.41916C1.13592 0.197493 1.50925 0.19166 1.73675 0.41916Z' fill='black'/%3E%3C/svg%3E%0A");
       background-position: center;
-      background-size: 10px 10px;
+      background-size: 8px 5px;
       background-repeat: no-repeat;
       opacity: 0;
       transition: opacity 0.3s ease-in-out;
@@ -39,16 +39,23 @@
   }
 }
 
-.custom-checkbox__field:checked + .custom-checkbox__content::after {
+.custom-checkbox__field:checked+.custom-checkbox__content::after {
   opacity: 1;
 }
 
-.custom-checkbox__field:focus + .custom-checkbox__content::before {
+.custom-checkbox__field:focus+.custom-checkbox__content::before {
   outline: 2px solid #f00;
   outline-offset: 2px;
 }
 
-.custom-checkbox__field:disabled + .custom-checkbox__content {
+.custom-checkbox__field:disabled+.custom-checkbox__content {
   opacity: 0.4;
   pointer-events: none;
 }
+
+
+.custom-checkbox__field[disabled]+.custom-checkbox__content::before {
+  border-color: var(--color-disabled);
+  color: var(--color-disabled);
+}
+

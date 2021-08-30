@@ -1,0 +1,11 @@
+@import 'single-slider';
+@import 'single-info';
+@import 'single-list';
+
+.product{
+  // @include flex-s-sb;
+
+  &__swiper{
+    // display: flex;
+  }
+}
