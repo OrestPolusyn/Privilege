@@ -1090,7 +1090,8 @@
     max-width: 815px;
     width: 100%;
     display: flex;
-    position: relative; }
+    position: relative;
+    margin-right: 30px; }
   .product .gallery-thumbs {
     width: 150px;
     height: 864px;
