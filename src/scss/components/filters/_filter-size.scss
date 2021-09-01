@@ -3,6 +3,11 @@
     display: grid;
     grid-template-columns: repeat(5, 43px);
     grid-gap: 16px;
+
+    @include mobile-s {
+      grid-template-columns: repeat(4, 43px);
+
+    }
   }
 
   &__item {
@@ -75,7 +80,7 @@
     }
 
     &.custom-checkbox--disabled,
-     &.custom-checkbox--disabled .custom-checkbox__content::before {
+    &.custom-checkbox--disabled .custom-checkbox__content::before {
       border-color: var(--color-disabled);
       color: var(--color-disabled);
     }

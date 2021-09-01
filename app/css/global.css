@@ -66,7 +66,8 @@ body {
 .container {
   margin: 0 auto;
   padding: 0 22px;
-  max-width: 1284px; }
+  max-width: 1284px;
+  width: 100%; }
 
 .for-mobile {
   display: none; }
@@ -481,5 +482,21 @@ input[type="search"]::-webkit-search-results-decoration {
   @media (max-width: 475px) {
     .burger {
       margin-left: 10px; } }
+
+.title {
+  text-align: center;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 1.2;
+  text-transform: capitalize;
+  font-feature-settings: 'cpsp'on; }
+
+.main-title {
+  font-weight: 700;
+  font-size: 68px;
+  line-height: 1.2;
+  text-transform: capitalize;
+  font-feature-settings: 'cpsp'on;
+  text-align: center; }
 
 /*# sourceMappingURL=global.css.map */

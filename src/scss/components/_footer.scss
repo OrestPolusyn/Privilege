@@ -9,7 +9,7 @@
 
   &__wrap {
     @include flex-s-sb;
-    margin-bottom: 6px;
+    margin-bottom: 40px;
 
     @include mobile {
       justify-content: start;
@@ -100,8 +100,8 @@
   }
 
   &__icon {
-   height: 25px;
-   width: 25px;
+    height: 25px;
+    width: 25px;
     fill: #fff;
     transition: fill 0.3s ease-in-out;
   }
@@ -120,6 +120,9 @@
     @include flex-s;
     color: #fff;
 
+    @include mobile-s {
+      display: none;
+    }
 
     .footer__link {
       &:first-child {
@@ -254,5 +257,42 @@
   .choices[data-type*=select-one].is-open:after {
     margin-top: -2px;
     transform: rotate(180deg);
+  }
+
+  .custom-checkbox {
+    display: none;
+    text-transform: none;
+    font-size: 12px;
+    margin-bottom: 24px;
+
+    @include mobile-s {
+      display: block;
+    }
+
+    &__link {
+      color: var(--color-golden);
+    }
+
+    &__content {
+      &::before {
+        top: 2px;
+      }
+
+      &::after {
+        background-color: var(--color-golden);
+        mask-image: url('../img/sprite.svg#arrow-footer');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        height: 6px;
+        width: 11px;
+        background-image: none;
+        transform: translate(2px, 7px);
+      }
+    }
+
+    &:hover {
+      color: var(--color-white);
+    }
   }
 }

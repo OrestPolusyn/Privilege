@@ -46,6 +46,11 @@
       background-color: var(--color-hover);
     }
 
+    @include mobile-s {
+      mask-image: url('../img/sprite.svg#check');
+      background-color: var(--color-golden);
+    }
+
   }
 
   &__subscribe-icon {

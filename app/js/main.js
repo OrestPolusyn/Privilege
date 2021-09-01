@@ -38,15 +38,30 @@ document.addEventListener('DOMContentLoaded', function () {
         spaceBetween: 10,
         slidesPerGroup: 1
       },
-      480: {
+      425: {
         slidesPerView: 2,
-        spaceBetween: 20,
+        spaceBetween: 22,
         slidesPerGroup: 2
       },
       576: {
         slidesPerView: 3,
-        spaceBetween: 90,
-        slidesPerGroup: 3
+        slidesPerGroup: 3,
+        spaceBetween: 22
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 22,
+        slidesPerGroup: 4
+      },
+      980: {
+        slidesPerView: 4,
+        spaceBetween: 22,
+        slidesPerGroup: 4
+      },
+      1080: {
+        slidesPerView: 5,
+        spaceBetween: 22,
+        slidesPerGroup: 5
       }
     }
   });

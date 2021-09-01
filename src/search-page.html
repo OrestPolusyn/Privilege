@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>P R I V I L E G E | Catalog page</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  @include('html/_header.html')
+
+  <main class="main search-page">
+    <div class="container">
+
+      <h1 class="sr-only main-title">
+        Search
+      </h1>
+
+      <section class="search-page__inner">
+        <h2 class="title">
+          Search Results “Nike”
+        </h2>
+
+
+        <span class="search-page__result">
+          4 Items
+        </span>
+
+        <span class="search-page__nofound">
+          Nothing found
+        </span>
+
+        @include('html/filters/_filter-main.html')
+
+        <ul class="catalog-list__grid">
+          <li class="catalog-list__item">
+            @include('html/_product-article.html',{
+            image:"catalog-list/shoes.jpg",
+            title:"Burberry",
+            text:"B-Runner asymmetrical sneakers",
+            price:"$ 250.00",
+            width:"332" })
+          </li>
+
+          <li class="catalog-list__item">
+            @include('html/_product-article.html',{
+            image:"catalog-list/shoes-pool.jpg",
+            title:"Burberry",
+            text:"B-Runner asymmetrical sneakers",
+            price:"$ 250.00",
+            width:"332"
+            })
+          </li>
+
+          <li class="catalog-list__item">
+            @include('html/_product-article.html',{
+            image:"catalog-list/sneakers.jpg",
+            title:"Burberry",
+            text:"B-Runner asymmetrical sneakers",
+            price:"$ 250.00",
+            width:"332"
+            })
+          </li>
+
+        </ul>
+
+      </section>
+
+    </div>
+  </main>
+
+  @include('html/_footer.html')
+
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

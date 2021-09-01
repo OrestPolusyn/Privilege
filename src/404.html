@@ -16,32 +16,28 @@
 <body>
   @include('html/_header.html')
 
-  <main class="main">
+  <main class="main error-page" style="background-image: url(img/404.jpg);">
     <div class="container">
 
-      @include('html/catalog/_catalog-slider.html')
+      <div class="error-page__inner" >
 
-      <h1 class="title-main">
-        Shoes
-      </h1>
+        <h1 class="main-title">
+          404
+        </h1>
 
-      <h2 class="sr-only">
-        Catalog list
-      </h2>
-      <section class="catalog-list">
+        <p class="title">
+          Search Results “Nike”
+        </p>
 
-        @include('html/catalog/_catalog-list.html')
-
-      </section>
-      
-      @include('html/_pagination.html')
+        <a class="btn-shop" href="#"
+        >home page
+      </a>
+      </div>
 
     </div>
   </main>
 
   @include('html/_footer.html')
-
-  @include('html/catalog/_catalog-sidebar.html')
 
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>

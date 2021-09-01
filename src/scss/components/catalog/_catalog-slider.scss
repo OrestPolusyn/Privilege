@@ -46,13 +46,21 @@
 
     .swiper-pagination-bullet {
       margin-left: 0;
+
       &:not(:last-child) {
-        margin-right: 18px;
+        margin-right: 20px;
 
         @include mobile-s {
           margin-right: 9px;
         }
       }
+    }
+  }
+
+  .product-article {
+    p {
+      font-size: 16px;
+      margin-bottom: 6px;
     }
   }
 }
@@ -63,7 +71,7 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: 122px;
     row-gap: 56px;
-    margin-bottom: 100px;
+    margin-bottom: 96px;
 
     @include tablet {
       column-gap: 60px;
@@ -84,13 +92,16 @@
     max-width: 332px;
     width: 100%;
 
+    img {
+      margin-bottom: 24px;
+    }
 
     h3 {
-      font-size: 15px;
+      font-size: 18px;
     }
 
     span {
-      font-size: 14px;
+      font-size: 17px;
     }
   }
 

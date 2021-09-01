@@ -37,15 +37,31 @@ document.addEventListener('DOMContentLoaded', () => {
         spaceBetween: 10,
         slidesPerGroup: 1,
       },
-      480: {
+      425: {
         slidesPerView: 2,
-        spaceBetween: 20,
+        spaceBetween: 22,
         slidesPerGroup: 2,
       },
       576: {
         slidesPerView: 3,
-        spaceBetween: 90,
         slidesPerGroup: 3,
+        spaceBetween: 22,
+
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 22,
+        slidesPerGroup: 4,
+      },
+      980: {
+        slidesPerView: 4,
+        spaceBetween: 22,
+        slidesPerGroup: 4,
+      },
+      1080: {
+        slidesPerView: 5,
+        spaceBetween: 22,
+        slidesPerGroup: 5,
       }
     },
   });
@@ -224,7 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       e.target.classList.toggle('accordion-active');
 
-      if (controlItem.classList.contains('accordion-active')) {
+      if (controlItem.classList.contains('accordion-active') ) {
         contentItem.style.maxHeight = contentItem.scrollHeight + 'px';
       } else {
         contentItem.style.maxHeight = null;

@@ -120,16 +120,27 @@
         width: 14px;
       }
 
-      .swiper-button-prev:after,
-      .swiper-button-next:after {
-        content: '';
-        background-color: #000;
-        mask-image: url('../img/sprite.svg#arrow-footer');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        height: 8px;
-        width: 14px;
+      .swiper-button-prev,
+      .swiper-button-next {
+        &:after {
+          content: '';
+          background-color: #000;
+          mask-image: url('../img/sprite.svg#arrow-footer');
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          height: 8px;
+          width: 14px;
+          transition: background-color 0.3s ease-out;
+        }
+
+        &:hover:after {
+          background-color: var(--color-hover);
+        }
+
+        &:focus:after {
+          background-color: var(--color-hover);
+        }
       }
 
       .swiper-button-next {

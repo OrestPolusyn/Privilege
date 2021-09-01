@@ -17,6 +17,7 @@ body {
   margin: 0 auto;
   padding: 0 22px;
   max-width: 1284px;
+  width: 100%;
 }
 
 .for-mobile {
@@ -489,4 +490,16 @@ input[type="search"]::-webkit-search-results-decoration {
   @include mobile-s {
     margin-left: 10px;
   }
+}
+
+
+
+.title{
+  text-align: center;
+  @include H2;
+}
+
+.main-title{
+  @include H; 
+  text-align: center;
 }

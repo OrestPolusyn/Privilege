@@ -1,0 +1,25 @@
+.error-page {
+  @include flex-all-sb;
+
+
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: inherit;
+
+  @include tablet{
+    background-size: cover;
+  }
+
+  &__inner {
+    padding: 50px 0;
+    text-align: center;
+  }
+
+  p{
+    margin-bottom: 24px;  
+    @include mobile-s{
+      font-size: 30px;
+    }
+  }
+
+}
