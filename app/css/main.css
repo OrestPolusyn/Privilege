@@ -238,9 +238,9 @@
       .header__action-item:not(:last-child) {
         margin-right: 10px; } }
   .header__action-item:hover svg {
-    stroke: var(--color-btn-hover); }
+    stroke: var(--color-hover); }
   .header__action-item:active svg {
-    stroke: var(--color-btn-hover); }
+    stroke: var(--color-hover); }
   .header__link {
     position: relative;
     color: var(--color-black);

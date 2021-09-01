@@ -244,14 +244,14 @@
 
     &:hover {
       svg {
-        stroke: var(--color-btn-hover);
+        stroke: var(--color-hover);
       }
     }
 
 
     &:active {
       svg {
-        stroke: var(--color-btn-hover);
+        stroke: var(--color-hover);
       }
     }
   }

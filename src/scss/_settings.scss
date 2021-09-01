@@ -238,10 +238,10 @@ body {
     }
 
     &:hover {
-      border-color: var(--color-btn-hover);
+      border-color: var(--color-hover);
 
       svg {
-        fill: var(--color-btn-hover);
+        fill: var(--color-hover);
       }
     }
   }

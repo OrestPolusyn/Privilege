@@ -239,9 +239,9 @@ body {
     .swiper-nav .swiper-btn.swiper-button-prev svg {
       transform: rotate(180deg); }
   .swiper-nav .swiper-btn:hover {
-    border-color: var(--color-btn-hover); }
+    border-color: var(--color-hover); }
     .swiper-nav .swiper-btn:hover svg {
-      fill: var(--color-btn-hover); }
+      fill: var(--color-hover); }
 
 .swiper-nav .swiper-button-prev:after,
 .swiper-nav .swiper-container-rtl .swiper-button-next:after,
