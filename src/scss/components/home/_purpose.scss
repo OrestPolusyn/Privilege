@@ -24,6 +24,10 @@
       grid-column-gap: 20px;
       grid-row-gap: 20px;
     }
+
+    @include mobile-s {
+      padding-top: 170px;
+    }
   }
 
   &__item {
@@ -71,6 +75,10 @@
       @include mobile-m {
         transform: translateY(-65%);
         max-width: 100%;
+      }
+
+      @include mobile-s {
+        transform: translateY(-75%);
       }
     }
 

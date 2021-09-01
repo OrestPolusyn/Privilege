@@ -487,6 +487,9 @@
         padding-top: 150px;
         grid-column-gap: 20px;
         grid-row-gap: 20px; } }
+    @media (max-width: 475px) {
+      .purpose__list {
+        padding-top: 170px; } }
   .purpose__item {
     position: relative;
     cursor: pointer;
@@ -523,6 +526,9 @@
         .purpose__item--text {
           transform: translateY(-65%);
           max-width: 100%; } }
+      @media (max-width: 475px) {
+        .purpose__item--text {
+          transform: translateY(-75%); } }
     .purpose__item--accessories {
       grid-area: 1 / 3 / 3 / 4; }
       @media (max-width: 1024px) {
