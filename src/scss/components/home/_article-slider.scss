@@ -1,9 +1,19 @@
 .slider-article {
   position: relative;
 
+  @include mobile-m {
+    margin: 0 auto;
+
+    margin-bottom: 24px;
+  }
+
   img {
     object-fit: contain;
     height: 100%;
+
+    @include mobile-m {
+      height: 300px;
+    }
   }
 
   &__content {
@@ -14,6 +24,14 @@
     width: 100%;
     padding: 12px 108px 12px 30px;
     z-index: 2;
+
+    @include mobile {
+      padding: 10px 17px;
+    }
+
+    @include mobile-m {
+      max-width: 100%;
+    }
 
     &::after {
       position: absolute;
@@ -26,11 +44,21 @@
       backdrop-filter: blur(15px);
       z-index: -1;
     }
+
+    &:hover {
+      .slider-article__icon {
+        transform: scale(-1, 1.2);
+      }
+    }
   }
 
   h3 {
     margin-bottom: 10px;
     @include body;
+
+    @include mobile-m {
+      font-size: 12px;
+    }
   }
 
   span {
@@ -39,6 +67,11 @@
     line-height: 19px;
     display: block;
     margin-bottom: 16px;
+
+    @include mobile-m {
+      font-size: 12px;
+      margin-bottom: 0;
+    }
   }
 
   a {
@@ -49,10 +82,34 @@
     text-transform: uppercase;
     font: $font-btn;
 
+    @include mobile {
+      font-size: 16px;
+    }
+
+    @include mobile-m {
+      font-size: 12px;
+      margin-bottom: 0;
+
+      position: absolute;
+      right: 17px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
     .icon {
       margin-left: 20px;
       width: 28px;
       height: 16px;
+      transition: transform 0.5s ease-in-out;
+
+      @include mobile {
+        width: 19px;
+        height: 10px;
+      }
+
+      @include mobile-m {
+        margin-left: 8px;
+      }
     }
   }
 }

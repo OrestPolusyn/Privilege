@@ -1,4 +1,4 @@
-<div class="swiper-slide__inner">
+<div class="swiper-slide__inner container">
   <h2>@title</h2>
   <p>@text</p>
   <a class="swiper-slide__btn btn-shop" href="#">Shop now</a>
@@ -6,10 +6,14 @@
 
 </div>
 
-<div class="swiper-slide__inner">
+<div class="swiper-slide__inner ">
   <article class="slider-article">
 
-    <img src="img/hero/@img" alt="Check knitted cardigan" width="644" height="725">
+    <picture>
+      <source media="(max-width: 576px)" srcset="img/hero/@img-576w.jpg">
+      <source media="(min-width: 577px)" srcset="img/hero/@img.jpg">
+      <img src="img/hero/@img.jpg" alt="@title_article" width="644" height="725">
+    </picture>
 
     <div class="slider-article__content">
       <h3>

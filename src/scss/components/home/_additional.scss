@@ -1,6 +1,13 @@
 .additional {
-
   margin-bottom: 135px;
+
+  @include tablet {
+    margin-bottom: 80px;
+  }
+
+  @include mobile-m {
+    margin-bottom: 60px;
+  }
 
   &__title {
     @include H4;
@@ -9,6 +16,16 @@
 
   &__list {
     @include flex-all-sb;
+
+    @include tablet {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      margin-right: -30px;
+    }
+
+    @include mobile-m {
+      margin-right: 0;
+    }
   }
 
   &__item {
@@ -17,6 +34,19 @@
     width: 100%;
     margin-bottom: 24px;
     overflow-x: hidden;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+
+      @include tablet {
+        margin-bottom: 50px;
+      }
+
+      @include mobile-m {
+        margin-right: 0;
+        width: 100%;
+      }
+    }
 
     &::before {
       position: absolute;

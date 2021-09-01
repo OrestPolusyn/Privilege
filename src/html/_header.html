@@ -11,6 +11,7 @@
       </a>
 
       <ul class="header__menu">
+
         <li class="header__item">
           <a class="header__link" href="#">
             Designers
@@ -62,11 +63,15 @@
           <use xlink:href="img/sprite.svg#search"></use>
         </svg>
 
-        <input class="search__header search__field" id="search__field" type="search" placeholder="Search..." name="search">
+        <input class="search__header search__field" id="search__field" type="search" placeholder="Search..."
+          name="search">
 
-        <svg class="search__icon search__icon--close">
-          <use xlink:href="img/sprite.svg#close"></use>
-        </svg>
+        <button class="search__close" type="button">
+          <span class="sr-only">
+            Close search field
+          </span>
+        </button>
+
       </form>
 
       <ul class="header__action">
@@ -95,6 +100,15 @@
 
 
       </ul>
+
+      <button class="burger" type="button">
+        <span class="sr-only">
+          Menu
+        </span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
     </nav>
   </div>
 

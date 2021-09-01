@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
-  <title>P R I V I L E G E | Home page</title>
+  <title>P R I V I L E G E | Sinle product</title>
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
@@ -28,6 +28,7 @@
       </a>
 
       <ul class="header__menu">
+
         <li class="header__item">
           <a class="header__link" href="#">
             Designers
@@ -79,11 +80,15 @@
           <use xlink:href="img/sprite.svg#search"></use>
         </svg>
 
-        <input class="search__header search__field" id="search__field" type="search" placeholder="Search..." name="search">
+        <input class="search__header search__field" id="search__field" type="search" placeholder="Search..."
+          name="search">
 
-        <svg class="search__icon search__icon--close">
-          <use xlink:href="img/sprite.svg#close"></use>
-        </svg>
+        <button class="search__close" type="button">
+          <span class="sr-only">
+            Close search field
+          </span>
+        </button>
+
       </form>
 
       <ul class="header__action">
@@ -112,6 +117,15 @@
 
 
       </ul>
+
+      <button class="burger" type="button">
+        <span class="sr-only">
+          Menu
+        </span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
     </nav>
   </div>
 
@@ -126,29 +140,27 @@
 
    <div class="swiper-container gallery-thumbs">
      <div class="swiper-wrapper">
-       <div class="swiper-slide">
-         <img src="img/single-page/shoes-big.jpg" alt="B-Runner asymmetrical sneakers" />
-       </div>
 
        <div class="swiper-slide">
          <img src="img/single-page/shoes-big.jpg" alt="B-Runner asymmetrical sneakers" />
        </div>
 
        <div class="swiper-slide">
-         <img src="img/single-page/shoes-big.jpg" alt="B-Runner asymmetrical sneakers" />
+         <img src="img/single-page/sneakers.jpg" alt="B-Runner asymmetrical sneakers" />
        </div>
 
        <div class="swiper-slide">
-         <img src="img/single-page/shoes-big.jpg" alt="B-Runner asymmetrical sneakers" />
+         <img src="img/single-page/sneakers-nike.jpg" alt="B-Runner asymmetrical sneakers" />
        </div>
 
        <div class="swiper-slide">
-         <img src="img/single-page/shoes-big.jpg" alt="B-Runner asymmetrical sneakers" />
+         <img src="img/single-page/shoes-mans.jpg" alt="B-Runner asymmetrical sneakers" />
        </div>
 
        <div class="swiper-slide">
-         <img src="img/single-page/shoes-big.jpg" alt="B-Runner asymmetrical sneakers" />
+         <img src="img/single-page/sneakers-woman.jpg" alt="B-Runner asymmetrical sneakers" />
        </div>
+
 
      </div>
    </div>
@@ -156,105 +168,105 @@
    <div class="swiper-container gallery-preview">
 
      <div class="swiper-wrapper">
-       <div class="swiper-slide">
-         <img src="img/single-page/shoes-big.jpg" alt="B-Runner asymmetrical sneakers"/>
-       </div>
+        <div class="swiper-slide">
+          <img src="img/single-page/shoes-big.jpg" alt="B-Runner asymmetrical sneakers" />
+        </div>
 
-       <div class="swiper-slide">
-         <img src="img/single-page/shoes-big.jpg" alt="B-Runner asymmetrical sneakers"/>
-       </div>
+        <div class="swiper-slide">
+          <img src="img/single-page/sneakers.jpg" alt="B-Runner asymmetrical sneakers" />
+        </div>
 
-       <div class="swiper-slide">
-         <img src="img/single-page/shoes-big.jpg" alt="B-Runner asymmetrical sneakers"/>
-       </div>
+        <div class="swiper-slide">
+          <img src="img/single-page/sneakers-nike.jpg" alt="B-Runner asymmetrical sneakers" />
+        </div>
 
-       <div class="swiper-slide">
-         <img src="img/single-page/shoes-big.jpg" alt="B-Runner asymmetrical sneakers"/>
-       </div>
+        <div class="swiper-slide">
+          <img src="img/single-page/shoes-mans.jpg" alt="B-Runner asymmetrical sneakers" />
+        </div>
 
-       <div class="swiper-slide">
-         <img src="img/single-page/shoes-big.jpg" alt="B-Runner asymmetrical sneakers"/>
-       </div>
-
-       <div class="swiper-slide">
-         <img src="img/single-page/shoes-big.jpg" alt="B-Runner asymmetrical sneakers"/>
-       </div>
+        <div class="swiper-slide">
+          <img src="img/single-page/sneakers-woman.jpg" alt="B-Runner asymmetrical sneakers" />
+        </div>
 
      </div>
+  <div class="gallery-preview__pagination">
+    <div class="swiper-button-next">
+      <span class="sr-only">
+        Next slide
+      </span>
+    </div>
 
+    <div class="swiper-pagination">
+      <span class="sr-only">
+        Slider pagination
+      </span>
+    </div>
+
+    <div class="swiper-button-prev">
+      <span class="sr-only">
+        Prev slide
+      </span>
+    </div>
+  </div>
    </div>
 
-   <div class="gallery-preview__pagination">
-     <div class="swiper-button-next">
-       <span class="sr-only">
-         Next slide
-       </span>
-     </div>
-
-     <div class="swiper-pagination">
-       <span class="sr-only">
-         Slider pagination
-       </span>
-     </div>
-
-     <div class="swiper-button-prev">
-       <span class="sr-only">
-         Prev slide
-       </span>
-     </div>
-   </div>
+ 
 
  </div>
 
         <div class="single-info">
+  <div class="single-info__wrapper">
+    <div class="single-info__inner">
+      <h1>
+        Burberry
+      </h1>
 
-  <h1>
-    Burberry
-  </h1>
+      <p>
+        B-Runner asymmetrical sneakers
+      </p>
 
-  <p>
-    B-Runner asymmetrical sneakers
-  </p>
+      <span>$250.00</span>
 
-  <span>$250.00</span>
+      <div class="single-info__color">
+        <span>Color:</span>
 
-  <div class="single-info__color">
-    <span>Color:</span>
+        <span>Black</span>
 
-    <span>Black</span>
-
-    <form class="single-info__thumb" action="#">
-
-      <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
-        <span class="custom-checkbox__content">
-          <img class="single-info__thumb-img single-info__thumb-img--active" src="img/single-page/shoes-small-w.jpg"
-            alt="B-Runner asymmetrical sneakers thumb" width="50" height="50">
-        </span>
-      </label>
-
-      <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
-        <span class="custom-checkbox__content">
-          <img class="single-info__thumb-img" src=" img/single-page/shoes-small-b.jpg"
-            alt="B-Runner asymmetrical sneakers thumb" width="50" height="50">
-        </span>
-      </label>
+        <form class="single-info__thumb" action="#">
 
 
-    </form>
-  </div>
+          <label class="custom-checkbox">
+            <input class="custom-checkbox__field" type="radio" name="color-radio" checked>
+            <span class="custom-checkbox__content">
+              <img class="single-info__thumb-img single-info__thumb-img--active" src="img/single-page/shoes-small-w.jpg"
+                alt="B-Runner asymmetrical sneakers thumb" width="50" height="50">
+            </span>
+          </label>
 
-  <span class="single-info__size">
-    Size:
-  </span>
+          <label class="custom-checkbox">
+            <input class="custom-checkbox__field" type="radio" name="color-radio">
+            <span class="custom-checkbox__content">
+              <img class="single-info__thumb-img" src=" img/single-page/shoes-small-w.jpg"
+                alt="B-Runner asymmetrical sneakers thumb" width="50" height="50">
+            </span>
+          </label>
 
-  <form class="filter-size @class" action="#">
+
+        </form>
+      </div>
+    </div>
+
+    <div class="single-info__inner">
+      <span class="single-info__size">
+        Size:
+      </span>
+
+      <form class="filter-size @class" action="#">
 
   <ul class="filter-size__list">
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
+        <input type="radio" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           36
         </span>
@@ -263,7 +275,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
+        <input type="radio" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           36,5
         </span>
@@ -272,7 +284,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
+        <input type="radio" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           37
         </span>
@@ -281,7 +293,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
+        <input type="radio" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           37,5 </span>
       </label>
@@ -289,7 +301,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
+        <input type="radio" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           38
         </span>
@@ -298,7 +310,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
+        <input type="radio" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           38,5
         </span>
@@ -307,7 +319,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
+        <input type="radio" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           39
         </span>
@@ -316,7 +328,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
+        <input type="radio" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           39,5
         </span>
@@ -325,7 +337,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
+        <input type="radio" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           40
         </span>
@@ -334,7 +346,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
+        <input type="radio" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           40,5
         </span>
@@ -343,7 +355,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
+        <input type="radio" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           41
         </span>
@@ -352,7 +364,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
+        <input type="radio" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           41,5
         </span>
@@ -362,7 +374,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
+        <input type="radio" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           42
         </span>
@@ -371,7 +383,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
+        <input type="radio" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           42,5
         </span>
@@ -380,7 +392,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
+        <input type="radio" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           43
         </span>
@@ -389,7 +401,7 @@
 
     <li class="filter-size__item filter-size__item--disabled">
       <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field" disabled>
+        <input type="radio" name="size" class="custom-checkbox__field" disabled>
         <span class="custom-checkbox__content">
           44
         </span>
@@ -398,7 +410,7 @@
 
     <li class="filter-size__item filter-size__item--disabled">
       <label class="custom-checkbox custom-checkbox--disabled">
-        <input type="checkbox" class="custom-checkbox__field" disabled>
+        <input type="radio" name="size" class="custom-checkbox__field" disabled>
         <span class="custom-checkbox__content">
           45
         </span>
@@ -408,22 +420,23 @@
 
 </form>
 
-  <div class="single-info__btns">
-    <button class="btn-shop" type="button">
-      Shop now
-    </button>
+      <div class="single-info__btns">
+        <button class="btn-shop" type="button">
+          Shop now
+        </button>
 
-    <button class="btn-favorite">
-      <span class="sr-only">
-        Add to favorite
-      </span>
+        <button class="btn-favorite">
+          <span class="sr-only">
+            Add to favorite
+          </span>
 
-      <svg class="header__action-icon">
-        <use xlink:href="img/sprite.svg#favorite"></use>
-      </svg>
-    </button>
+          <svg class="single-info__icon">
+            <use xlink:href="img/sprite.svg#favorite"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
   </div>
-
   <ul class="accordion">
 
     <li class="accordion__item ">

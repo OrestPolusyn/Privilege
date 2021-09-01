@@ -27,6 +27,7 @@
       </a>
 
       <ul class="header__menu">
+
         <li class="header__item">
           <a class="header__link" href="#">
             Designers
@@ -78,11 +79,15 @@
           <use xlink:href="img/sprite.svg#search"></use>
         </svg>
 
-        <input class="search__header search__field" id="search__field" type="search" placeholder="Search..." name="search">
+        <input class="search__header search__field" id="search__field" type="search" placeholder="Search..."
+          name="search">
 
-        <svg class="search__icon search__icon--close">
-          <use xlink:href="img/sprite.svg#close"></use>
-        </svg>
+        <button class="search__close" type="button">
+          <span class="sr-only">
+            Close search field
+          </span>
+        </button>
+
       </form>
 
       <ul class="header__action">
@@ -111,6 +116,15 @@
 
 
       </ul>
+
+      <button class="burger" type="button">
+        <span class="sr-only">
+          Menu
+        </span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
     </nav>
   </div>
 
@@ -320,11 +334,9 @@
         Number of item
       </label>
       <select class="js-choice" name="number" id="numbers">
-        <option value="12">12</option>
-        <option value="16">16</option>
-        <option value="32">32</option>
-        <option value="64">64</option>
-        <option value="128">128</option>
+        <option value="3">3</option>
+        <option value="6">6</option>
+        <option value="9">9</option>
       </select>
       
       <label class="sr-only" for="numbers">
@@ -345,7 +357,7 @@
   <ul class="catalog-list__grid">
     <li class="catalog-list__item">
       <article class="product-article">
-  <img src="img/catalog-list/shoes.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="440">
+  <img src="img/catalog-list/shoes.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="@height">
   <h3>Burberry</h3>
   <p>B-Runner asymmetrical sneakers</p>
   <span> $ 250.00</span>
@@ -354,7 +366,7 @@
 
     <li class="catalog-list__item">
       <article class="product-article">
-  <img src="img/catalog-list/shoes-pool.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="440">
+  <img src="img/catalog-list/shoes-pool.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="@height">
   <h3>Burberry</h3>
   <p>B-Runner asymmetrical sneakers</p>
   <span> $ 250.00</span>
@@ -363,7 +375,7 @@
 
     <li class="catalog-list__item">
       <article class="product-article">
-  <img src="img/catalog-list/sneakers.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="440">
+  <img src="img/catalog-list/sneakers.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="@height">
   <h3>Burberry</h3>
   <p>B-Runner asymmetrical sneakers</p>
   <span> $ 250.00</span>
@@ -372,7 +384,7 @@
     
     <li class="catalog-list__item">
       <article class="product-article">
-  <img src="img/catalog-list/shoes.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="440">
+  <img src="img/catalog-list/shoes.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="@height">
   <h3>Burberry</h3>
   <p>B-Runner asymmetrical sneakers</p>
   <span> $ 250.00</span>
@@ -381,7 +393,7 @@
 
     <li class="catalog-list__item">
       <article class="product-article">
-  <img src="img/catalog-list/sneakers-color.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="440">
+  <img src="img/catalog-list/sneakers-color.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="@height">
   <h3>Burberry</h3>
   <p>B-Runner asymmetrical sneakers</p>
   <span> $ 250.00</span>
@@ -390,7 +402,7 @@
 
     <li class="catalog-list__item">
       <article class="product-article">
-  <img src="img/catalog-list/sneakers.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="440">
+  <img src="img/catalog-list/sneakers.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="@height">
   <h3>Burberry</h3>
   <p>B-Runner asymmetrical sneakers</p>
   <span> $ 250.00</span>
@@ -398,16 +410,7 @@
     </li>
     <li class="catalog-list__item">
       <article class="product-article">
-  <img src="img/catalog-list/shoes.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="440">
-  <h3>Burberry</h3>
-  <p>B-Runner asymmetrical sneakers</p>
-  <span> $ 250.00</span>
-</article>
-    </li>
-
-    <li class="catalog-list__item">
-      <article class="product-article">
-  <img src="img/catalog-list/sneakers-color.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="440">
+  <img src="img/catalog-list/shoes.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="@height">
   <h3>Burberry</h3>
   <p>B-Runner asymmetrical sneakers</p>
   <span> $ 250.00</span>
@@ -416,15 +419,7 @@
 
     <li class="catalog-list__item">
       <article class="product-article">
-  <img src="img/catalog-list/sneakers.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="440">
-  <h3>Burberry</h3>
-  <p>B-Runner asymmetrical sneakers</p>
-  <span> $ 250.00</span>
-</article>
-    </li>
-    <li class="catalog-list__item">
-      <article class="product-article">
-  <img src="img/catalog-list/shoes.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="440">
+  <img src="img/catalog-list/sneakers-color.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="@height">
   <h3>Burberry</h3>
   <p>B-Runner asymmetrical sneakers</p>
   <span> $ 250.00</span>
@@ -433,7 +428,15 @@
 
     <li class="catalog-list__item">
       <article class="product-article">
-  <img src="img/catalog-list/sneakers-color.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="440">
+  <img src="img/catalog-list/sneakers.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="@height">
+  <h3>Burberry</h3>
+  <p>B-Runner asymmetrical sneakers</p>
+  <span> $ 250.00</span>
+</article>
+    </li>
+    <li class="catalog-list__item">
+      <article class="product-article">
+  <img src="img/catalog-list/shoes.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="@height">
   <h3>Burberry</h3>
   <p>B-Runner asymmetrical sneakers</p>
   <span> $ 250.00</span>
@@ -442,7 +445,16 @@
 
     <li class="catalog-list__item">
       <article class="product-article">
-  <img src="img/catalog-list/sneakers.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="440">
+  <img src="img/catalog-list/sneakers-color.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="@height">
+  <h3>Burberry</h3>
+  <p>B-Runner asymmetrical sneakers</p>
+  <span> $ 250.00</span>
+</article>
+    </li>
+
+    <li class="catalog-list__item">
+      <article class="product-article">
+  <img src="img/catalog-list/sneakers.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="@height">
   <h3>Burberry</h3>
   <p>B-Runner asymmetrical sneakers</p>
   <span> $ 250.00</span>
@@ -482,25 +494,25 @@
       </a>
     </li>
 
-    <li class="pagination__item">
+    <li class="pagination__item pagination__item--mobile">
       <a href="#" class="pagination__link">
         3
       </a>
     </li>
 
-    <li class="pagination__item">
+    <li class="pagination__item pagination__item--mobile">
       <a href="#" class="pagination__link">
         4
       </a>
     </li>
 
-    <li class="pagination__item">
+    <li class="pagination__item pagination__item--mobile">
       <a href="#" class="pagination__link">
         5
       </a>
     </li>
 
-    <li class="pagination__item">
+    <li class="pagination__item pagination__item--mobile">
       <a href="#" class="pagination__link">
         6
       </a>
@@ -895,12 +907,12 @@
           Size
         </span>
 
-        <form class="filter-size accordion__filter" action="#">
+        <form class="filter-size @class" action="#">
 
   <ul class="filter-size__list">
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
+        <input type="checkbox" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           36
         </span>
@@ -909,7 +921,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
+        <input type="checkbox" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           36,5
         </span>
@@ -918,7 +930,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
+        <input type="checkbox" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           37
         </span>
@@ -927,7 +939,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
+        <input type="checkbox" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           37,5 </span>
       </label>
@@ -935,7 +947,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
+        <input type="checkbox" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           38
         </span>
@@ -944,7 +956,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
+        <input type="checkbox" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           38,5
         </span>
@@ -953,7 +965,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
+        <input type="checkbox" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           39
         </span>
@@ -962,7 +974,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
+        <input type="checkbox" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           39,5
         </span>
@@ -971,7 +983,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
+        <input type="checkbox" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           40
         </span>
@@ -980,7 +992,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
+        <input type="checkbox" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           40,5
         </span>
@@ -989,7 +1001,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
+        <input type="checkbox" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           41
         </span>
@@ -998,7 +1010,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
+        <input type="checkbox" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           41,5
         </span>
@@ -1008,7 +1020,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
+        <input type="checkbox" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           42
         </span>
@@ -1017,7 +1029,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
+        <input type="checkbox" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           42,5
         </span>
@@ -1026,7 +1038,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
+        <input type="checkbox" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           43
         </span>
@@ -1035,7 +1047,7 @@
 
     <li class="filter-size__item filter-size__item--disabled">
       <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field" disabled>
+        <input type="checkbox" name="size" class="custom-checkbox__field" disabled>
         <span class="custom-checkbox__content">
           44
         </span>
@@ -1044,7 +1056,166 @@
 
     <li class="filter-size__item filter-size__item--disabled">
       <label class="custom-checkbox custom-checkbox--disabled">
-        <input type="checkbox" class="custom-checkbox__field" disabled>
+        <input type="checkbox" name="size" class="custom-checkbox__field" disabled>
+        <span class="custom-checkbox__content">
+          45
+        </span>
+      </label>
+    </li>
+  </ul>
+
+</form>
+
+        <form class="filter-size accordion__filter" action="#">
+
+  <ul class="filter-size__list">
+    <li class="filter-size__item">
+      <label class="custom-checkbox">
+        <input type="@type" name="@choose" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          36
+        </span>
+      </label>
+    </li>
+
+    <li class="filter-size__item">
+      <label class="custom-checkbox">
+        <input type="@type" name="@choose" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          36,5
+        </span>
+      </label>
+    </li>
+
+    <li class="filter-size__item">
+      <label class="custom-checkbox">
+        <input type="@type" name="@choose" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          37
+        </span>
+      </label>
+    </li>
+
+    <li class="filter-size__item">
+      <label class="custom-checkbox">
+        <input type="@type" name="@choose" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          37,5 </span>
+      </label>
+    </li>
+
+    <li class="filter-size__item">
+      <label class="custom-checkbox">
+        <input type="@type" name="@choose" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          38
+        </span>
+      </label>
+    </li>
+
+    <li class="filter-size__item">
+      <label class="custom-checkbox">
+        <input type="@type" name="@choose" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          38,5
+        </span>
+      </label>
+    </li>
+
+    <li class="filter-size__item">
+      <label class="custom-checkbox">
+        <input type="@type" name="@choose" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          39
+        </span>
+      </label>
+    </li>
+
+    <li class="filter-size__item">
+      <label class="custom-checkbox">
+        <input type="@type" name="@choose" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          39,5
+        </span>
+      </label>
+    </li>
+
+    <li class="filter-size__item">
+      <label class="custom-checkbox">
+        <input type="@type" name="@choose" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          40
+        </span>
+      </label>
+    </li>
+
+    <li class="filter-size__item">
+      <label class="custom-checkbox">
+        <input type="@type" name="@choose" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          40,5
+        </span>
+      </label>
+    </li>
+
+    <li class="filter-size__item">
+      <label class="custom-checkbox">
+        <input type="@type" name="@choose" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          41
+        </span>
+      </label>
+    </li>
+
+    <li class="filter-size__item">
+      <label class="custom-checkbox">
+        <input type="@type" name="@choose" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          41,5
+        </span>
+      </label>
+    </li>
+
+
+    <li class="filter-size__item">
+      <label class="custom-checkbox">
+        <input type="@type" name="@choose" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          42
+        </span>
+      </label>
+    </li>
+
+    <li class="filter-size__item">
+      <label class="custom-checkbox">
+        <input type="@type" name="@choose" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          42,5
+        </span>
+      </label>
+    </li>
+
+    <li class="filter-size__item">
+      <label class="custom-checkbox">
+        <input type="@type" name="@choose" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">
+          43
+        </span>
+      </label>
+    </li>
+
+    <li class="filter-size__item filter-size__item--disabled">
+      <label class="custom-checkbox">
+        <input type="@type" name="@choose" class="custom-checkbox__field" disabled>
+        <span class="custom-checkbox__content">
+          44
+        </span>
+      </label>
+    </li>
+
+    <li class="filter-size__item filter-size__item--disabled">
+      <label class="custom-checkbox custom-checkbox--disabled">
+        <input type="@type" name="@choose" class="custom-checkbox__field" disabled>
         <span class="custom-checkbox__content">
           45
         </span>

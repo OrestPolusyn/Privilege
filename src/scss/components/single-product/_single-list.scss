@@ -8,12 +8,29 @@
 
   &__list {
     @include flex-all-sb;
+
+    @include mobile-m {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  img {
+    height: auto;
   }
 
   &__item {
 
     &:not(:last-child) {
       margin-right: 20px;
+
+
     }
+
+    @include mobile-m {
+      margin: 0 20px 30px;
+    }
+
   }
 }

@@ -2,14 +2,29 @@
   @include flex-s-sb;
   margin-bottom: 40px;
 
+  @include mobile-m {
+    display: block;
+  }
+
+
   &__btn {
     padding: 13px 50px;
+
+    &:first-child {
+      @include mobile-m {
+        margin-bottom: 24px;
+      }
+    }
   }
 
   &__selectors {
     @include flex-s-sb;
     max-width: 254px;
     width: 100%;
+
+    @include mobile-m {
+      max-width: 245px;
+    }
 
     .choices {
       position: relative;
@@ -138,9 +153,13 @@
   }
 
   &__item {
-    margin-bottom: 40px;
     transition: all 0.5s ease-in;
     position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+
+    }
   }
 
   &__filter {
@@ -220,7 +239,7 @@
 }
 
 .accordion-active {
-  
+
   &.accordion__name {
     padding-bottom: 8px;
   }
@@ -231,11 +250,10 @@
     overflow: visible;
   }
 
-
   &.accordion__name {
     &::before {
       transform: translateY(-50%) rotate(-180deg);
     }
   }
-  
+
 }

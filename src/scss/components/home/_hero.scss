@@ -1,6 +1,18 @@
 .hero {
   margin-bottom: 150px;
 
+  @include tablet {
+    margin-bottom: 100px;
+  }
+
+  @include mobile {
+    margin-bottom: 60px;
+  }
+
+  @include mobile-m {
+    margin-bottom: 30px;
+  }
+
   .swiper-slider {
     margin: 0 auto;
     padding: 0;
@@ -11,23 +23,58 @@
     @include flex-v-center;
     justify-content: space-between;
     position: relative;
+    align-items: flex-end;
+
+    @include mobile-m {
+      flex-wrap: wrap-reverse;
+    }
 
     &.swiper-slide-active {
       background-color: #ffffff;
     }
 
     &__inner {
-
       max-width: 644px;
       width: 100%;
 
+      @include mobile {
+        padding: 0 20px;
+      }
+
+      @include mobile-m {
+        max-width: 420px;
+        margin: 0 auto;
+      }
+
       &:first-child {
-        transform: translateX(15%);
+        margin-bottom: 170px;
+
+        @include tablet {
+          margin-bottom: 80px;
+        }
+
+        @include mobile {
+          margin-bottom: 0;
+        }
+
       }
 
       h2 {
         @include H;
         margin-bottom: 24px;
+
+        @include tablet {
+          font-size: 51px;
+        }
+
+        @include mobile {
+          font-size: 26px;
+          margin-bottom: 12px;
+        }
+
+        @include mobile-s {
+          font-size: 24px;
+        }
       }
 
       p {
@@ -36,18 +83,31 @@
         width: 100%;
         font-size: 14px;
         line-height: 1.7;
+
+        @include mobile-s {
+          padding-right: 20px;
+        }
       }
 
       img {
         width: 100%;
+
+        @include mobile-s {
+          height: 250px;
+          object-fit: cover;
+        }
       }
     }
 
     &__btn {
       margin-bottom: 24px;
+
+      @include mobile-s {
+        width: 100%;
+        margin-bottom: 0;
+      }
     }
   }
 
-  
-}
 
+}

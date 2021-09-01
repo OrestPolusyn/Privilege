@@ -8,7 +8,6 @@
     font-size: 16px;
   }
 
-
   &__field {
     background-color: transparent;
     border: none;
@@ -30,12 +29,23 @@
     right: 0;
     background-color: transparent;
     border: none;
-    background-image: url('../img/sprite.svg#arrow-white');
+    background-color: #fff;
+    mask-image: url('../img/sprite.svg#arrow');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     width: 25px;
     height: 15px;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: var(--color-hover);
+    }
+
+    &:active {
+      background-color: var(--color-hover);
+    }
+
   }
 
   &__subscribe-icon {

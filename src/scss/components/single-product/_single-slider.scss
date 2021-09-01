@@ -1,24 +1,36 @@
 .product {
   @include flex-s-sb;
   margin-top: 10px;
+  margin-bottom: 100px;
+
+  @include tablet {
+    display: block;
+  }
 
   &__gallery {
-    max-width: 815px;
-    width: 100%;
+    width: 65%;
     display: flex;
     position: relative;
     margin-right: 30px;
+
+    @include tablet {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 50px;
+    }
   }
 
   .gallery-thumbs {
-    width: 150px;
-    height: 864px;
+    width: 19%;
     margin-right: 20px;
+
+    @include tablet {
+      width: 25%;
+    }
 
     .swiper-slide {
       cursor: pointer;
-      width: 150px;
-      height: 194px;
+      object-fit: cover;
       position: relative;
 
       &::before {
@@ -29,6 +41,17 @@
         right: 0;
         left: 0;
         background: rgba(0, 0, 0, 0.4);
+        transition: background-color 0.3s ease-out;
+      }
+
+      &:hover {
+        &::before {
+          background-color: transparent;
+        }
+      }
+
+      img {
+        height: 100%;
       }
     }
 
@@ -42,13 +65,18 @@
   }
 
   .gallery-preview {
-    max-width: 635px;
-    width: 100%;
     position: relative;
+    width: calc(100% - 150px);
+    max-height: 816px;
+
+    @include tablet {
+      width: 100%;
+    }
+
 
     &__pagination {
       position: absolute;
-      bottom: -110px;
+      bottom: 30px;
       height: 40px;
       z-index: 10;
       width: 100%;
@@ -58,6 +86,10 @@
       max-width: 140px;
       width: 100%;
       right: 0;
+
+      @include mobile-m {
+        bottom: 5px;
+      }
 
       .swiper-pagination {
         position: relative;
@@ -117,8 +149,8 @@
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
+
+
+
   }
-
-
-
 }

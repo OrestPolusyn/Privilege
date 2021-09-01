@@ -1,17 +1,142 @@
 .purpose {
-  margin-bottom: 142px;
+  margin-bottom: 215px;
+
+  @include tablet {
+    margin-bottom: 100px;
+  }
 
   &__list {
-    column-count: 3;
-    column-gap: 90px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 160px);
+    grid-column-gap: 90px;
+    grid-row-gap: 80px;
+
+    @include tablet {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(7, 1fr);
+      grid-column-gap: 50px;
+      grid-row-gap: 30px;
+    }
+
+    @include mobile-m {
+      padding-top: 150px;
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+    }
   }
 
-  p {
+  &__item {
+    position: relative;
+    cursor: pointer;
+    padding-left: 54px;
+    justify-self: center;
+    align-self: flex-start;
+
+
+    @include tablet {
+      padding-left: 30px;
+    }
+
+    @include mobile {
+      padding-left: 20px;
+    }
+
+    &--clothing {
+      grid-area: 1 / 1 / 3 / 2;
+
+      @include tablet {
+        grid-area: 2 / 1 / 4 / 3;
+      }
+    }
+
+    &--text {
+      grid-area: 1 / 2 / 2 / 3;
+      padding-left: 0;
+      max-width: 300px;
+      margin-left: auto;
+      transform: translateX(8px);
+      letter-spacing: -0.01em;
+
+      @include tablet {
+        grid-area: 1 / 2 / 2 / 4;
+      }
+
+      @include mobile {
+        grid-area: 1 / 1 / 4 / 5;
+        max-width: 70%;
+        margin: 0 auto;
+      }
+
+      @include mobile-m {
+        transform: translateY(-65%);
+        max-width: 100%;
+      }
+    }
+
+    &--accessories {
+      grid-area: 1 / 3 / 3 / 4;
+
+      @include tablet {
+        grid-area: 2 / 3 / 4 / 5;
+      }
+    }
+
+    &--grooming {
+      grid-area: 3 / 1 / 5 / 2;
+
+      @include tablet {
+        grid-area: 6 / 1 / 8 / 3;
+      }
+
+    }
+
+    &--shoes {
+      grid-area: 2 / 2 / 4 / 3;
+      transform: translateY(40px);
+
+      @include tablet {
+        grid-area: 4 / 2 / 6 / 4;
+        transform: translateY(0);
+      }
+    }
+
+    &--gift {
+      grid-area: 3 / 3 / 5 / 4;
+
+      @include tablet {
+        grid-area: 6 / 3 / 8 / 5;
+      }
+    }
+
+    &:hover {
+      .purpose__link-text {
+        background-position: 0 100%;
+      }
+
+      .purpose__img {
+        filter: drop-shadow(0px 16px 24px rgba(0, 0, 0, 0.06)) drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.04)) drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.04));
+      }
+    }
+
+    &:active {
+      .purpose__link-text {
+        background-position: 0 100%;
+      }
+
+      .purpose__img {
+        filter: drop-shadow(0px 16px 24px rgba(0, 0, 0, 0.06)) drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.04)) drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.04));
+      }
+    }
+  }
+
+  &__text {
     text-align: center;
-    margin-bottom: 32px;
+    margin-bottom: 30px;
+    line-height: 1.75;
   }
 
-  h2 {
+  &__title {
     text-align: center;
     font: $font-btn;
     letter-spacing: 0.2em;
@@ -22,7 +147,7 @@
     margin: auto;
     border-top: 2px solid transparent;
     border-bottom: 2px solid var(--color-golden);
-    padding: 8px 0;
+    padding: 10px 0;
     transition: all 0.35s ease-in-out;
     z-index: 1;
 
@@ -33,7 +158,7 @@
       left: 0;
       width: 0;
       bottom: 0;
-      background-color: var(--color-btn-hover);
+      background-color: var(--color-hover);
       transition: all 0.35s ease-in-out;
       color: #fff;
       z-index: -1;
@@ -48,38 +173,15 @@
     }
 
     &:active {
-      background-color: var(--color-btn-hover);
-    }
-
-  }
-
-  &__item {
-    display: inline-block;
-    margin: 0 0 1em;
-    width: 100%;
-    position: relative;
-    margin-bottom: 70px;
-    cursor: pointer;
-
-
-    &:hover {
-      .purpose__link-text {
-        background-position: 0 100%;
-        font-weight: 700;
-      }
-    }
-
-    &--text {
-      margin-bottom: 84px;
-      max-width: 303px;
-      width: 100%;
-      margin-left: 60px;
+      background-color: var(--color-hover);
     }
   }
 
   &__link {
     width: 100%;
     height: 100%;
+    position: absolute;
+    left: 0;
   }
 
   &__link-text {
@@ -92,11 +194,22 @@
     @include H3;
     transition: background-position 0.3s ease-in,
       font-weight 0.53s ease-in-out;
+
+    @include tablet {
+      font-size: 18px;
+    }
+
+    @include mobile-m {
+      font-size: 14px;
+    }
   }
 
-  img {
+  &__img {
     margin-left: auto;
     max-width: 300px;
     width: 100%;
+    height: auto;
+    transition: filter 0.3s ease-in-out;
+
   }
 }

@@ -1,22 +1,58 @@
 .blog {
-
   margin-bottom: 170px;
+
+  @include tablet {
+    margin-bottom: 60px;
+  }
 
   &__wrap {
     @include flex-s-sb;
+
+    @include tablet {
+      display: block;
+    }
   }
 
+  &__item {
+    max-width: 300px;
+    width: 100%;
+    position: relative;
 
+    @include mobile-m {
+      max-width: 190px;
+    }
+
+    &:first-child {
+      margin-right: 30px;
+
+      @include mobile-m {
+        margin-right: 10px;
+      }
+    }
+
+
+  }
 
   &__inner {
+    @include mobile-s {
+      margin-bottom: 26px;
+    }
 
     &:first-child {
       max-width: 385px;
       width: 100%;
+
+      @include tablet {
+        margin-bottom: 50px;
+      }
     }
 
     &:last-child {
       display: flex;
+
+      @include tablet {
+        justify-content: space-evenly;
+      }
     }
 
     h2 {
@@ -29,19 +65,30 @@
       @include body;
     }
   }
+
+  &__btn-shop {
+    @include mobile-s {
+      display: none;
+    }
+  }
+
+  &__btn-all {
+    display: none;
+
+    @include mobile-s {
+      display: block;
+    }
+  }
 }
 
 .blog-article {
-  max-width: 300px;
-  width: 100%;
-  position: relative;
-
-  &:first-child {
-    margin-right: 30px;
-  }
-
+  cursor: pointer;
   img {
     margin-bottom: 24px;
+
+    @include mobile-m {
+      height: 205px;
+    }
   }
 
   span {
@@ -53,6 +100,11 @@
 
   h3 {
     @include H4;
+    transition: color 0.3s ease-in-out;
+
+    @include mobile-m {
+      font-size: 16px;
+    }
   }
 
 
@@ -63,5 +115,11 @@
     right: 0;
     left: 0;
     cursor: pointer;
+  }
+
+  &:hover {
+    h3 {
+      color: var(--color-hover);
+    }
   }
 }

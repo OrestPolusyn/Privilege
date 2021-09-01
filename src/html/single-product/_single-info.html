@@ -1,66 +1,73 @@
 <div class="single-info">
+  <div class="single-info__wrapper">
+    <div class="single-info__inner">
+      <h1>
+        Burberry
+      </h1>
 
-  <h1>
-    Burberry
-  </h1>
+      <p>
+        B-Runner asymmetrical sneakers
+      </p>
 
-  <p>
-    B-Runner asymmetrical sneakers
-  </p>
+      <span>$250.00</span>
 
-  <span>$250.00</span>
+      <div class="single-info__color">
+        <span>Color:</span>
 
-  <div class="single-info__color">
-    <span>Color:</span>
+        <span>Black</span>
 
-    <span>Black</span>
-
-    <form class="single-info__thumb" action="#">
-
-      <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
-        <span class="custom-checkbox__content">
-          <img class="single-info__thumb-img single-info__thumb-img--active" src="img/single-page/shoes-small-w.jpg"
-            alt="B-Runner asymmetrical sneakers thumb" width="50" height="50">
-        </span>
-      </label>
-
-      <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
-        <span class="custom-checkbox__content">
-          <img class="single-info__thumb-img" src=" img/single-page/shoes-small-b.jpg"
-            alt="B-Runner asymmetrical sneakers thumb" width="50" height="50">
-        </span>
-      </label>
+        <form class="single-info__thumb" action="#">
 
 
-    </form>
-  </div>
+          <label class="custom-checkbox">
+            <input class="custom-checkbox__field" type="radio" name="color-radio" checked>
+            <span class="custom-checkbox__content">
+              <img class="single-info__thumb-img single-info__thumb-img--active" src="img/single-page/shoes-small-w.jpg"
+                alt="B-Runner asymmetrical sneakers thumb" width="50" height="50">
+            </span>
+          </label>
 
-  <span class="single-info__size">
-    Size:
-  </span>
+          <label class="custom-checkbox">
+            <input class="custom-checkbox__field" type="radio" name="color-radio">
+            <span class="custom-checkbox__content">
+              <img class="single-info__thumb-img" src=" img/single-page/shoes-small-w.jpg"
+                alt="B-Runner asymmetrical sneakers thumb" width="50" height="50">
+            </span>
+          </label>
 
-  @include('../filters/_filter-size.html',{
-  name:"catalog"
-  })
 
-  <div class="single-info__btns">
-    <button class="btn-shop" type="button">
-      Shop now
-    </button>
+        </form>
+      </div>
+    </div>
 
-    <button class="btn-favorite">
-      <span class="sr-only">
-        Add to favorite
+    <div class="single-info__inner">
+      <span class="single-info__size">
+        Size:
       </span>
 
-      <svg class="header__action-icon">
-        <use xlink:href="img/sprite.svg#favorite"></use>
-      </svg>
-    </button>
-  </div>
+      @include('../filters/_filter-size.html',{
+      name:"catalog",
+      type:"radio",
+      choose:"size"
+      })
 
+      <div class="single-info__btns">
+        <button class="btn-shop" type="button">
+          Shop now
+        </button>
+
+        <button class="btn-favorite">
+          <span class="sr-only">
+            Add to favorite
+          </span>
+
+          <svg class="single-info__icon">
+            <use xlink:href="img/sprite.svg#favorite"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
   <ul class="accordion">
 
     <li class="accordion__item ">

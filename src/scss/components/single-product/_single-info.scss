@@ -2,20 +2,60 @@
   max-width: 343px;
   width: 100%;
 
+  @include tablet {
+    max-width: 100%;
+  }
+
+  &__wrapper {
+    @include tablet {
+      display: flex;
+    }
+
+    @include mobile-m {
+      display: block;
+    }
+  }
+
+  &__inner {
+    &:not(:last-child) {
+      @include tablet {
+        margin-right: 50px;
+      }
+    }
+  }
+
   h1 {
     @include H2;
     margin-bottom: 8px;
+
+    @include mobile-m {
+      font-size: 26px;
+    }
   }
 
   p {
     @include body;
     margin-bottom: 24px;
 
+    @include mobile-m {
+      margin-bottom: 10px;
+    }
+
     &+span {
       @include subtitle;
       margin-bottom: 43px;
       display: inline-block;
+
+      @include mobile-m {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
     }
+  }
+
+  &__icon {
+    width: 27px;
+    height: 24px;
   }
 
   .filter-size {
@@ -26,12 +66,30 @@
     display: flex;
     margin-bottom: 34px;
 
+    @include mobile-m {
+      margin-bottom: 15px;
+    }
+
+    .custom-checkbox {
+      &:first-child {
+        margin-right: 15px;
+      }
+    }
+
     .custom-checkbox__field:checked+.custom-checkbox__content::after {
       opacity: 0;
     }
 
     .custom-checkbox__content {
       padding: 0;
+
+      &::after {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        opacity: 1;
+        background-image: none;
+      }
     }
 
     .custom-checkbox__content::before {
@@ -54,15 +112,15 @@
     margin-bottom: 24px;
     display: inline-block;
 
+    @include mobile-m {
+      margin-bottom: 15px;
+    }
+
   }
 
   &__thumb-img {
     width: 50px;
     height: 50px;
-
-    &:first-child {
-      margin-right: 15px;
-    }
 
     &--active {
       border: 1px solid var(--color-golden);
@@ -72,7 +130,15 @@
   &__btns {
     @include flex-s-sb;
     margin-bottom: 40px;
+
+    .btn-shop {
+      @include mobile {
+        padding: 13px 40px;
+      }
+    }
   }
+
+
 
   .accordion {
     &__name {
@@ -91,10 +157,6 @@
       max-height: 0;
       transition: all 0.3s ease-in;
       box-sizing: content-box;
-    }
-
-    &__item {
-      margin-bottom: 40px;
     }
   }
 }

@@ -10,6 +10,14 @@
     right: 0;
     bottom: 7px;
     z-index: 12;
+
+    @include mobile {
+      max-width: 74px;
+    }
+
+    @include mobile-m {
+      display: none;
+    }
   }
 
   .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
@@ -17,6 +25,12 @@
     width: 32px;
     height: 2px;
     background-color: #000;
+
+    @include mobile-s {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+    }
   }
 
 
@@ -25,10 +39,19 @@
   .swiper-container-horizontal>.swiper-pagination-bullets {
     transform: translateY(-50%);
 
+    @include mobile-s {
+      transform: translateY(0);
+
+    }
 
     .swiper-pagination-bullet {
+      margin-left: 0;
       &:not(:last-child) {
         margin-right: 18px;
+
+        @include mobile-s {
+          margin-right: 9px;
+        }
       }
     }
   }
@@ -41,6 +64,34 @@
     column-gap: 122px;
     row-gap: 56px;
     margin-bottom: 100px;
+
+    @include tablet {
+      column-gap: 60px;
+      row-gap: 30px;
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile-m {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+  }
+
+  .product-article {
+    max-width: 332px;
+    width: 100%;
+
+
+    h3 {
+      font-size: 15px;
+    }
+
+    span {
+      font-size: 14px;
+    }
   }
 
 }

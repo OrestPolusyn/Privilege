@@ -28,6 +28,7 @@
       </a>
 
       <ul class="header__menu">
+
         <li class="header__item">
           <a class="header__link" href="#">
             Designers
@@ -79,11 +80,15 @@
           <use xlink:href="img/sprite.svg#search"></use>
         </svg>
 
-        <input class="search__header search__field" id="search__field" type="search" placeholder="Search..." name="search">
+        <input class="search__header search__field" id="search__field" type="search" placeholder="Search..."
+          name="search">
 
-        <svg class="search__icon search__icon--close">
-          <use xlink:href="img/sprite.svg#close"></use>
-        </svg>
+        <button class="search__close" type="button">
+          <span class="sr-only">
+            Close search field
+          </span>
+        </button>
+
       </form>
 
       <ul class="header__action">
@@ -112,6 +117,15 @@
 
 
       </ul>
+
+      <button class="burger" type="button">
+        <span class="sr-only">
+          Menu
+        </span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
     </nav>
   </div>
 
@@ -128,7 +142,7 @@
 
     <ul class="swiper-wrapper">
       <li class="swiper-slide">
-        <div class="swiper-slide__inner">
+        <div class="swiper-slide__inner container">
   <h2>New Winter Collection</h2>
   <p>Free delivery from £30 and free returns - Returns extended to 60 days</p>
   <a class="swiper-slide__btn btn-shop" href="#">Shop now</a>
@@ -157,10 +171,14 @@
 
 </div>
 
-<div class="swiper-slide__inner">
+<div class="swiper-slide__inner ">
   <article class="slider-article">
 
-    <img src="img/hero/girl-cardigan.jpg" alt="Check knitted cardigan" width="644" height="725">
+    <picture>
+      <source media="(max-width: 576px)" srcset="img/hero/girl-cardigan-576w.jpg">
+      <source media="(min-width: 577px)" srcset="img/hero/girl-cardigan.jpg">
+      <img src="img/hero/girl-cardigan.jpg" alt="Check knitted cardigan" width="644" height="725">
+    </picture>
 
     <div class="slider-article__content">
       <h3>
@@ -186,7 +204,7 @@
 
       <li class="swiper-slide">
 
-        <div class="swiper-slide__inner">
+        <div class="swiper-slide__inner container">
   <h2>Denim collection in privilege</h2>
   <p>Free delivery from £30 and free returns - Returns extended to 60 days</p>
   <a class="swiper-slide__btn btn-shop" href="#">Shop now</a>
@@ -215,10 +233,14 @@
 
 </div>
 
-<div class="swiper-slide__inner">
+<div class="swiper-slide__inner ">
   <article class="slider-article">
 
-    <img src="img/hero/girls-jacket.jpg" alt="Check knitted cardigan" width="644" height="725">
+    <picture>
+      <source media="(max-width: 576px)" srcset="img/hero/girls-jacket-576w.jpg">
+      <source media="(min-width: 577px)" srcset="img/hero/girls-jacket.jpg">
+      <img src="img/hero/girls-jacket.jpg" alt="High-waisted culottes jeans & jacket" width="644" height="725">
+    </picture>
 
     <div class="slider-article__content">
       <h3>
@@ -244,7 +266,7 @@
 
       <li class="swiper-slide">
 
-        <div class="swiper-slide__inner">
+        <div class="swiper-slide__inner container">
   <h2>Skinny Jeans</h2>
   <p></p>
   <a class="swiper-slide__btn btn-shop" href="#">Shop now</a>
@@ -273,10 +295,14 @@
 
 </div>
 
-<div class="swiper-slide__inner">
+<div class="swiper-slide__inner ">
   <article class="slider-article">
 
-    <img src="img/hero/girl-black.jpg" alt="Check knitted cardigan" width="644" height="725">
+    <picture>
+      <source media="(max-width: 576px)" srcset="img/hero/girl-black-576w.jpg">
+      <source media="(min-width: 577px)" srcset="img/hero/girl-black.jpg">
+      <img src="img/hero/girl-black.jpg" alt="High-waisted culottes jeans & jacket" width="644" height="725">
+    </picture>
 
     <div class="slider-article__content">
       <h3>
@@ -308,80 +334,98 @@
 </section>
 
     <section class="purpose">
+
   <div class="container">
 
+
     <ul class="purpose__list ">
-      <li class="purpose__item">
-        <a class="purpose__link" href="#">
-
-          <span class="purpose__link-text">
-            Clothing
+      <li class="purpose__item purpose__item--clothing">
+        <a class="purpose__link " href="#">
+          <span class="sr-only">
+            Clothing link
           </span>
-
-          <img class="purpose__img" src="img/purpose-ron.jpg" alt="Clothing" width="300" height="400">
         </a>
-      </li>
+        <span class="purpose__link-text">
+          Clothing
+        </span>
 
-      <li class="purpose__item">
-        <a class="purpose__link" href="#">
+        <img class="purpose__img" src="img/purpose-ron.jpg" alt="Clothing" width="300" height="400">
 
-          <span class="purpose__link-text">
-            Grooming
-          </span>
-
-          <img class="purpose__img" src="img/purpose-shave.jpg" alt="Grooming" width="300" height="400">
-        </a>
       </li>
 
       <li class="purpose__item purpose__item--text">
+        <a class="purpose__link-title" href="#">
+          <p class="purpose__text">
+            Since 1991, Privilege has been based on a simple idea: to create a wardrobe that is accessible, chic and
+            sportswear, casual and urban. To accompany men on a daily basis.
+          </p>
 
-        <p>
-          Since 1991, Privilege has been based on a simple idea: to create a wardrobe that is accessible, chic and
-          sportswear, casual and urban. To accompany men on a daily basis.
-        </p>
 
-        <h2>
-          <a href="#">
+          <h2 class="purpose__title title">
             Our Purpose
-          </a>
-        </h2>
+          </h2>
+        </a>
 
       </li>
-
-      <li class="purpose__item">
-        <a class="purpose__link" href="#">
-
-          <span class="purpose__link-text">
-            Shoes
+      <li class="purpose__item purpose__item--accessories">
+        <a class="purpose__link " href="#">
+          <span class="sr-only">
+            Accessories link
           </span>
-
-          <img class="purpose__img" src="img/purpose-shoes.jpg" alt="Shoes" width="300" height="400">
         </a>
+        <span class="purpose__link-text">
+          Accessories
+        </span>
+
+        <img class="purpose__img" src="img/purpose-whatch.jpg" alt="Accessories" width="300" height="400">
       </li>
 
-      <li class="purpose__item">
-        <a class="purpose__link" href="#">
 
-          <span class="purpose__link-text">
-            Accessories
+      <li class="purpose__item purpose__item--grooming">
+        <a class="purpose__link " href="#">
+          <span class="sr-only">
+            Grooming link
           </span>
-
-          <img class="purpose__img" src="img/purpose-whatch.jpg" alt="Accessories" width="300" height="400">
         </a>
+
+        <span class="purpose__link-text">
+          Grooming
+        </span>
+
+        <img class="purpose__img" src="img/purpose-shave.jpg" alt="Grooming" width="300" height="400">
       </li>
 
-      <li class="purpose__item">
-        <a class="purpose__link" href="#">
-
-          <span class="purpose__link-text">
-            Gift
+      <li class="purpose__item purpose__item--shoes">
+        <a class="purpose__link " href="#">
+          <span class="sr-only">
+            Shoes link
           </span>
-
-          <img class="purpose__img" src="img/purpose-lamp.jpg" alt="Gift" width="300" height="400">
         </a>
+
+        <span class="purpose__link-text">
+          Shoes
+        </span>
+
+        <img class="purpose__img" src="img/purpose-shoes.jpg" alt="Shoes" width="300" height="400">
+      </li>
+
+      <li class="purpose__item purpose__item--gift">
+        <a class="purpose__link " href="#">
+          <span class="sr-only">
+            Gift link
+          </span>
+        </a>
+
+        <span class="purpose__link-text">
+          Gift
+        </span>
+
+        <img class="purpose__img" src="img/purpose-lamp.jpg" alt="Gift" width="300" height="400">
+
       </li>
 
     </ul>
+
 
   </div>
 </section>
@@ -608,12 +652,13 @@
     <li class="designers-aside__item">
       Incotex
     </li>
-    <li class="designers-aside__item">
-      <a class="designers-aside__link" href="#">
-        view all
-      </a>
-    </li>
+
   </ul>
+
+  <a class="designers-aside__link" href="#">
+    view all
+  </a>
+  
 </aside>
     </div>
   </div>
@@ -697,34 +742,28 @@
         <p>
           Check out our information hub to get all of the facts about our products for men.
         </p>
-        <a class="btn-shop" href="#">Shop now</a>
+        <a class="btn-shop blog__btn-shop" href="#">Shop now</a>
       </div>
 
       <ul class="blog__inner">
-        <li class="block__item">
+        <li class="blog__item">
           <atricle class="blog-article">
-            <a class="blog-article__link" href="#">
-              <span class="sr-only">
-                The best dressed men of November 2020
-              </span>
-            </a>
+
             <img src="img/researching/shoes.jpg" alt="The best dressed men of November 2020" width="300" height="400">
 
             <span>12.03.2021</span>
 
             <h3>
-              The best dressed men of November 2020
+              <a href="#">
+                The best dressed men of November 2020
+              </a>
             </h3>
           </atricle>
         </li>
 
-        <li class="block__item">
+        <li class="blog__item">
           <atricle class="blog-article">
-            <a class="blog-article__link" href="#">
-              <span class="sr-only">
-                The stylish man’s guide to wearing a turtleneck
-              </span>
-            </a>
+
 
             <img src="img/researching/guy-glasses.jpg" alt="The stylish man’s guide to wearing a turtleneck" width="300"
               height="400">
@@ -732,14 +771,20 @@
             <span>08.03.2021</span>
 
             <h3>
-              The stylish man’s guide to wearing a turtleneck
+              <a href="#">
+                The stylish man’s guide to wearing a turtleneck
+              </a>
             </h3>
+
           </atricle>
         </li>
 
       </ul>
 
     </div>
+
+    <a class="btn-shop blog__btn-all" href="#">See all</a>
+
   </div>
 </section>
 

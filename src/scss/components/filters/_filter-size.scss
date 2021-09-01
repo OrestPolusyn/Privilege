@@ -43,7 +43,7 @@
 .custom-checkbox {
   @include checkbox;
   text-transform: uppercase;
-  transition:  color 0.3s ease-in;
+  transition: color 0.3s ease-in;
 
   &__content {
     padding-left: 32px;
@@ -72,6 +72,12 @@
 
     .custom-checkbox__content::before {
       border-color: var(--color-golden);
+    }
+
+    &.custom-checkbox--disabled,
+     &.custom-checkbox--disabled .custom-checkbox__content::before {
+      border-color: var(--color-disabled);
+      color: var(--color-disabled);
     }
   }
 }
