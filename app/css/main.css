@@ -2002,11 +2002,6 @@
       background-color: var(--color-hover); }
     .subscribe__btn:active {
       background-color: var(--color-hover); }
-    @media (max-width: 475px) {
-      .subscribe__btn {
-        -webkit-mask-image: url("../img/sprite.svg#check");
-        mask-image: url("../img/sprite.svg#check");
-        background-color: var(--color-golden); } }
   .subscribe__subscribe-icon {
     width: 25px;
     height: 10px;
@@ -2221,5 +2216,10 @@
       transform: translate(2px, 7px); }
     .footer .custom-checkbox:hover {
       color: var(--color-white); }
+  @media (max-width: 475px) {
+    .footer .subscribe__btn {
+      -webkit-mask-image: url("../img/sprite.svg#check");
+      mask-image: url("../img/sprite.svg#check");
+      background-color: var(--color-golden); } }
 
 /*# sourceMappingURL=main.css.map */
