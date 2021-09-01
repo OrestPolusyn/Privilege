@@ -70,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let galleryThumbs = new Swiper('.gallery-thumbs', {
     autoHeight: true,
-
     slidesPerView: 4,
     slideToClickedSlide: true,
     spaceBetween: 10,
@@ -83,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   });
 
-  galleryThumbs.update();
+
 
   galleryPreview.controller.control = galleryThumbs;
   galleryThumbs.controller.control = galleryPreview;
@@ -98,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const designersTab = document.querySelector('.designers-aside__list');
 
-  if (designersTab != null) {
+  if (designersTab !== null) {
     designersTab.addEventListener('click', function (event) {
       let target = event.target;
       if (target.className == 'designers-aside__item') {
@@ -286,4 +285,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     scrollPrev = windowScrolled;
   });
+
+  if (designersTab === null) {
+    galleryThumbs.update();
+  }
 });

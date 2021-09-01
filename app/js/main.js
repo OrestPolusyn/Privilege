@@ -77,7 +77,6 @@ document.addEventListener('DOMContentLoaded', function () {
     preloadImages: false,
     lazy: true
   }, "loop", true));
-  galleryThumbs.update();
   galleryPreview.controller.control = galleryThumbs;
   galleryThumbs.controller.control = galleryPreview;
   var tab, tabContent;
@@ -90,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var designersTab = document.querySelector('.designers-aside__list');
 
-  if (designersTab != null) {
+  if (designersTab !== null) {
     designersTab.addEventListener('click', function (event) {
       var target = event.target;
 
@@ -259,5 +258,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     scrollPrev = windowScrolled;
   });
+
+  if (designersTab === null) {
+    galleryThumbs.update();
+  }
 });
 //# sourceMappingURL=main.js.map
