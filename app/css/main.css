@@ -1102,7 +1102,7 @@
     content: '';
     position: absolute;
     right: 7px;
-    top: 5px;
+    top: 10px;
     transform: translateY(-50%) rotate(0);
     background-color: var(--color-black);
     -webkit-mask-image: url("../img/sprite.svg#arrow-footer");
