@@ -236,22 +236,33 @@ document.addEventListener('DOMContentLoaded', function () {
       itemSelectText: ''
     });
   });
-  var searchLine = document.querySelector('.search'),
-      menuHeaderSearch = document.querySelector('.header__nav');
+  var searchForm = document.querySelector('.search'),
+      searchLine = document.querySelector('.search__field'),
+      menuHeaderSearch = document.querySelector('.header__nav'),
+      searchIcon = document.querySelector('.search__icon--search');
   window.addEventListener('click', function (e) {
     if (e.target.classList.contains('search__header')) {
       menuHeaderSearch.classList.add('header__nav--active');
+      searchForm.classList.add('search--open');
     }
 
     if (e.target.classList.contains('search__close')) {
       menuHeaderSearch.classList.remove('header__nav--active');
+      searchForm.classList.remove('search--open');
+      searchLine.value = '';
+    }
+
+    if (e.target.classList.contains('search__icon--search')) {
+      menuHeaderSearch.classList.add('header__nav--active');
+      searchForm.classList.add('search--open');
+      searchLine.value = '';
     }
   });
   var burger = document.querySelector('.burger'),
       menuMobile = document.querySelector('.header__menu');
   burger.addEventListener('click', function (e) {
-    e.currentTarget.classList.toggle('burger--active');
-    menuMobile.classList.toggle('header__menu--active');
+    e.currentTarget.classList.toggle('burger--open');
+    menuMobile.classList.toggle('header__menu--open');
   });
   var headerTop = document.querySelector('.header'),
       scrollPrev = 0;

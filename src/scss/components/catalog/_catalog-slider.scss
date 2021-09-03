@@ -80,12 +80,11 @@
 
     @include mobile {
       grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+      column-gap: 20px;
+      row-gap: 20px;
     }
 
-    @include mobile-m {
-      grid-template-columns: 1fr;
-      justify-items: center;
-    }
   }
 
   .product-article {

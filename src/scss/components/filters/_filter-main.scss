@@ -2,13 +2,20 @@
   @include flex-s-sb;
   margin-bottom: 40px;
 
-  @include mobile-m {
+  @include mobile-s {
     display: block;
   }
 
-
   &__btn {
     padding: 13px 50px;
+
+    @include mobile-m {
+      padding: 13px 15px;
+    }
+
+    @include mobile-s {
+      width: 100%;
+    }
 
     &:first-child {
       @include mobile-m {
@@ -23,7 +30,12 @@
     width: 100%;
 
     @include mobile-m {
-      max-width: 245px;
+      justify-content: flex-end;
+    }
+
+    @include mobile-s {
+      max-width: 100%;
+      justify-content: space-between;
     }
 
     .choices {
@@ -33,6 +45,14 @@
       width: 100%;
       text-align: center;
 
+      @include mobile-m {
+        max-width: 60px;
+        margin-right: 20px;
+      }
+
+      @include mobile-s {
+        max-width: 40%;
+      }
 
       &:hover {
         .choices__inner {
@@ -73,11 +93,17 @@
         max-width: 77px;
         width: 100%;
         text-align: center;
+
       }
 
       &:last-child {
         max-width: 153px;
         width: 100%;
+
+        @include mobile-m {
+          max-width: 60%;
+          margin-right: 0;
+        }
       }
     }
 

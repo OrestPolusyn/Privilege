@@ -41,6 +41,12 @@
   justify-content: flex-start;
 }
 
+@mixin flex-c-e {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
 
 @mixin hover-wh {
   color: var(--color-black);

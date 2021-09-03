@@ -71,26 +71,29 @@
         </li>
       </ul>
 
-      <form class="search" action="#">
 
-        <label class="sr-only" for="search__field">Search on site </label>
-
-        <svg class="search__icon search__icon--search">
-          <use xlink:href="img/sprite.svg#search"></use>
-        </svg>
-
-        <input class="search__header search__field" id="search__field" type="search" placeholder="Search..."
-          name="search">
-
-        <button class="search__close" type="button">
-          <span class="sr-only">
-            Close search field
-          </span>
-        </button>
-
-      </form>
 
       <ul class="header__action">
+        <li class="header__action-item header__action-item--search">
+          <form class="search" action="#">
+
+            <label class="sr-only" for="search__field">Search on site </label>
+
+            <svg class="search__icon search__icon--search">
+              <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+
+            <input class="search__header search__field" id="search__field" type="search" placeholder="Search..."
+              name="search">
+
+            <button class="search__close" type="button">
+              <span class="sr-only">
+                Close search field
+              </span>
+            </button>
+
+          </form>
+        </li>
 
         <li class="header__action-item">
 
@@ -185,29 +188,53 @@
 
         <ul class="catalog-list__grid">
           <li class="catalog-list__item">
-            <article class="product-article" >
-  <img src="img/catalog-list/shoes.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="@height">
-  <h3>Burberry</h3>
+            <article class="product-article">
+  <div class="product-article__image">
+    <img src="img/catalog-list/shoes.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="@height">
+  </div>
+
+  <h3>
+    <a href="#">
+      Burberry
+    </a>
+  </h3>
   <p>B-Runner asymmetrical sneakers</p>
   <span> $ 250.00</span>
+
 </article>
           </li>
 
           <li class="catalog-list__item">
-            <article class="product-article" >
-  <img src="img/catalog-list/shoes-pool.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="@height">
-  <h3>Burberry</h3>
+            <article class="product-article">
+  <div class="product-article__image">
+    <img src="img/catalog-list/shoes-pool.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="@height">
+  </div>
+
+  <h3>
+    <a href="#">
+      Burberry
+    </a>
+  </h3>
   <p>B-Runner asymmetrical sneakers</p>
   <span> $ 250.00</span>
+
 </article>
           </li>
 
           <li class="catalog-list__item">
-            <article class="product-article" >
-  <img src="img/catalog-list/sneakers.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="@height">
-  <h3>Burberry</h3>
+            <article class="product-article">
+  <div class="product-article__image">
+    <img src="img/catalog-list/sneakers.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="@height">
+  </div>
+
+  <h3>
+    <a href="#">
+      Burberry
+    </a>
+  </h3>
   <p>B-Runner asymmetrical sneakers</p>
   <span> $ 250.00</span>
+
 </article>
           </li>
 

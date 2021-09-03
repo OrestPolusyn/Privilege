@@ -369,12 +369,11 @@ body {
 }
 
 .search {
-  position: relative;
-
+position: relative;
 
   &__close {
-    visibility: hidden;
-    opacity: 0;
+     visibility: hidden;
+     opacity: 0;
     background-color: transparent;
     border: none;
     position: absolute;
@@ -382,8 +381,6 @@ body {
     width: 24px;
     height: 24px;
     z-index: 10;
-    right: -20px;
-    background-image: url();
 
     &::after {
       content: '';
@@ -393,8 +390,14 @@ body {
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
+      mask-repeat: no-repeat;
+      mask-position: bottom;
+      mask-size: contain;
       width: 24px;
       height: 14px;
+      top: 0;
+      left: 0;
+      transform: translateY(6px);
     }
   }
 
@@ -405,21 +408,13 @@ body {
 
     @include mobile-m {
       stroke-width: 1px;
+      width: 18px;
     }
 
     &--search {
       position: absolute;
       left: -34px;
       top: 3px;
-    }
-
-    &--close {
-      cursor: pointer;
-      width: 17px;
-      height: 16px;
-      position: absolute;
-      visibility: hidden;
-      z-index: 1;
     }
   }
 
@@ -492,14 +487,12 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 }
 
-
-
-.title{
+.title {
   text-align: center;
   @include H2;
 }
 
-.main-title{
-  @include H; 
+.main-title {
+  @include H;
   text-align: center;
 }

@@ -11,13 +11,13 @@
     @include flex-s-sb;
     margin-bottom: 40px;
 
-    @include mobile {
-      justify-content: start;
-    }
-
-    @include mobile {
+    @include mobile-m {
       justify-content: start;
       flex-wrap: wrap-reverse;
+    }
+
+    @include mobile-s {
+      margin-bottom: 0;
     }
 
   }
@@ -43,7 +43,8 @@
         margin-right: 50px;
       }
 
-      @include mobile-s {
+      @include mobile-m {
+        max-width: 100%;
         margin-right: 0;
       }
     }
@@ -59,6 +60,8 @@
 
       @include mobile-m {
         margin-bottom: 24px;
+        max-width: 100%;
+        margin-right: 0;
       }
     }
 
@@ -143,6 +146,14 @@
     &--language {
       margin-bottom: 33px;
     }
+
+    @include mobile-m {
+      justify-content: flex-start;
+    }
+
+    @include mobile-s {
+      justify-content: space-between;
+    }
   }
 
   &__choose-name {
@@ -214,8 +225,7 @@
     }
 
     &:last-child {
-      max-width: 153px;
-      width: 100%;
+      width: 75px;
       margin-top: 6px;
     }
   }

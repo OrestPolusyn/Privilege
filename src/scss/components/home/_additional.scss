@@ -35,12 +35,12 @@
     margin-bottom: 24px;
     overflow-x: hidden;
 
+    @include tablet {
+      margin-bottom: 50px;
+    }
+
     &:not(:last-child) {
       margin-right: 30px;
-
-      @include tablet {
-        margin-bottom: 50px;
-      }
 
       @include mobile-m {
         margin-right: 0;
@@ -104,6 +104,10 @@
       padding-left 0.5s ease-in-out;
     position: relative;
 
+    @include mobile {
+      justify-content: center;
+    }
+
     &::after,
     &::before {
       content: '';
@@ -119,6 +123,11 @@
       left: 50%;
       transition: transform 0.7s ease,
         padding-left 0.5s ease-in-out;
+
+      @include mobile {
+        left: 75%;
+        font-weight: 500;
+      }
     }
 
     &::before {
@@ -132,18 +141,44 @@
       @include hover-full;
       padding-left: 50px;
 
+      @include mobile {
+        padding-left: 0;
+      }
+
       &::after {
         transform: translateX(1000%);
       }
 
       &::before {
         transform: translateX(0);
+
+        @include mobile {
+          transform: translateX(200%);
+
+        }
       }
     }
 
     &:active {
       @include hover-full;
       padding-left: 50px;
+
+      @include mobile {
+        padding-left: 0;
+      }
+
+      &::after {
+        transform: translateX(1000%);
+      }
+
+      &::before {
+        transform: translateX(0);
+
+        @include mobile {
+          transform: translateX(200%);
+
+        }
+      }
     }
   }
 }

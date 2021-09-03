@@ -93,8 +93,8 @@
         width: 100%;
 
         @include mobile-s {
-          height: 250px;
           object-fit: cover;
+          object-position:top;
         }
       }
     }
@@ -109,5 +109,9 @@
     }
   }
 
-
+  .swiper-nav .swiper-btns {
+    @include mobile {
+      max-width: 80px;
+    }
+  }
 }

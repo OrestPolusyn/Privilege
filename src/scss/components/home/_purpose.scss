@@ -20,7 +20,7 @@
     }
 
     @include mobile-m {
-      padding-top: 150px;
+      padding-top: 60px;
       grid-column-gap: 20px;
       grid-row-gap: 20px;
     }
@@ -72,9 +72,13 @@
         margin: 0 auto;
       }
 
-      @include mobile-m {
-        transform: translateY(-65%);
+      @include mobile {
+        transform: translateY(-15%);
         max-width: 100%;
+      }
+
+      @include mobile-m {
+        transform: translateY(-35%);
       }
 
       @include mobile-s {
