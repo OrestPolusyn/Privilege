@@ -1,16 +1,32 @@
-// @import 'vars'; если используете scss-переменные - подключите сюда vars, но удалите root из _vars.scss
 @import "vars";
 @import "mixins";
 @import "components/header";
 @import "components/home/home-styles";
-@import "components/dropdown";
+@import "components/product";
 @import "components/accordion";
+@import "components/titles";
+@import "components/error";
+@import "components/buttons";
+@import "components/popup";
+
+@import "components/parts/pagination";
+@import "components/parts/dropdown";
+@import "components/parts/subscribe";
+@import "components/parts/product-list";
+@import "components/parts/swiper-slider";
+@import "components/parts/search";
+@import "components/parts/tabs";
+@import "components/parts/choice";
+
 @import "components/filters/filter-styles";
+
 @import "components/catalog/catalog-styles";
+
 @import "components/single-product/single-styles";
-@import "components/product-article";
+@import "components/designers-page/designers-page";
+
 @import "components/search-page/search-page";
-@import "components/404";
-@import "components/pagination";
-@import "components/subscribe";
+@import "components/cart/cart-styles";
+@import "components/privacy-policy/privacy-policy";
+
 @import "components/footer";

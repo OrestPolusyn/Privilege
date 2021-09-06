@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>P R I V I L E G E | Shop cart</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <header class="header">
+
+  <div class="haeder-adv">
+    <p>Shop with up to 50% off</p>
+  </div>
+
+  <div class="container">
+    <nav class="header__nav">
+
+      <a class="logo" href="#">
+        <img class="logo__img" src="img/logo.svg" alt="Privilege designers website" width="163" height="26">
+      </a>
+
+      <button class="burger" type="button">
+        <span class="sr-only">
+          Menu
+        </span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+
+      <ul class="header__menu">
+
+        <li class="header__item">
+          <a class="header__link" href="#">
+            Designers
+          </a>
+        </li>
+
+        <li class="header__item">
+          <a class="header__link" href="#">
+            Clothing
+          </a>
+        </li>
+
+        <li class="header__item">
+          <a class="header__link" href="#">
+            Shoes
+          </a>
+        </li>
+
+        <li class="header__item">
+          <a class="header__link" href="#">
+            Accessories
+          </a>
+        </li>
+
+        <li class="header__item">
+          <a class="header__link" href="#">
+            Sport
+          </a>
+        </li>
+
+        <li class="header__item">
+          <a class="header__link" href="#">
+            Gifts
+          </a>
+        </li>
+
+        <li class="header__item">
+          <a class="header__link" href="#">
+            Interior
+          </a>
+        </li>
+      </ul>
+
+      <ul class="header__action">
+
+        <li class="header__action-item header__action-item--search">
+          <form class="search" action="#">
+            <label class="sr-only" for="search__field">Search on site </label>
+
+<svg class="search__icon search__icon--search">
+  <use xlink:href="img/sprite.svg#search"></use>
+</svg>
+
+<input class="search__header search__field" id="search__field" type="search" placeholder="Search..." name="search">
+
+<button class="search__close" type="button">
+  <span class="sr-only">
+    Close search field
+  </span>
+</button>
+
+
+
+          </form>
+        </li>
+
+        <li class="header__action-item">
+
+          <a class="header__action-link" href="#">
+            <span class="sr-only">Cart</span>
+
+            <svg class="header__action-icon">
+              <use xlink:href="img/sprite.svg#shopping-cart"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="header__action-item">
+
+          <a class="header__action-link" href="#">
+            <span class="sr-only">Personal Account</span>
+
+            <svg class="header__action-icon">
+              <use xlink:href="img/sprite.svg#user"></use>
+            </svg>
+          </a>
+        </li>
+
+
+      </ul>
+    </nav>
+  </div>
+
+</header>
+
+  <main class="main cart">
+    <div class="container">
+
+      <h1 class="main-title">
+        Cart
+      </h1>
+
+      <span class="main-title__subtitle">
+        2 Items
+      </span>
+
+      <section class="cart__inner">
+
+        <div class="cart__list">
+
+  <article class="cart-product">
+
+    <button class="cart-product__delete" type="button">
+      <span class="sr-only">
+        Delete product from list
+      </span>
+
+      <svg class="cart-product__icon">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+
+    </button>
+
+    <div class="cart-product__image">
+      <img src="img/single-page/shoes-big.jpg" alt="B-Runner asymmetrical sneakers" width="190">
+    </div>
+
+    <div class="cart-product__inner">
+
+      <div class="cart-product__content">
+        <h2>Burberry</h2>
+        <span>$250.00</span>
+      </div>
+
+      <p>B-Runner asymmetrical sneakers</p>
+
+      <div class="cart-product__action">
+
+
+        <label class="cart-product__label" for="numbers">
+          Quantity:
+          <div class="cart-product__label-box">
+            <span class="cart-product__label-icon minus">
+              <span class="sr-only">
+                Minus
+              </span>
+
+              <svg class="cart-product__minus">
+                <use xlink:href="img/sprite.svg#minus"></use>
+              </svg>
+            </span>
+
+            <input class="cart-product__number choices__inner" type="number" value="1" min="1">
+
+            <span class="cart-product__label-icon plus">
+              <span class="sr-only">
+                Minus
+              </span>
+
+              <svg class="cart-product__plus">
+                <use xlink:href="img/sprite.svg#plus"></use>
+              </svg>
+            </span>
+
+          </div>
+        </label>
+
+        <label class="cart-product__label" for="numbers">
+          Size:
+          <select class="cart-product__number js-choice" name="number" id="number">
+            <option value="42">42</option>
+            <option value="43">43</option>
+            <option value="44">44</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+  </article>
+
+
+  <article class="cart-product">
+
+    <button class="cart-product__delete" type="button">
+      <span class="sr-only">
+        Delete product from list
+      </span>
+
+      <svg class="cart-product__icon">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+
+    </button>
+
+    <div class="cart-product__image">
+      <img src="img/single-page/shoes-big.jpg" alt="B-Runner asymmetrical sneakers" width="190">
+    </div>
+
+    <div class="cart-product__inner">
+
+      <div class="cart-product__content">
+        <h2>Burberry</h2>
+        <span>$250.00</span>
+      </div>
+
+      <p>B-Runner asymmetrical sneakers</p>
+
+      <div class="cart-product__action">
+
+
+        <label class="cart-product__label" for="numbers">
+          Quantity:
+          <div class="cart-product__label-box">
+            <span class="cart-product__label-icon minus">
+              <span class="sr-only">
+                Minus
+              </span>
+
+              <svg class="cart-product__minus">
+                <use xlink:href="img/sprite.svg#minus"></use>
+              </svg>
+            </span>
+
+            <input class="cart-product__number choices__inner" type="number" value="1" min="1">
+
+            <span class="cart-product__label-icon plus">
+              <span class="sr-only">
+                Minus
+              </span>
+
+              <svg class="cart-product__plus">
+                <use xlink:href="img/sprite.svg#plus"></use>
+              </svg>
+            </span>
+
+          </div>
+        </label>
+
+        <label class="cart-product__label" for="numbers">
+          Size:
+          <select class="cart-product__number js-choice" name="number" id="number">
+            <option value="42">42</option>
+            <option value="43">43</option>
+            <option value="44">44</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+  </article>
+
+</div>
+
+        <aside class="cart__summary">
+
+  <div class="cart__summary-box">
+
+    <h3 class="cart__summary-title title-quick">
+      Order summary
+    </h3>
+
+    <div class="cart__summary-count">
+      <span class="cart__summary-text">
+        Item Sub-Total
+      </span>
+      <span class="cart__summary-text">
+        $
+        <span>250.00</span>
+      </span>
+    </div>
+
+    <div class="cart__summary-count">
+      <span class="cart__summary-text">
+        Shipping </span>
+      <span class="cart__summary-text">
+        $ 
+        <span>25.00</span>
+      </span>
+    </div>
+
+    <div class="cart__summary-total">
+      <span>
+        Total:
+      </span>
+
+      <span class="cart__summary-text">
+        $ <span>275.00</span>
+      </span>
+    </div>
+
+    <button class="cart__summary btn-shop" type="button">
+      Checkout
+    </button>
+
+  </div>
+
+</aside>
+
+      </section>
+
+      <div class="cart__empty">
+
+        <h2 class="title">
+          You don’t have any items
+        </h2>
+
+        <button class="btn-shop" type="button">
+          Buy now
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+  <div class="container">
+
+    <a class="logo" href="#">
+      <img class="logo__img" src="img/logo.svg" alt="Privilege designers website" width="163" height="26">
+    </a>
+
+    <div class="footer__wrap">
+      <div class="footer__inner">
+
+        <form class="subscribe" action="#">
+
+    <label class="subscribe__text">
+        Sing up for style news
+        <input class="subscribe__field" name="subscription" type="email" required
+            placeholder="Email address">
+    </label>
+
+    <button class="subscribe__btn" type="submit">
+        <span class="sr-only">
+            Send email address
+        </span>
+    </button>
+</form>
+
+
+        <label class="custom-checkbox">
+          <input type="checkbox" class="custom-checkbox__field" checked>
+
+          <span class="custom-checkbox__content">
+            I agree with your
+            <a class="custom-checkbox__link" href="#">
+              terms & conditions
+            </a>
+          </span>
+
+        </label>
+
+        <ul class="footer__socials">
+
+          <li class="footer__item">
+            <a class="footer__link" href="#">
+
+              <span class="sr-only">
+                facebook
+              </span>
+
+              <svg class="footer__icon">
+                <use xlink:href="img/sprite.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="footer__item">
+            <a class="footer__link" href="#">
+
+              <span class="sr-only">
+                twitter
+              </span>
+
+              <svg class="footer__icon">
+                <use xlink:href="img/sprite.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="footer__item">
+            <a class="footer__link" href="#">
+
+              <span class="sr-only">
+                instagram
+              </span>
+
+              <svg class="footer__icon">
+                <use xlink:href="img/sprite.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="footer__item">
+            <a class="footer__link" href="#">
+
+              <span class="sr-only">
+                youtube
+              </span>
+
+              <svg class="footer__icon">
+                <use xlink:href="img/sprite.svg#youtube"></use>
+              </svg>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="footer__inner ">
+
+        <div class="footer__choose ">
+          <label class="footer__choose-name" for="language">
+            Language:
+          </label>
+          <select class="footer__choose-item js-choice" name="number" id="language">
+            <option class="footer__choose-value" value=" Eng"> Eng</option>
+            <option class="footer__choose-value" value=" Rus"> Rus</option>
+            <option class="footer__choose-value" value="Arab"> Arab</option>
+          </select>
+        </div>
+
+        <div class="footer__choose">
+          <label class="footer__choose-name" for="currency">
+            Currency:
+          </label>
+          <select class="footer__choose-item js-choice" name="currency" id="currency">
+            <option class="footer__choose-value" value=" $"> $</option>
+            <option class="footer__choose-value" value=" &#8381;"> &#8381;</option>
+            <option class="footer__choose-value" value="&#1583;"> &#1583;</option>
+          </select>
+
+        </div>
+
+      </div>
+
+      <div class="footer__inner">
+        <p>
+          Customer Services
+        </p>
+
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__link" href="#">
+              Payment
+            </a>
+          </li>
+
+          <li class="footer__item">
+            <a class="footer__link" href="#">
+              Delivery
+            </a>
+          </li>
+
+          <li class="footer__item">
+            <a class="footer__link" href="#">
+              Returns
+            </a>
+          </li>
+
+          <li class="footer__item">
+            <a class="footer__link" href="#">
+              FAQs
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__inner">
+        <p>
+          Company
+        </p>
+
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__link" href="#">
+              About Us
+            </a>
+          </li>
+
+          <li class="footer__item">
+            <a class="footer__link" href="#">
+              Contact Us
+            </a>
+          </li>
+
+          <li class="footer__item">
+            <a class="footer__link" href="#">
+              Affiliates
+            </a>
+          </li>
+
+          <li class="footer__item">
+            <a class="footer__link" href="#">
+              Partnerships
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <ul class="footer__terms">
+
+      <li class="footer__item">
+        <a class="footer__link" href="#">
+          Privacy Policy
+        </a>
+      </li>
+
+      <li class="footer__item">
+        <a class="footer__link" href="#">
+          Terms of Servise
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+
+</footer>
+
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

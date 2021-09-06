@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
-  <title>P R I V I L E G E | Catalog page</title>
+  <title>P R I V I L E G E | Search result</title>
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
@@ -22,9 +22,19 @@
 
   <div class="container">
     <nav class="header__nav">
+
       <a class="logo" href="#">
         <img class="logo__img" src="img/logo.svg" alt="Privilege designers website" width="163" height="26">
       </a>
+
+      <button class="burger" type="button">
+        <span class="sr-only">
+          Menu
+        </span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
 
       <ul class="header__menu">
 
@@ -71,26 +81,25 @@
         </li>
       </ul>
 
-
-
       <ul class="header__action">
+
         <li class="header__action-item header__action-item--search">
           <form class="search" action="#">
-
             <label class="sr-only" for="search__field">Search on site </label>
 
-            <svg class="search__icon search__icon--search">
-              <use xlink:href="img/sprite.svg#search"></use>
-            </svg>
+<svg class="search__icon search__icon--search">
+  <use xlink:href="img/sprite.svg#search"></use>
+</svg>
 
-            <input class="search__header search__field" id="search__field" type="search" placeholder="Search..."
-              name="search">
+<input class="search__header search__field" id="search__field" type="search" placeholder="Search..." name="search">
 
-            <button class="search__close" type="button">
-              <span class="sr-only">
-                Close search field
-              </span>
-            </button>
+<button class="search__close" type="button">
+  <span class="sr-only">
+    Close search field
+  </span>
+</button>
+
+
 
           </form>
         </li>
@@ -119,15 +128,6 @@
 
 
       </ul>
-
-      <button class="burger" type="button">
-        <span class="sr-only">
-          Menu
-        </span>
-        <span class="burger__line"></span>
-        <span class="burger__line"></span>
-        <span class="burger__line"></span>
-      </button>
     </nav>
   </div>
 
@@ -145,13 +145,12 @@
           Search Results “Nike”
         </h2>
 
-
-        <span class="search-page__result">
-          4 Items
+        <span class="main-title__subtitle">
+          Nothing found
         </span>
 
-        <span class="search-page__nofound">
-          Nothing found
+        <span class="main-title__subtitle">
+          4 Items
         </span>
 
           <div class="filters">
@@ -186,11 +185,11 @@
 
   </div>
 
-        <ul class="catalog-list__grid">
-          <li class="catalog-list__item">
-            <article class="product-article">
-  <div class="product-article__image">
-    <img src="img/catalog-list/shoes.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="@height">
+        <ul class="product-list">
+          <li class="product__item">
+            <article class="product">
+  <div class="product__image">
+    <img src="img/catalog-list/shoes.jpg" alt="Burberry" width="332" height="@height">
   </div>
 
   <h3>
@@ -198,16 +197,18 @@
       Burberry
     </a>
   </h3>
+
   <p>B-Runner asymmetrical sneakers</p>
-  <span> $ 250.00</span>
+
+  <span>$ 250.00</span>
 
 </article>
           </li>
 
-          <li class="catalog-list__item">
-            <article class="product-article">
-  <div class="product-article__image">
-    <img src="img/catalog-list/shoes-pool.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="@height">
+          <li class="product__item">
+            <article class="product">
+  <div class="product__image">
+    <img src="img/catalog-list/shoes-pool.jpg" alt="Burberry" width="332" height="@height">
   </div>
 
   <h3>
@@ -215,16 +216,18 @@
       Burberry
     </a>
   </h3>
+
   <p>B-Runner asymmetrical sneakers</p>
-  <span> $ 250.00</span>
+
+  <span>$ 250.00</span>
 
 </article>
           </li>
 
-          <li class="catalog-list__item">
-            <article class="product-article">
-  <div class="product-article__image">
-    <img src="img/catalog-list/sneakers.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="@height">
+          <li class="product__item">
+            <article class="product">
+  <div class="product__image">
+    <img src="img/catalog-list/sneakers.jpg" alt="Burberry" width="332" height="@height">
   </div>
 
   <h3>
@@ -232,8 +235,10 @@
       Burberry
     </a>
   </h3>
+
   <p>B-Runner asymmetrical sneakers</p>
-  <span> $ 250.00</span>
+
+  <span>$ 250.00</span>
 
 </article>
           </li>
@@ -257,28 +262,30 @@
 
         <form class="subscribe" action="#">
 
-          <label class="subscribe__text" for="subscription">
-            Sing up for style news
-          </label>
-
-          <input class="subscribe__field" id="subscription" name="subscription" type="email" required
+    <label class="subscribe__text">
+        Sing up for style news
+        <input class="subscribe__field" name="subscription" type="email" required
             placeholder="Email address">
+    </label>
 
-          <button class="subscribe__btn" type="submit">
-            <span class="sr-only">
-              Send email address
-            </span>
-          </button>
-        </form>
+    <button class="subscribe__btn" type="submit">
+        <span class="sr-only">
+            Send email address
+        </span>
+    </button>
+</form>
+
 
         <label class="custom-checkbox">
           <input type="checkbox" class="custom-checkbox__field" checked>
+
           <span class="custom-checkbox__content">
             I agree with your
             <a class="custom-checkbox__link" href="#">
               terms & conditions
             </a>
           </span>
+
         </label>
 
         <ul class="footer__socials">
@@ -340,30 +347,28 @@
 
       <div class="footer__inner ">
 
-        <div class="footer__choose footer__choose--language">
+        <div class="footer__choose ">
           <label class="footer__choose-name" for="language">
             Language:
           </label>
-          <select class="footer__choose-item dropdown-item js-choice" name="number" id="language">
-            <option class="dropdown-choose__item" value=" Eng"> Eng</option>
-            <option class="dropdown-choose__item" value=" Rus"> Rus</option>
-            <option class="dropdown-choose__item" value="Arab"> Arab</option>
+          <select class="footer__choose-item js-choice" name="number" id="language">
+            <option class="footer__choose-value" value=" Eng"> Eng</option>
+            <option class="footer__choose-value" value=" Rus"> Rus</option>
+            <option class="footer__choose-value" value="Arab"> Arab</option>
           </select>
         </div>
 
-        <div class="footer__choose footer__choose--currency">
+        <div class="footer__choose">
           <label class="footer__choose-name" for="currency">
             Currency:
           </label>
-          <select class="footer__choose-item dropdown-item js-choice" name="currency" id="currency">
-            <option class="dropdown-choose__item" value=" $"> $</option>
-            <option class="dropdown-choose__item" value=" &#8381;"> &#8381;</option>
-            <option class="dropdown-choose__item" value="&#1583;"> &#1583;</option>
+          <select class="footer__choose-item js-choice" name="currency" id="currency">
+            <option class="footer__choose-value" value=" $"> $</option>
+            <option class="footer__choose-value" value=" &#8381;"> &#8381;</option>
+            <option class="footer__choose-value" value="&#1583;"> &#1583;</option>
           </select>
 
         </div>
-
-
 
       </div>
 
@@ -430,18 +435,17 @@
           </li>
         </ul>
       </div>
-
-
     </div>
+
     <ul class="footer__terms">
 
-      <li class="footer__term">
+      <li class="footer__item">
         <a class="footer__link" href="#">
           Privacy Policy
         </a>
       </li>
 
-      <li class="footer__term">
+      <li class="footer__item">
         <a class="footer__link" href="#">
           Terms of Servise
         </a>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>P R I V I L E G E | Privacy Policy</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  @include('html/_header.html')
+
+  <main class="main privacy-policy">
+    <div class="container">
+
+      <h1 class="main-title">
+        privacy policy
+      </h1>
+
+      <span class="main-title__subtitle">
+        October 26, 2020
+      </span>
+
+      <section class="privacy-policy__inner">
+
+        @include('html/privacy-policy/_policy-text.html')
+
+        @include('html/privacy-policy/_policy-quick.html')
+
+      </section>
+
+    </div>
+  </main>
+
+  @include('html/_footer.html')
+
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

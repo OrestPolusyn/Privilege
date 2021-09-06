@@ -1,0 +1,28 @@
+.error-page {
+
+  @include flex-all-center;
+  flex-direction: column;
+  padding: 50px 0;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: inherit;
+
+  @include tablet {
+    background-size: cover;
+  }
+
+  .main-title {
+    margin-bottom: 24px;
+
+    @include mobile-s {
+    }
+  }
+
+  .title{
+    text-align: center;
+    font-size: 20px;
+  }
+
+
+}

@@ -1,5 +1,5 @@
 .single-info {
-  max-width: 343px;
+  max-width: 365px;
   width: 100%;
 
   @include tablet {
@@ -22,6 +22,10 @@
         margin-right: 50px;
       }
     }
+
+    .filter-size__list {
+      grid-template-columns: repeat(5, 43px);
+    }
   }
 
   h1 {
@@ -35,7 +39,8 @@
 
   p {
     @include body;
-    margin-bottom: 24px;
+    margin-bottom: 25px;
+
 
     @include mobile-m {
       margin-bottom: 10px;
@@ -51,15 +56,19 @@
         margin-bottom: 20px;
       }
     }
+
+    span {
+      display: block;
+    }
   }
 
   &__icon {
-    width: 27px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
   }
 
   .filter-size {
-    margin-bottom: 24px;
+    margin-bottom: 36px;
   }
 
   &__thumb {
@@ -101,7 +110,7 @@
   &__color {
     span {
       &:not(.custom-checkbox__content) {
-        margin-bottom: 24px;
+        margin-bottom: 26px;
         display: inline-block;
       }
     }
@@ -130,6 +139,8 @@
   &__btns {
     @include flex-s-sb;
     margin-bottom: 40px;
+    max-width: 352px;
+    width: 100%;
 
     .btn-shop {
       @include mobile {
@@ -138,11 +149,18 @@
     }
   }
 
-
-
   .accordion {
+    max-width: 345px;
+    width: 100%;
+
+    @include tablet {
+      max-width: 100%;
+    }
+
     &__name {
-      padding-bottom: 8px;
+      padding-bottom: 5px;
+      font-size: 15px;
+      line-height: 2.2;
 
       &::after {
         background-color: var(--color-golden);
@@ -157,6 +175,13 @@
       max-height: 0;
       transition: all 0.3s ease-in;
       box-sizing: content-box;
+
+      p {
+        font-size: 12px;
+        line-height: 1.2;
+        margin-bottom: 12px;
+        letter-spacing: 0.03em;
+      }
     }
   }
 }

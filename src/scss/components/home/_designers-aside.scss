@@ -1,73 +1,18 @@
-.designers-aside {
-  transform: translate(-35px, -30px);
+.designers {
 
-  @include tablet {
-    transform: translate(0, 0);
-    margin-bottom: 40px;
-  }
-
-  h2 {
-    @include H2;
-    margin-bottom: 24px;
-
-    @include mobile-m {
-      font-size: 32px;
-    }
-
-  }
-
-  &__list {
-    @include tablet {
-      column-count: 2;
-      column-gap: 22px;
-    }
-
-    @include mobile-m {
-      column-gap: 0;
-    }
-  }
-
-  &__item {
-    position: relative;
-    cursor: pointer;
-    @include hover-bl;
-    @include H4;
-    transition: background 0.3s ease-in-out,
-      padding 0.3s ease-in-out;
-    margin-bottom: 25px;
+  &__sidebar {
+    transform: translate(-22px, -33px);
+    max-width: 220px;
+    width: 100%;
 
     @include tablet {
-      width: 150px;
+      transform: translate(0, 0);
+      margin-bottom: 40px;
+      max-width: 50%;
     }
 
-    @include mobile-m {
-      font-size: 14px;
-    }
-
-    &:hover {
-      @include hover-full;
-    }
-
-    &::before {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      background-color: var(--color-golden);
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      transition: width 0.3s ease-in-out;
-    }
-
-    &--active {
-      @include hover-full;
-      padding-left: 48px;
-
-      &::before {
-        width: 40px;
-      }
-
+    @include mobile {
+      max-width: 100%;
     }
   }
 
@@ -77,6 +22,5 @@
     color: var(--color-golden);
     display: inline-block;
     text-decoration: underline;
-
   }
 }

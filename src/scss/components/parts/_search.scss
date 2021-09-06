@@ -1,0 +1,87 @@
+.search {
+  position: relative;
+
+  &__close {
+    visibility: hidden;
+    opacity: 0;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    z-index: 10;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: #000;
+      mask-image: url('../img/sprite.svg#close');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      mask-repeat: no-repeat;
+      mask-position: bottom;
+      mask-size: contain;
+      width: 24px;
+      height: 14px;
+      top: 0;
+      left: 0;
+      transform: translateY(6px);
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    stroke-width: 2px;
+
+    @include mobile-m {
+      stroke-width: 1px;
+      width: 18px;
+    }
+
+    &--search {
+      position: absolute;
+      left: -34px;
+      top: 3px;
+    }
+  }
+
+  &__field {
+    border: none;
+    border-bottom: 2px solid var(--color-golden);
+    outline: transparent;
+    padding: 0;
+    max-width: 105px;
+    width: 100%;
+    transition: all 0.5s ease-in;
+
+    &::placeholder {
+      color: #9d9d9d;
+      font-size: 10px;
+      line-height: 1.1;
+    }
+  }
+
+
+}
+
+input[type=search]::-ms-clear,
+input[type=search]::-ms-reveal {
+  -webkit-appearance: none;
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  display: none;
+  width: 0;
+  height: 0;
+
+}

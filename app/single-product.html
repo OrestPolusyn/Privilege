@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
-  <title>P R I V I L E G E | Sinle product</title>
+  <title>P R I V I L E G E | Product </title>
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
@@ -23,9 +23,19 @@
 
   <div class="container">
     <nav class="header__nav">
+
       <a class="logo" href="#">
         <img class="logo__img" src="img/logo.svg" alt="Privilege designers website" width="163" height="26">
       </a>
+
+      <button class="burger" type="button">
+        <span class="sr-only">
+          Menu
+        </span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
 
       <ul class="header__menu">
 
@@ -72,26 +82,25 @@
         </li>
       </ul>
 
-
-
       <ul class="header__action">
+
         <li class="header__action-item header__action-item--search">
           <form class="search" action="#">
-
             <label class="sr-only" for="search__field">Search on site </label>
 
-            <svg class="search__icon search__icon--search">
-              <use xlink:href="img/sprite.svg#search"></use>
-            </svg>
+<svg class="search__icon search__icon--search">
+  <use xlink:href="img/sprite.svg#search"></use>
+</svg>
 
-            <input class="search__header search__field" id="search__field" type="search" placeholder="Search..."
-              name="search">
+<input class="search__header search__field" id="search__field" type="search" placeholder="Search..." name="search">
 
-            <button class="search__close" type="button">
-              <span class="sr-only">
-                Close search field
-              </span>
-            </button>
+<button class="search__close" type="button">
+  <span class="sr-only">
+    Close search field
+  </span>
+</button>
+
+
 
           </form>
         </li>
@@ -120,15 +129,6 @@
 
 
       </ul>
-
-      <button class="burger" type="button">
-        <span class="sr-only">
-          Menu
-        </span>
-        <span class="burger__line"></span>
-        <span class="burger__line"></span>
-        <span class="burger__line"></span>
-      </button>
     </nav>
   </div>
 
@@ -137,11 +137,11 @@
   <main class="main">
 
     <div class="container">
-      <div class="product">
+      <div class="single-product">
 
-         <div class="product__gallery">
+         <div class="single-product__gallery gallery">
 
-   <div class="swiper-container gallery-thumbs">
+   <div class="swiper-container gallery__thumbs">
      <div class="swiper-wrapper">
 
        <div class="swiper-slide">
@@ -168,52 +168,53 @@
      </div>
    </div>
 
-   <div class="swiper-container gallery-preview">
+   <div class="swiper-container gallery__preview">
 
      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="img/single-page/shoes-big.jpg" alt="B-Runner asymmetrical sneakers" />
-        </div>
+       <div class="swiper-slide">
+         <img src="img/single-page/shoes-big.jpg" alt="B-Runner asymmetrical sneakers" />
+       </div>
 
-        <div class="swiper-slide">
-          <img src="img/single-page/sneakers.jpg" alt="B-Runner asymmetrical sneakers" />
-        </div>
+       <div class="swiper-slide">
+         <img src="img/single-page/sneakers.jpg" alt="B-Runner asymmetrical sneakers" />
+       </div>
 
-        <div class="swiper-slide">
-          <img src="img/single-page/sneakers-nike.jpg" alt="B-Runner asymmetrical sneakers" />
-        </div>
+       <div class="swiper-slide">
+         <img src="img/single-page/sneakers-nike.jpg" alt="B-Runner asymmetrical sneakers" />
+       </div>
 
-        <div class="swiper-slide">
-          <img src="img/single-page/shoes-mans.jpg" alt="B-Runner asymmetrical sneakers" />
-        </div>
+       <div class="swiper-slide">
+         <img src="img/single-page/shoes-mans.jpg" alt="B-Runner asymmetrical sneakers" />
+       </div>
 
-        <div class="swiper-slide">
-          <img src="img/single-page/sneakers-woman.jpg" alt="B-Runner asymmetrical sneakers" />
-        </div>
+       <div class="swiper-slide">
+         <img src="img/single-page/sneakers-woman.jpg" alt="B-Runner asymmetrical sneakers" />
+       </div>
 
      </div>
-  <div class="gallery-preview__pagination">
-    <div class="swiper-button-next">
-      <span class="sr-only">
-        Next slide
-      </span>
-    </div>
+     
+     <div class="gallery__preview-pagination">
+       <div class="swiper-button-next">
+         <span class="sr-only">
+           Next slide
+         </span>
+       </div>
 
-    <div class="swiper-pagination">
-      <span class="sr-only">
-        Slider pagination
-      </span>
-    </div>
+       <div class="swiper-pagination">
+         <span class="sr-only">
+           Slider pagination
+         </span>
+       </div>
 
-    <div class="swiper-button-prev">
-      <span class="sr-only">
-        Prev slide
-      </span>
-    </div>
-  </div>
+       <div class="swiper-button-prev">
+         <span class="sr-only">
+           Prev slide
+         </span>
+       </div>
+     </div>
    </div>
 
- 
+
 
  </div>
 
@@ -264,12 +265,12 @@
         Size:
       </span>
 
-      <form class="filter-size @class" action="#">
+      <form class="filter-size single-info__filter" action="#">
 
   <ul class="filter-size__list">
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="radio" name="size" class="custom-checkbox__field">
+        <input type="checkbox" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           36
         </span>
@@ -278,7 +279,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="radio" name="size" class="custom-checkbox__field">
+        <input type="checkbox" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           36,5
         </span>
@@ -287,7 +288,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="radio" name="size" class="custom-checkbox__field">
+        <input type="checkbox" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           37
         </span>
@@ -296,7 +297,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="radio" name="size" class="custom-checkbox__field">
+        <input type="checkbox" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           37,5 </span>
       </label>
@@ -304,7 +305,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="radio" name="size" class="custom-checkbox__field">
+        <input type="checkbox" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           38
         </span>
@@ -313,7 +314,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="radio" name="size" class="custom-checkbox__field">
+        <input type="checkbox" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           38,5
         </span>
@@ -322,7 +323,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="radio" name="size" class="custom-checkbox__field">
+        <input type="checkbox" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           39
         </span>
@@ -331,7 +332,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="radio" name="size" class="custom-checkbox__field">
+        <input type="checkbox" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           39,5
         </span>
@@ -340,7 +341,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="radio" name="size" class="custom-checkbox__field">
+        <input type="checkbox" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           40
         </span>
@@ -349,7 +350,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="radio" name="size" class="custom-checkbox__field">
+        <input type="checkbox" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           40,5
         </span>
@@ -358,7 +359,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="radio" name="size" class="custom-checkbox__field">
+        <input type="checkbox" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           41
         </span>
@@ -367,7 +368,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="radio" name="size" class="custom-checkbox__field">
+        <input type="checkbox" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           41,5
         </span>
@@ -377,7 +378,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="radio" name="size" class="custom-checkbox__field">
+        <input type="checkbox" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           42
         </span>
@@ -386,7 +387,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="radio" name="size" class="custom-checkbox__field">
+        <input type="checkbox" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           42,5
         </span>
@@ -395,7 +396,7 @@
 
     <li class="filter-size__item">
       <label class="custom-checkbox">
-        <input type="radio" name="size" class="custom-checkbox__field">
+        <input type="checkbox" name="size" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
           43
         </span>
@@ -404,7 +405,7 @@
 
     <li class="filter-size__item filter-size__item--disabled">
       <label class="custom-checkbox">
-        <input type="radio" name="size" class="custom-checkbox__field" disabled>
+        <input type="checkbox" name="size" class="custom-checkbox__field" disabled>
         <span class="custom-checkbox__content">
           44
         </span>
@@ -413,7 +414,7 @@
 
     <li class="filter-size__item filter-size__item--disabled">
       <label class="custom-checkbox custom-checkbox--disabled">
-        <input type="radio" name="size" class="custom-checkbox__field" disabled>
+        <input type="checkbox" name="size" class="custom-checkbox__field" disabled>
         <span class="custom-checkbox__content">
           45
         </span>
@@ -456,16 +457,36 @@
 
         <p>
           Highlights
-          black/white/orange
-          cotton
-          classic collar
-          front zip fastening
-          stripe detailing
-          embroidered logo to the front
-          long sleeves
-          two side slit pockets
-          Composition
-          Outer: Cotton 100%, Calf Leather 100%
+          </span>
+          <span>
+            black/white/orange
+          </span>
+          <span>
+            cotton
+          </span>
+          <span>
+            classic collar
+          </span>
+          <span>
+            front zip fastening
+          </span>
+          <span>
+            stripe detailing
+          </span>
+          <span>
+            embroidered logo to the front
+          </span>
+          <span>
+            long sleeves
+          </span>
+          <span>
+            two side slit pockets
+          </span>
+          <span>
+            Composition </span>
+          <span>
+            Outer: Cotton 100%, Calf Leather 100%
+          </span>
         </p>
 
         <p>
@@ -473,9 +494,15 @@
         </p>
 
         <p>
-          Washing instructions
-          Dry Clean Only
-          Designer Style ID: 8036794
+          <span>
+            Washing instructions
+          </span>
+          <span>
+            Dry Clean Only
+          </span>
+          <span>
+            Designer Style ID: 8036794
+          </span>
         </p>
 
       </div>
@@ -563,15 +590,17 @@
 </div>
 
       </div>
-      <section class="products">
 
-  <h2>Wear it with</h2>
+      <section class="catalog-list">
 
-  <ul class="products__list">
-    <li class="products__item">
-      <article class="product-article">
-  <div class="product-article__image">
-    <img src="img/catalog-list/shoes.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="440">
+        
+  <h2 class="title">Wear it with</h2>
+
+  <ul class="product-list">
+    <li class="product__item">
+      <article class="product">
+  <div class="product__image">
+    <img src="img/catalog-list/shoes.jpg" alt="Burberry" width="332" height="">
   </div>
 
   <h3>
@@ -579,16 +608,18 @@
       Burberry
     </a>
   </h3>
+
   <p>B-Runner asymmetrical sneakers</p>
-  <span> $ 250.00</span>
+
+  <span>$ 250.00</span>
 
 </article>
     </li>
 
-    <li class="products__item">
-      <article class="product-article">
-  <div class="product-article__image">
-    <img src="img/catalog-list/shoes-pool.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="440">
+    <li class="product__item">
+      <article class="product">
+  <div class="product__image">
+    <img src="img/catalog-list/shoes-pool.jpg" alt="Burberry" width="332" height="">
   </div>
 
   <h3>
@@ -596,16 +627,18 @@
       Burberry
     </a>
   </h3>
+
   <p>B-Runner asymmetrical sneakers</p>
-  <span> $ 250.00</span>
+
+  <span>$ 250.00</span>
 
 </article>
     </li>
 
-    <li class="products__item">
-      <article class="product-article">
-  <div class="product-article__image">
-    <img src="img/catalog-list/sneakers.jpg" alt="B-Runner asymmetrical sneakers" width="332" height="440">
+    <li class="product__item">
+      <article class="product">
+  <div class="product__image">
+    <img src="img/catalog-list/sneakers.jpg" alt="Burberry" width="332" height="">
   </div>
 
   <h3>
@@ -613,14 +646,18 @@
       Burberry
     </a>
   </h3>
+
   <p>B-Runner asymmetrical sneakers</p>
-  <span> $ 250.00</span>
+
+  <span>$ 250.00</span>
 
 </article>
     </li>
   </ul>
 
 </section>
+        
+      </section>
 
     </div>
 
@@ -640,28 +677,30 @@
 
         <form class="subscribe" action="#">
 
-          <label class="subscribe__text" for="subscription">
-            Sing up for style news
-          </label>
-
-          <input class="subscribe__field" id="subscription" name="subscription" type="email" required
+    <label class="subscribe__text">
+        Sing up for style news
+        <input class="subscribe__field" name="subscription" type="email" required
             placeholder="Email address">
+    </label>
 
-          <button class="subscribe__btn" type="submit">
-            <span class="sr-only">
-              Send email address
-            </span>
-          </button>
-        </form>
+    <button class="subscribe__btn" type="submit">
+        <span class="sr-only">
+            Send email address
+        </span>
+    </button>
+</form>
+
 
         <label class="custom-checkbox">
           <input type="checkbox" class="custom-checkbox__field" checked>
+
           <span class="custom-checkbox__content">
             I agree with your
             <a class="custom-checkbox__link" href="#">
               terms & conditions
             </a>
           </span>
+
         </label>
 
         <ul class="footer__socials">
@@ -723,30 +762,28 @@
 
       <div class="footer__inner ">
 
-        <div class="footer__choose footer__choose--language">
+        <div class="footer__choose ">
           <label class="footer__choose-name" for="language">
             Language:
           </label>
-          <select class="footer__choose-item dropdown-item js-choice" name="number" id="language">
-            <option class="dropdown-choose__item" value=" Eng"> Eng</option>
-            <option class="dropdown-choose__item" value=" Rus"> Rus</option>
-            <option class="dropdown-choose__item" value="Arab"> Arab</option>
+          <select class="footer__choose-item js-choice" name="number" id="language">
+            <option class="footer__choose-value" value=" Eng"> Eng</option>
+            <option class="footer__choose-value" value=" Rus"> Rus</option>
+            <option class="footer__choose-value" value="Arab"> Arab</option>
           </select>
         </div>
 
-        <div class="footer__choose footer__choose--currency">
+        <div class="footer__choose">
           <label class="footer__choose-name" for="currency">
             Currency:
           </label>
-          <select class="footer__choose-item dropdown-item js-choice" name="currency" id="currency">
-            <option class="dropdown-choose__item" value=" $"> $</option>
-            <option class="dropdown-choose__item" value=" &#8381;"> &#8381;</option>
-            <option class="dropdown-choose__item" value="&#1583;"> &#1583;</option>
+          <select class="footer__choose-item js-choice" name="currency" id="currency">
+            <option class="footer__choose-value" value=" $"> $</option>
+            <option class="footer__choose-value" value=" &#8381;"> &#8381;</option>
+            <option class="footer__choose-value" value="&#1583;"> &#1583;</option>
           </select>
 
         </div>
-
-
 
       </div>
 
@@ -813,18 +850,17 @@
           </li>
         </ul>
       </div>
-
-
     </div>
+
     <ul class="footer__terms">
 
-      <li class="footer__term">
+      <li class="footer__item">
         <a class="footer__link" href="#">
           Privacy Policy
         </a>
       </li>
 
-      <li class="footer__term">
+      <li class="footer__item">
         <a class="footer__link" href="#">
           Terms of Servise
         </a>

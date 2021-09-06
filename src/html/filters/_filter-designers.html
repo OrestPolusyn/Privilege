@@ -1,26 +1,14 @@
 <form class="accordion__filter filter-designers" action="#">
 
-  <div class="accordion__filter-search search">
-
-    <label class="sr-only" for="search__field-filter">
-      Search on site
-    </label>
-
-    <svg class="search__icon search__icon--search">
-      <use xlink:href="img/sprite.svg#search"></use>
-    </svg>
-
-    <input class="search__field" id="search__field-filter" type="search" placeholder="Search..." name="search">
-
-    <svg class="search__icon search__icon--close ">
-      <use xlink:href="img/sprite.svg#close"></use>
-    </svg>
-
+  <div class="accordion__filter-search ">
+  @include('../parts/_search-field.html',{
+  class:"search__accordion"
+  })
   </div>
 
-  <ul class="accordion__filter-checkboxes">
+  <ul class="accordion__checkboxes">
 
-    <li class="accordion__filter-checkbox">
+    <li class="accordion__checkbox">
       <label class="custom-checkbox">
         <input type="checkbox" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
@@ -29,7 +17,7 @@
       </label>
     </li>
 
-    <li class="accordion__filter-checkbox">
+    <li class="accordion__checkbox">
       <label class="custom-checkbox">
         <input type="checkbox" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
@@ -38,7 +26,7 @@
       </label>
     </li>
 
-    <li class="accordion__filter-checkbox">
+    <li class="accordion__checkbox">
       <label class="custom-checkbox">
         <input type="checkbox" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
@@ -47,7 +35,7 @@
       </label>
     </li>
 
-    <li class="accordion__filter-checkbox">
+    <li class="accordion__checkbox">
       <label class="custom-checkbox">
         <input type="checkbox" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
@@ -56,7 +44,7 @@
       </label>
     </li>
 
-    <li class="accordion__filter-checkbox">
+    <li class="accordion__checkbox">
       <label class="custom-checkbox">
         <input type="checkbox" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
@@ -65,7 +53,7 @@
       </label>
     </li>
 
-    <li class="accordion__filter-checkbox">
+    <li class="accordion__checkbox">
       <label class="custom-checkbox">
         <input type="checkbox" class="custom-checkbox__field">
         <span class="custom-checkbox__content">
@@ -74,7 +62,7 @@
       </label>
     </li>
 
-    <li class="accordion__filter-checkbox">
+    <li class="accordion__checkbox">
       <label class="custom-checkbox">
         <input type="checkbox" class="custom-checkbox__field">
         <span class="custom-checkbox__content">

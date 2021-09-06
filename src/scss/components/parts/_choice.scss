@@ -1,0 +1,115 @@
+.choices {
+  position: relative;
+
+  &:hover {
+    .choices__inner {
+      border-color: var(--color-golden);
+      color: var(--color-golden);
+    }
+
+    &[data-type*=select-one]:after {
+      background-color: var(--color-golden);
+    }
+  }
+
+  &.is-open {
+
+    .choices__inner {
+      border-color: var(--color-golden);
+      color: var(--color-golden);
+    }
+
+    &[data-type*=select-one]:after {
+      background-color: var(--color-golden);
+
+    }
+  }
+
+  &__inner {
+    border: none;
+    background-color: transparent;
+    border-top: 2px solid var(--color-black);
+    border-bottom: 2px solid var(--color-black);
+    cursor: pointer;
+    text-align: center;
+    border-radius: 0;
+    transition: border-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  }
+}
+
+.is-flipped.is-open .choices__inner,
+.is-open .choices__inner {
+  border-radius: 0;
+}
+
+.choices[data-type*=select-one]:after {
+  border: none;
+  content: '';
+  position: absolute;
+  right: 5px;
+  background-color: $white;
+  top: 25px;
+  mask-image: url('../img/sprite.svg#arrow-footer');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 8px;
+  width: 14px;
+  transition: background-color 0.5s ease-in-out,
+    transform 0.4s ease-in;
+}
+
+.choices__list--dropdown {
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
+  border: none;
+  color: var(--color-black);
+  border-radius: 0;
+
+  .choices__item--selectable {
+    padding: 12px 0;
+    text-align: center;
+  }
+
+  &__choose-item {
+    padding: 14px 10px 14px 5px;
+    max-width: 75px;
+    width: 100%;
+    text-align: left;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--color-golden);
+
+      &::after {
+        background-color: var(--color-golden);
+      }
+    }
+
+    &:active {
+      color: var(--color-golden);
+
+      &::after {
+        background-color: var(--color-golden);
+      }
+    }
+
+    &:focus {
+      color: var(--color-golden);
+
+      &::after {
+        background-color: var(--color-golden);
+      }
+    }
+  }
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted {
+  background-color: var(--color-golden);
+  color: $white;
+}
+
+.choices[data-type*=select-one].is-open:after {
+  margin-top: -2px;
+  transform: rotate(180deg);
+}

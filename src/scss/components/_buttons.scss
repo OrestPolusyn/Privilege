@@ -1,0 +1,94 @@
+.btn-reset {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn-shop {
+  color: #fff;
+  font: $font-btn;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background-color: var(--color-black);
+  padding: 13px 70px;
+  display: inline-block;
+  position: relative;
+  transition: all 0.35s ease-in-out;
+  z-index: 1;
+  border: none;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    bottom: 0;
+    background-color: var(--color-hover);
+    transition: all 0.35s ease-in-out;
+    color: #fff;
+    z-index: -1;
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
+
+  &:active {
+    background-color: var(--color-hover);
+  }
+
+  &:disabled,
+  &[disabled] {
+    background-color: var(--color-disabled);
+    pointer-events: all !important;
+  }
+
+  &.disabled {
+    background-color: var(--color-disabled);
+    pointer-events: all !important;
+
+    &:hover:after {
+      width: 0;
+      pointer-events: all !important;
+
+    }
+
+    &:active {
+      background-color: var(--color-disabled);
+      pointer-events: all !important;
+
+    }
+  }
+
+}
+
+.btn-favorite {
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 10px;
+  position: relative;
+  transition: all 0.35s ease-in-out;
+  background-color: transparent;
+  z-index: 1;
+  border: none;
+  line-height: 1;
+  fill: transparent;
+  stroke: var(--color-black);
+  stroke-width: 2px;
+
+  &:hover {
+    stroke: var(--color-hover);
+  }
+
+  &:active {
+    stroke: var(--color-hover);
+  }
+
+  &:disabled,
+  &[disabled] {
+    background-color: var(--color-disabled);
+  }
+}

@@ -1,0 +1,44 @@
+.main-title {
+  @include H;
+  text-align: center;
+  margin-bottom: 40px;
+
+  @include mobile {
+    font-size: 50px;
+  }
+
+  @include mobile-m {
+    font-size: 44px;
+  }
+
+  @include mobile-s {
+    font-size: 32px;
+  }
+
+  &__subtitle {
+    @include body;
+    text-align: center;
+    display: block;
+    margin-bottom: 42px;
+
+  }
+}
+
+.title {
+  text-align: left;
+  @include H2;
+  margin-bottom: 24px;
+
+
+  @include mobile {
+    font-size: 36px;
+  }
+
+  @include mobile-m {
+    font-size: 28px;
+  }
+}
+
+.title-quick {
+  @include H3;
+}

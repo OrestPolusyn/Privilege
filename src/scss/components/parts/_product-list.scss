@@ -1,0 +1,42 @@
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 122px;
+  row-gap: 56px;
+  margin-bottom: 92px;
+
+  @include tablet {
+    column-gap: 60px;
+    row-gap: 30px;
+  }
+
+  @include mobile {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+
+  .product {
+    max-width: 332px;
+    width: 100%;
+
+    &__image {
+      margin-bottom: 24px;
+    }
+
+    img {
+      object-fit: contain;
+
+    }
+
+    h3 {
+      font-size: 18px;
+    }
+
+    span {
+      font-size: 17px;
+    }
+  }
+
+}

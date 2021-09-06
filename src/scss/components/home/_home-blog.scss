@@ -29,8 +29,6 @@
         margin-right: 10px;
       }
     }
-
-
   }
 
   &__inner {
@@ -57,7 +55,9 @@
 
     h2 {
       @include H3;
-      margin-bottom: 25px;
+      margin-bottom: 10px;
+      letter-spacing: -0.03em;
+      text-align: left;
     }
 
     p {
@@ -66,60 +66,63 @@
     }
   }
 
-  &__btn-shop {
+  &__btn-shop.btn-shop {
     @include mobile-s {
       display: none;
     }
   }
 
-  &__btn-all {
+  &__btn-all.btn-shop {
     display: none;
 
     @include mobile-s {
       display: block;
     }
   }
-}
 
-.blog-article {
-  cursor: pointer;
-  img {
-    margin-bottom: 24px;
-
-    @include mobile-m {
-      height: 205px;
-    }
-  }
-
-  span {
-    color: var(--color-golden);
-    display: block;
-    @include body-sec;
-    margin-bottom: 8px;
-  }
-
-  h3 {
-    @include H4;
-    transition: color 0.3s ease-in-out;
-
-    @include mobile-m {
-      font-size: 16px;
-    }
-  }
-
-
-  &__link {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
+  .blog-article {
     cursor: pointer;
-  }
 
-  &:hover {
+    img {
+      margin-bottom: 24px;
+
+      @include mobile-m {
+        height: 205px;
+      }
+    }
+
+    span {
+      color: var(--color-golden);
+      display: block;
+      @include body-sec;
+      margin-bottom: 8px;
+    }
+
     h3 {
-      color: var(--color-hover);
+      @include H4;
+      transition: color 0.3s ease-in-out;
+
+      @include mobile-m {
+        font-size: 16px;
+      }
+    }
+
+    a {
+
+      &::before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        cursor: pointer;
+      }
+    }
+
+    &:hover {
+      h3 {
+        color: var(--color-hover);
+      }
     }
   }
 }

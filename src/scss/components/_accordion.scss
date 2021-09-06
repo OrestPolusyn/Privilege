@@ -7,6 +7,7 @@
     cursor: pointer;
     transition: padding-bottom 0.3s ease-in;
     @include hover-bl;
+    text-transform: capitalize;
 
     &::before {
       content: '';
@@ -50,10 +51,8 @@
     position: relative;
 
     &:not(:last-child) {
-      margin-bottom: 40px;
+      margin-bottom: 36px;
     }
-
-
   }
 
   &__filter {
@@ -73,6 +72,11 @@
 
         &::before {
           border-color: var(--color-silver);
+          top: 2px;
+        }
+
+        &::after {
+          top: 2px;
         }
 
         &:checked {
@@ -105,7 +109,7 @@
 
   }
 
-  &__filter-checkboxes {
+  &__checkboxes {
     max-height: 234px;
     overflow-y: scroll;
     scrollbar-color: var(--color-golden);
@@ -121,16 +125,48 @@
     }
   }
 
-  &__filter-checkbox {
+  &__checkbox {
     font-size: 16px;
     line-height: 1.2;
-
 
     &:not(:last-child) {
       margin-bottom: 24px;
     }
+
+    &__content {
+      padding-left: 25px;
+      cursor: pointer;
+
+      &::after {
+        top: 2px;
+      }
+    }
+
   }
 
+  &__filter-search {
+    padding-left: 25px;
+    margin-bottom: 24px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      mask-image: url('../img/sprite.svg#search-acc');
+      background-color: var(--color-black);
+      width: 30px;
+      left: -6px;
+      bottom: 0;
+      height: 17px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+
+    .search__icon {
+      display: none;
+    }
+  }
 
 }
 

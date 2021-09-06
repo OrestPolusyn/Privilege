@@ -1,0 +1,146 @@
+.privacy-policy {
+  padding-top: 40px;
+
+  .main-title {
+    margin-bottom: 24px;
+
+    &__subtitle {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__inner {
+    @include flex-s-sb;
+    position: relative;
+
+    @include mobile-m {
+      flex-wrap: wrap-reverse;
+    }
+  }
+
+  &__content {
+    margin-right: 74px;
+    width: calc(100% - 375px);
+
+    @include tablet {
+      width: calc(100% - 250px);
+    }
+
+    @include mobile {
+      width: 100%;
+      margin-right: 30px;
+    }
+
+    @include mobile-m {
+      margin-right: 0
+    }
+
+    h3 {
+      @include H4;
+      margin-bottom: 34px;
+      position: relative;
+      display: inline-block;
+      padding-top: 20px;
+
+      &::after {
+        content: "";
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        height: 2px;
+        background-color: var(--color-golden);
+      }
+
+    }
+
+    p {
+      @include body;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__quick {
+    max-width: 305px;
+    width: 100%;
+
+    @include tablet {
+      max-width: 250px;
+    }
+
+    @include mobile {
+      max-width: 230px;
+    }
+
+    @include mobile-m {
+      max-width: 100%;
+      background-color: var(--color-white);
+    }
+  }
+
+  .title-quick {
+    margin-bottom: 24px;
+  }
+
+  &__tab {
+    margin-bottom: 30px;
+    @include hover-full;
+    position: relative;
+    transition: padding-left 0.3s ease;
+    text-align: left;
+    cursor: pointer;
+    @include hover-bl;
+    transition: background 0.3s ease-in-out,
+      padding 0.3s ease-in-out;
+
+    @include mobile {
+      font-size: 12px;
+    }
+
+
+    &:hover {
+      @include hover-full;
+    }
+
+    &:active {
+      @include hover-full;
+    }
+
+    &:focus {
+      @include hover-full;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: var(--color-golden);
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: width 0.3s ease-in-out;
+    }
+
+    &--active {
+      padding-left: 53px;
+
+      @include mobile {
+        padding-left: 30px;
+      }
+
+      &::before {
+        width: 40px;
+
+        @include mobile {
+          width: 20px;
+        }
+      }
+
+      .privacy-policy__btn {
+        @include hover-full;
+      }
+    }
+  }
+
+}

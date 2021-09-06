@@ -20,11 +20,6 @@
     @include tablet {
       flex-wrap: wrap;
       justify-content: space-evenly;
-      margin-right: -30px;
-    }
-
-    @include mobile-m {
-      margin-right: 0;
     }
   }
 
@@ -40,12 +35,19 @@
     }
 
     &:not(:last-child) {
-      margin-right: 30px;
+      margin-right: 10px;
+    }
 
-      @include mobile-m {
-        margin-right: 0;
-        width: 100%;
+    @include mobile {
+      margin: 0 10px 50px;
+
+      &:last-child {
+        margin-bottom: 0;
       }
+    }
+
+    @include mobile-s {
+      margin: 0 0 50px;
     }
 
     &::before {
@@ -56,21 +58,15 @@
       width: 50px;
       top: 0;
       left: 0;
-      background-image: url('../img/sprite.svg#shirt');
+      background-image: url('../img/sprite.svg#like');
     }
 
     &--track::before {
       background-image: url('../img/sprite.svg#track');
     }
 
-    &--shirt {
-      .additional__item-inner {
-        padding-left: 84px;
-      }
-
-      &::before {
-        background-image: url('../img/sprite.svg#shirt');
-      }
+    &--shirt::before {
+      background-image: url('../img/sprite.svg#shirt');
     }
 
     &--like::before {
@@ -78,11 +74,10 @@
     }
   }
 
-  &__item-inner {
+  &__inner {
     padding-left: 76px;
     border-bottom: 2px solid var(--color-golden);
     margin-bottom: 24px;
-
   }
 
   &__text {
@@ -153,7 +148,7 @@
         transform: translateX(0);
 
         @include mobile {
-          transform: translateX(200%);
+          transform: translateX(160%);
 
         }
       }
@@ -175,7 +170,29 @@
         transform: translateX(0);
 
         @include mobile {
-          transform: translateX(200%);
+          transform: translateX(160%);
+
+        }
+      }
+    }
+
+    &:focus {
+      @include hover-full;
+      padding-left: 50px;
+
+      @include mobile {
+        padding-left: 0;
+      }
+
+      &::after {
+        transform: translateX(1000%);
+      }
+
+      &::before {
+        transform: translateX(0);
+
+        @include mobile {
+          transform: translateX(160%);
 
         }
       }

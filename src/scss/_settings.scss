@@ -32,18 +32,6 @@ body {
   border: 2px #ff4019 solid;
 }
 
-.btn-reset {
-  border: none;
-  background: transparent;
-  cursor: pointer;
-}
-
-.logo {
-  max-width: 163px;
-  z-index: 5;
-}
-
-
 .js-focus-visible :focus:not(.focus-visible) {
   outline: transparent;
 }
@@ -61,94 +49,15 @@ body {
   overflow: hidden;
 }
 
-.btn-shop {
-  color: #fff;
-  font: $font-btn;
-  text-align: center;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  background-color: var(--color-black);
-  padding: 13px 70px;
-  display: inline-block;
-  position: relative;
-  transition: all 0.35s ease-in-out;
-  z-index: 1;
-  border: none;
-
-  &::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 0;
-    bottom: 0;
-    background-color: var(--color-hover);
-    transition: all 0.35s ease-in-out;
-    color: #fff;
-    z-index: -1;
-  }
-
-  &:hover:after {
-    width: 100%;
-  }
-
-  &:active {
-    background-color: var(--color-hover);
-  }
-
-  button:disabled,
-  button[disabled] {
-    background-color: var(--color-disabled);
-  }
-}
-
-.btn-favorite {
-  text-align: center;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  padding: 10px;
-  position: relative;
-  transition: all 0.35s ease-in-out;
-  background-color: transparent;
-  z-index: 1;
-  border: none;
-  fill: transparent;
-  stroke: var(--color-black);
-  stroke-width: 2px;
-
-  &:hover {
-    stroke: var(--color-hover);
-  }
-
-  &:active {
-    stroke: var(--color-hover);
-  }
-
-  button:disabled,
-  button[disabled] {
-    background-color: var(--color-disabled);
-  }
-}
-
 .disabled {
-  background-color: var(--color-disabled);
-  cursor: not-allowed;
+  background-color: var(--color-disabled) !important;
+  color: var(--color-disabled) !important;
   pointer-events: all !important;
 
 }
 
-.title-main {
-  @include H;
-  text-align: center;
-  margin-bottom: 40px;
-
-  @include mobile {
-    font-size: 50px;
-  }
-
-  @include mobile-m {
-    font-size: 44px;
-  }
+.error {
+  border: 2px #ff4019 solid !important; // stylelint-disable-line declaration-no-important
 }
 
 .main {
@@ -166,333 +75,33 @@ body {
   @include mobile-m {
     margin-top: 140px;
   }
-
-  &__baner {
-    margin-bottom: 150px;
-
-    @include tablet {
-      margin-bottom: 60px;
-    }
-
-    img {
-      object-fit: cover;
-      width: 100%;
-      height: 604px;
-
-      @include tablet {
-        height: 400px;
-      }
-
-      @include mobile-m {
-        height: 244px;
-      }
-    }
-  }
 }
 
-.swiper-nav {
-  .swiper-btns {
-    position: relative;
-    max-width: 124px;
-    width: 100%;
-    height: 50px;
-    left: 0;
-
-    @include mobile {
-      width: 30%;
-      height: 30px;
-    }
-
-    @include mobile-m {
-      display: none;
-    }
-  }
-
-  .swiper-btn {
-    border: 2px solid var(--color-black);
-    padding: 2px 10px;
-    transition: border-color 0.3s ease-in-out;
-    height: 50px;
-    width: 50px;
-
-    @include mobile {
-      width: 30px;
-      height: 30px;
-      padding: 4px;
-    }
-
-    svg {
-      height: 50px;
-      transition: fill 0.3s ease-in-out;
-    }
-
-    &.swiper-button-next {
-      right: 0;
-    }
-
-    &.swiper-button-prev {
-      left: 0;
-
-      svg {
-        transform: rotate(180deg);
-      }
-    }
-
-    &:hover {
-      border-color: var(--color-hover);
-
-      svg {
-        fill: var(--color-hover);
-      }
-    }
-  }
-
-  .swiper-button-prev:after,
-  .swiper-container-rtl .swiper-button-next:after,
-  .swiper-button-next:after,
-  .swiper-container-rtl .swiper-button-prev:after {
-    display: none;
-  }
+button {
+  border: none;
+  background-color: transparent;
 }
 
-.popup {
-  visibility: hidden;
-  opacity: 0;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: 10;
-  transition: visibility 0.3s linear, opacity 0.3s linear;
 
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(25px);
+.logo {
+  max-width: 163px;
+  z-index: 5;
+
+  @include desktop {
+    margin-right: 70px;
   }
 
-  @-moz-document url-prefix() {
-    .popup {
-      background: rgba(0, 0, 0, 0.7);
-      background-repeat: no-repeat;
-      background-position-y: 0;
-      background-attachment: fixed;
-      filter: blur(25px);
-
-      &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-      }
-    }
+  @include mobile {
+    margin-right: auto;
   }
-
-  &__box {
-    max-width: 490px;
-    width: 100%;
-    height: 410px;
-    border: 1px solid var(--color-golden);
-    z-index: 13;
-    position: absolute;
-    opacity: 1;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    right: 0;
-    background-color: $white;
-    margin: 0 auto;
-
-    @include mobile-m {
-      height: 270px;
-      max-width: 290px;
-    }
-  }
-
-  .subscribe {
-    max-width: 350px;
-    width: 100%;
-    padding-top: 50px;
-    margin-bottom: 50px;
-    margin: 0 auto;
-
-    @include mobile-m {
-      padding: 10px 20px 0;
-    }
-
-    p {
-      @include subtitle-sec;
-    }
-
-    &__btn {
-      background-image: url('../img/sprite.svg#arrow');
-
-      @include mobile-m {
-        right: 20px;
-      }
-    }
-
-    &__close {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background-color: $white;
-      width: 40px;
-      height: 40px;
-      padding: 12px;
-      cursor: pointer;
-
-      @include mobile-m {
-        top: 10px;
-        right: 10px;
-        width: 30px;
-        height: 30px;
-        padding: 8px;
-      }
-
-    }
-  }
-
-  &--active {
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
-.search {
-position: relative;
-
-  &__close {
-     visibility: hidden;
-     opacity: 0;
-    background-color: transparent;
-    border: none;
-    position: absolute;
-    top: 0;
-    width: 24px;
-    height: 24px;
-    z-index: 10;
-
-    &::after {
-      content: '';
-      position: absolute;
-      background-color: #000;
-      mask-image: url('../img/sprite.svg#close');
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-      mask-repeat: no-repeat;
-      mask-position: bottom;
-      mask-size: contain;
-      width: 24px;
-      height: 14px;
-      top: 0;
-      left: 0;
-      transform: translateY(6px);
-    }
-  }
-
-  &__icon {
-    width: 24px;
-    height: 24px;
-    stroke-width: 2px;
-
-    @include mobile-m {
-      stroke-width: 1px;
-      width: 18px;
-    }
-
-    &--search {
-      position: absolute;
-      left: -34px;
-      top: 3px;
-    }
-  }
-
-  &__field {
-    border: none;
-    border-bottom: 2px solid var(--color-golden);
-    outline: transparent;
-    padding: 0;
-    max-width: 105px;
-    width: 100%;
-    transition: all 0.5s ease-in;
-
-    &::placeholder {
-      color: #9d9d9d;
-      font-size: 10px;
-      line-height: 1.1;
-    }
-  }
-}
-
-input[type=search]::-ms-clear,
-input[type=search]::-ms-reveal {
-  -webkit-appearance: none;
-  display: none;
-  width: 0;
-  height: 0;
-}
-
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration {
-  -webkit-appearance: none;
-  display: none;
-  width: 0;
-  height: 0;
-
-}
-
-.product-article {
-  cursor: pointer;
-
-  h3 {
-    transition: color 0.3s ease-in-out;
-  }
-
-  &:hover {
-    h3 {
-      color: var(--color-golden);
-      filter: drop-shadow(0px 16px 24px rgba(0, 0, 0, 0.06)) drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.04)) drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.04));
-    }
-  }
-}
-
-.burger {
-  display: none;
-  --burger-width: 16px;
-  --burger-height: 14px;
-  --burger-line-height: 1px;
-
-  @include burger;
 
   @include mobile-m {
-    display: block;
-    margin-left: 24px;
+    max-width: 144px;
   }
 
-  @include mobile-s {
-    margin-left: 10px;
+  &__img {
+    @include mobile-s {
+      height: 18px;
+    }
   }
-}
-
-.title {
-  text-align: center;
-  @include H2;
-}
-
-.main-title {
-  @include H;
-  text-align: center;
 }

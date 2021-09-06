@@ -1,21 +1,9 @@
 .search-page {
   @include flex-all-sb;
-
+  padding-top: 40px;
 
   .title {
     margin-bottom: 24px;
-    margin-top: 40px;
-  }
-
-  &__result {
     text-align: center;
-    display: block;
-    margin-bottom: 42px;
-  }
-
-  &__nofound {
-    text-align: center;
-    margin-bottom: 42px;
-    display: block;
   }
 }

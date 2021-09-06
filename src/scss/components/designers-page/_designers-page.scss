@@ -1,0 +1,114 @@
+.designers-page {
+  margin-bottom: 100px;
+
+  .search {
+    max-width: 410px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+
+    @include mobile-s {
+      width: 90%;
+    }
+
+    &__icon {
+      left: -24px;
+    }
+
+    &__designers {
+      max-width: 100%;
+    }
+  }
+
+  &__list {
+    margin-bottom: 100px;
+
+    @include mobile {
+      margin-bottom: 60px;
+    }
+
+    ul {
+      @include flex-all-sb;
+
+      @include tablet {
+        flex-wrap: wrap;
+        justify-content: center;
+
+      }
+    }
+
+    li {
+      text-transform: uppercase;
+      font-size: 18px;
+      transition: color 0.3s ease-in-out;
+      white-space: nowrap;
+      padding: 5px;
+
+      &:not(:last-child) {
+        @include tablet {
+          margin-right: 10px;
+        }
+      }
+
+      &:hover {
+        color: var(--color-golden);
+      }
+    }
+  }
+
+  &__inner {
+    .title {
+      text-align: left;
+      margin-bottom: 34px;
+    }
+  }
+
+  &__items {
+    column-count: 4;
+    display: block;
+
+    @include tablet {
+      column-count: 3;
+    }
+
+    @include mobile {
+      column-count: 2;
+    }
+
+    @include mobile-s {
+      column-count: 1;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+
+
+    li {
+      margin-bottom: 24px;
+
+
+      span {
+        background-color: var(--color-golden);
+        font: normal 400 14px/1.1 "CervoNeue",
+          sans-serif;
+        font-size: 16px;
+        display: inline-block;
+        letter-spacing: 0.3em;
+        text-transform: capitalize;
+        color: #fff;
+        margin-right: 10px;
+        padding: 4px 5px 4px 10px;
+      }
+    }
+
+    a {
+      @include hover-bl;
+      font-size: 14px;
+
+      &:hover {
+        @include hover-full;
+      }
+    }
+  }
+}

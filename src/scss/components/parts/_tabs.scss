@@ -1,0 +1,49 @@
+.tabs {
+  @include tablet {
+    column-count: 2;
+    column-gap: 120px;
+  }
+
+  @include mobile-m {
+    column-gap: 20px;
+  }
+
+  &__btn {
+    position: relative;
+    cursor: pointer;
+    @include hover-bl;
+    @include H4;
+    transition: background 0.3s ease-in-out,
+      padding 0.3s ease-in-out;
+    margin-bottom: 25px;
+
+    @include mobile-m {
+      font-size: 14px;
+    }
+
+    &:hover {
+      @include hover-full;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: var(--color-golden);
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: width 0.3s ease-in-out;
+    }
+
+    &--active {
+      @include hover-full;
+      padding-left: 48px;
+
+      &::before {
+        width: 40px;
+      }
+    }
+  }
+}

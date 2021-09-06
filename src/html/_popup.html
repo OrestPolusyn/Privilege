@@ -1,24 +1,19 @@
 <div class="popup">
   <div class="popup__box">
-    <img class="popup__ing" src="img/popup.jpg" alt="Man popup">
+    <img class="popup__img" src="img/popup.jpg" alt="Man popup">
 
-    <form class="subscribe" action="#">
+    @include('parts/_form-subscribe.html')
 
-      <label class="subscribe__text" for="subscription-popup">
-        Sing up for style news
-      </label>
+    <button class="popup__btn" type="button">
 
-      <input class="subscribe__field" id="subscription-popup" name="subscription" type="email" required
-        placeholder="Email address">
+      <span class="sr-only">
+        Close popup
+      </span>
 
-      <button class="subscribe__btn" type="submit">
-        <span class="sr-only">
-          Send email address
-        </span>
-      </button>
-    </form>
-    <svg class="subscribe__close">
-      <use xlink:href="img/sprite.svg#close"></use>
-    </svg>
+      <svg class="subscribe__close">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+
+    </button>
   </div>
 </div>

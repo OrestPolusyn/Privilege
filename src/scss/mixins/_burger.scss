@@ -57,3 +57,23 @@
     }
   }
 }
+
+
+.burger {
+  display: none;
+  --burger-width: 16px;
+  --burger-height: 14px;
+  --burger-line-height: 1px;
+
+  @include burger;
+
+  @include mobile-m {
+    order: 2;
+    display: block;
+    margin-left: 24px;
+  }
+
+  @include mobile-s {
+    margin-left: 10px;
+  }
+}
