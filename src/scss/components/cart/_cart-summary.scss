@@ -44,9 +44,11 @@
   &__summary-text {
     @include body-sec;
 
-    span {
-      @include subtitle-sec;
 
-    }
+  }
+
+  &__summary-price {
+    @include subtitle-sec;
+
   }
 }

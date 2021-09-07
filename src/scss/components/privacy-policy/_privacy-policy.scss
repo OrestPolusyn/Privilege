@@ -51,7 +51,6 @@
         height: 2px;
         background-color: var(--color-golden);
       }
-
     }
 
     p {
@@ -124,6 +123,7 @@
 
     &--active {
       padding-left: 53px;
+      @include hover-full;
 
       @include mobile {
         padding-left: 30px;
@@ -137,9 +137,6 @@
         }
       }
 
-      .privacy-policy__btn {
-        @include hover-full;
-      }
     }
   }
 

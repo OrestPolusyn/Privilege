@@ -12,7 +12,7 @@
     }
 
     &__icon {
-      left: -24px;
+      left: -35px;
     }
 
     &__designers {
@@ -29,11 +29,17 @@
 
     ul {
       @include flex-all-sb;
+      overflow-x: scroll;
+      scrollbar-color: var(--color-golden);
 
-      @include tablet {
-        flex-wrap: wrap;
-        justify-content: center;
+      &::-webkit-scrollbar {
+        height: 4px;
+      }
 
+      &::-webkit-scrollbar-thumb {
+        border-radius: 7px;
+        width: 5px;
+        background-color: var(--color-golden);
       }
     }
 
@@ -43,6 +49,7 @@
       transition: color 0.3s ease-in-out;
       white-space: nowrap;
       padding: 5px;
+      cursor: pointer;
 
       &:not(:last-child) {
         @include tablet {

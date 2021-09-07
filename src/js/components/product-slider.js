@@ -37,4 +37,6 @@ let galleryThumbs = new Swiper('.gallery__thumbs', {
 galleryPreview.controller.control = galleryThumbs;
 galleryThumbs.controller.control = galleryPreview;
 
-// galleryThumbs.update();
+if (document.querySelector('.gallery__thumbs')) {
+  galleryThumbs.update();
+}
