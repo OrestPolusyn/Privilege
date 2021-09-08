@@ -30,20 +30,18 @@
       </form>
 
 
-      <div class="designers-page__list">
 
-        @include('html/designers-page/_designers-alphabet.html')
+      @include('html/designers-page/_designers-alphabet.html')
 
-      </div>
 
       <section class="designers-page__inner">
         @include('html/designers-page/_designers-list.html',{
-          letter:'A'
+        letter:'A'
         })
 
-         @include('html/designers-page/_designers-list.html',{
-         letter:'B'
-         })
+        @include('html/designers-page/_designers-list.html',{
+        letter:'B'
+        })
       </section>
 
     </div>

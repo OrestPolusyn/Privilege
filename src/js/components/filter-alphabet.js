@@ -1,5 +1,5 @@
-const designersLetter = document.querySelectorAll('.designers-page__list li'),
-  designersList = document.querySelectorAll('.designers-page__items a');
+const designersLetter = document.querySelectorAll('.designers-page__btn'),
+  designersList = document.querySelectorAll('.designers-page__link');
 
 
 designersLetter.forEach(item => {
@@ -8,12 +8,20 @@ designersLetter.forEach(item => {
 
     designersList.forEach(el => {
       if (!el.innerText.toLowerCase().includes(letter)) {
-        el.parentElement.style.display = 'none'
+        el.parentElement.style.display = 'none';
       } else {
-        el.parentElement.style.display = 'block'
-
+        el.parentElement.style.display = 'block';
       }
+    });
 
+    designersList.forEach(el => {
+      if (!parseInt(letter)) {
+        let elNumber = parseInt(el.textContent.match(/\d+/));
+        console.log(elNumber);
+        // elNumber.parentElement.style.display = 'none'
+      } else {  
+        el.parentElement.style.display = 'block'
+      }
     });
   })
 });

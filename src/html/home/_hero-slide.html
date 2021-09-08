@@ -1,8 +1,8 @@
 <div class="swiper-slide__inner container">
-  
-  <h2>@title</h2>
 
-  <p>@text</p>
+  <h2 class="swiper-slide__title">@title</h2>
+
+  <p class="swiper-slide__text">@text</p>
 
   <a class="swiper-slide__btn btn-shop" href="#">
     Shop now
@@ -17,19 +17,19 @@
     <picture>
       <source media="(max-width: 576px)" srcset="img/hero/@img-576w.jpg">
       <source media="(min-width: 577px)" srcset="img/hero/@img.jpg">
-      <img src="img/hero/@img.jpg" alt="@title_article" width="644" height="725">
+      <img class="slider-article__img" src="img/hero/@img.jpg" alt="@title_article" width="644" height="725">
     </picture>
 
     <div class="slider-article__content">
-      <h3>
+      <h3 class="slider-article__title">
         @title_article
       </h3>
 
-      <span>
+      <span class="slider-article__price">
         @price
       </span>
 
-      <a href="#">
+      <a class="slider-article__link" href="#">
         buy now
         <svg class="slider-article__icon icon">
           <use xlink:href="img/sprite.svg#arrow"></use>

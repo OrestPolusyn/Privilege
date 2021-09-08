@@ -18,3 +18,17 @@ window.addEventListener('scroll', function () {
 
   scrollPrev = windowScrolled;
 });
+
+
+const dropdownMenu = document.querySelector('.header__dropdown')
+
+document.querySelectorAll('.header__menu .header__item').forEach(function (item) {
+
+  item.addEventListener('mouseover', function (e) {
+    dropdownMenu.classList.add('header__dropdown--show');
+  });
+
+  dropdownMenu.addEventListener('mouseleave', function (e) {
+    dropdownMenu.classList.remove('header__dropdown--show');
+  });
+});

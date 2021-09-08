@@ -1,9 +1,13 @@
-document.querySelectorAll('a[href^="#"').forEach(link => {
- 
- 
+const itemLink = document.querySelectorAll('.privacy-policy__tab');
+
+document.querySelectorAll('.privacy-policy__link[href^="#"').forEach(link => {
 
   link.addEventListener('click', function (e) {
     e.preventDefault();
+
+    itemLink.forEach(item => {
+      item.classList.remove("privacy-policy__tab--active");
+    });
 
     this.parentElement.classList.add("privacy-policy__tab--active");
 

@@ -70,15 +70,15 @@
     background-color: currentColor;
     transform: translateY(-50%);
     transition: transform 0.3s ease-in-out; }
-  .burger--active::before {
+  .burger--open::before {
     top: 50%;
     transform: rotate(45deg);
     transition: transform 0.3s ease-in-out, top 0.3s ease-in-out; }
-  .burger--active::after {
+  .burger--open::after {
     top: 50%;
     transform: rotate(-45deg);
     transition: transform 0.3s ease-in-out, top 0.3s ease-in-out; }
-  .burger--active .burger__line {
+  .burger--open .burger__line {
     transform: scale(0);
     transition: transform 0.3s ease-in-out; }
   @media (max-width: 576px) {

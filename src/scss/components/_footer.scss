@@ -79,10 +79,11 @@
       }
     }
 
-    p {
-      margin-bottom: 12px;
-      font-size: 16px;
-    }
+  }
+
+  &__inner-text {
+    margin-bottom: 12px;
+    font-size: 16px;
   }
 
   &__link {
@@ -210,6 +211,7 @@
       border-color: var(--color-golden);
     }
   }
+
   .custom-checkbox {
     display: none;
     text-transform: none;
@@ -254,7 +256,7 @@
     }
   }
 
-  .subscribe__field{
+  .subscribe__field {
     margin-top: 16px;
   }
 }

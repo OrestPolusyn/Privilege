@@ -4,4 +4,5 @@ const burger = document.querySelector('.burger'),
 burger.addEventListener('click', (e) => {
   e.currentTarget.classList.toggle('burger--open');
   menuMobile.classList.toggle('header__menu--open');
+  dropdownMenu.classList.remove('header__dropdown--show');
 });

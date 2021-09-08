@@ -56,46 +56,36 @@
         @include mobile {
           margin-bottom: 0;
         }
+      }
+    }
 
+    &__title {
+      @include H;
+      margin-bottom: 24px;
+
+      @include tablet {
+        font-size: 51px;
       }
 
-      h2 {
-        @include H;
-        margin-bottom: 24px;
-
-        @include tablet {
-          font-size: 51px;
-        }
-
-        @include mobile {
-          font-size: 26px;
-          margin-bottom: 12px;
-        }
-
-        @include mobile-s {
-          font-size: 24px;
-        }
+      @include mobile {
+        font-size: 26px;
+        margin-bottom: 12px;
       }
 
-      p {
-        margin-bottom: 24px;
-        max-width: 370px;
-        width: 100%;
-        font-size: 14px;
-        line-height: 1.7;
-
-        @include mobile-s {
-          padding-right: 20px;
-        }
+      @include mobile-s {
+        font-size: 24px;
       }
+    }
 
-      img {
-        width: 100%;
+    &__text {
+      margin-bottom: 24px;
+      max-width: 370px;
+      width: 100%;
+      font-size: 14px;
+      line-height: 1.7;
 
-        @include mobile-s {
-          object-fit: cover;
-          object-position: top;
-        }
+      @include mobile-s {
+        padding-right: 20px;
       }
     }
 

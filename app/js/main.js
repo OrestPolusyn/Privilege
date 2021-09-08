@@ -6,6 +6,7 @@ var burger = document.querySelector('.burger'),
 burger.addEventListener('click', function (e) {
   e.currentTarget.classList.toggle('burger--open');
   menuMobile.classList.toggle('header__menu--open');
+  dropdownMenu.classList.remove('header__dropdown--show');
 });
 "use strict";
 
@@ -97,14 +98,22 @@ var swiperCatalog = new Swiper('.catalog__swiper', {
 });
 "use strict";
 
-var designersLetter = document.querySelectorAll('.designers-page__list li'),
-    designersList = document.querySelectorAll('.designers-page__items a');
+var designersLetter = document.querySelectorAll('.designers-page__btn'),
+    designersList = document.querySelectorAll('.designers-page__link');
 designersLetter.forEach(function (item) {
   item.addEventListener('click', function () {
     var letter = item.textContent.trim().toLowerCase();
     designersList.forEach(function (el) {
       if (!el.innerText.toLowerCase().includes(letter)) {
         el.parentElement.style.display = 'none';
+      } else {
+        el.parentElement.style.display = 'block';
+      }
+    });
+    designersList.forEach(function (el) {
+      if (!parseInt(letter)) {
+        var elNumber = parseInt(el.textContent.match(/\d+/));
+        console.log(elNumber); // elNumber.parentElement.style.display = 'none'
       } else {
         el.parentElement.style.display = 'block';
       }
@@ -185,9 +194,13 @@ var swiperHero = new Swiper('.swiper-slider', {
 });
 "use strict";
 
-document.querySelectorAll('a[href^="#"').forEach(function (link) {
+var itemLink = document.querySelectorAll('.privacy-policy__tab');
+document.querySelectorAll('.privacy-policy__link[href^="#"').forEach(function (link) {
   link.addEventListener('click', function (e) {
     e.preventDefault();
+    itemLink.forEach(function (item) {
+      item.classList.remove("privacy-policy__tab--active");
+    });
     this.parentElement.classList.add("privacy-policy__tab--active");
     var href = this.getAttribute('href').substring(1);
     var scrollTarget = document.getElementById(href);
@@ -365,5 +378,14 @@ window.addEventListener('scroll', function () {
   }
 
   scrollPrev = windowScrolled;
+});
+var dropdownMenu = document.querySelector('.header__dropdown');
+document.querySelectorAll('.header__menu .header__item').forEach(function (item) {
+  item.addEventListener('mouseover', function (e) {
+    dropdownMenu.classList.add('header__dropdown--show');
+  });
+  dropdownMenu.addEventListener('mouseleave', function (e) {
+    dropdownMenu.classList.remove('header__dropdown--show');
+  });
 });
 //# sourceMappingURL=main.js.map

@@ -35,20 +35,17 @@
   &__summary-total {
     @include subtitle-sec;
     margin-bottom: 24px;
+  }
 
-    span {
-      margin-right: 4px;
-    }
+  &__summary-item {
+    margin-right: 4px;
   }
 
   &__summary-text {
     @include body-sec;
-
-
   }
 
   &__summary-price {
     @include subtitle-sec;
-
   }
 }

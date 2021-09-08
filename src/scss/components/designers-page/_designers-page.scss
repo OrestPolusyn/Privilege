@@ -13,6 +13,11 @@
 
     &__icon {
       left: -35px;
+
+      @include mobile-s {
+        left: -25px;
+      }
+
     }
 
     &__designers {
@@ -21,47 +26,45 @@
   }
 
   &__list {
+    @include flex-all-sb;
+    overflow-x: scroll;
+    scrollbar-color: var(--color-golden);
     margin-bottom: 100px;
 
     @include mobile {
       margin-bottom: 60px;
     }
 
-    ul {
-      @include flex-all-sb;
-      overflow-x: scroll;
-      scrollbar-color: var(--color-golden);
-
-      &::-webkit-scrollbar {
-        height: 4px;
-      }
-
-      &::-webkit-scrollbar-thumb {
-        border-radius: 7px;
-        width: 5px;
-        background-color: var(--color-golden);
-      }
+    &::-webkit-scrollbar {
+      height: 4px;
     }
 
-    li {
-      text-transform: uppercase;
-      font-size: 18px;
-      transition: color 0.3s ease-in-out;
-      white-space: nowrap;
-      padding: 5px;
-      cursor: pointer;
-
-      &:not(:last-child) {
-        @include tablet {
-          margin-right: 10px;
-        }
-      }
-
-      &:hover {
-        color: var(--color-golden);
-      }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 7px;
+      width: 5px;
+      background-color: var(--color-golden);
     }
   }
+
+  &__btn {
+    text-transform: uppercase;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+    white-space: nowrap;
+    padding: 5px;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      @include tablet {
+        margin-right: 10px;
+      }
+    }
+
+    &:hover {
+      color: var(--color-golden);
+    }
+  }
+
 
   &__inner {
     .title {
@@ -74,7 +77,7 @@
     column-count: 4;
     display: block;
 
-    @include tablet {
+    @include desktop {
       column-count: 3;
     }
 
@@ -93,29 +96,28 @@
 
     li {
       margin-bottom: 24px;
-
-
-      span {
-        background-color: var(--color-golden);
-        font: normal 400 14px/1.1 "CervoNeue",
-          sans-serif;
-        font-size: 16px;
-        display: inline-block;
-        letter-spacing: 0.3em;
-        text-transform: capitalize;
-        color: #fff;
-        margin-right: 10px;
-        padding: 4px 5px 4px 10px;
-      }
     }
+  }
 
-    a {
-      @include hover-bl;
-      font-size: 14px;
+  &__promo {
+    background-color: var(--color-golden);
+    font: normal 400 14px/1.1 "CervoNeue",
+      sans-serif;
+    font-size: 16px;
+    display: inline-block;
+    letter-spacing: 0.3em;
+    text-transform: capitalize;
+    color: #fff;
+    margin-right: 10px;
+    padding: 4px 5px 4px 10px;
+  }
 
-      &:hover {
-        @include hover-full;
-      }
+  &__link {
+    @include hover-bl;
+    font-size: 14px;
+
+    &:hover {
+      @include hover-full;
     }
   }
 }

@@ -8,13 +8,13 @@
     margin-bottom: 22px;
   }
 
-  h3 {
+  &__title {
     @include H4;
     margin-bottom: 15px;
     transition: color 0.3s ease-in-out;
   }
 
-  a {
+  &__link {
     &::before {
       content: "";
       position: absolute;
@@ -25,12 +25,12 @@
     }
   }
 
-  p {
+  &__text {
     margin-bottom: 15px;
     @include body-sec;
   }
 
-  span {
+  &__price {
     @include subtitle-sec;
     letter-spacing: -0.03em;
   }
@@ -38,7 +38,7 @@
   &:hover {
     filter: drop-shadow(0px 16px 24px rgba(0, 0, 0, 0.06)) drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.04)) drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.04));
 
-    h3 {
+    .product__title {
       color: var(--color-golden);
       filter: drop-shadow(0px 16px 24px rgba(0, 0, 0, 0.06)) drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.04)) drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.04));
     }

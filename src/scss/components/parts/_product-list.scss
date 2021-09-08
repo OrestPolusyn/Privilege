@@ -23,18 +23,15 @@
 
     &__image {
       margin-bottom: 24px;
-    }
-
-    img {
       object-fit: contain;
 
     }
 
-    h3 {
+    &__title {
       font-size: 18px;
     }
 
-    span {
+    &__price {
       font-size: 17px;
     }
   }

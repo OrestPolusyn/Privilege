@@ -53,17 +53,18 @@
       }
     }
 
-    h2 {
+    .title {
       @include H3;
       margin-bottom: 10px;
       letter-spacing: -0.03em;
       text-align: left;
     }
 
-    p {
-      margin-bottom: 25px;
-      @include body;
-    }
+  }
+
+  &__text {
+    margin-bottom: 25px;
+    @include body;
   }
 
   &__btn-shop.btn-shop {
@@ -83,7 +84,7 @@
   .blog-article {
     cursor: pointer;
 
-    img {
+    &__img {
       margin-bottom: 24px;
 
       @include mobile-m {
@@ -91,14 +92,14 @@
       }
     }
 
-    span {
+    &__price {
       color: var(--color-golden);
       display: block;
       @include body-sec;
       margin-bottom: 8px;
     }
 
-    h3 {
+    &__title {
       @include H4;
       transition: color 0.3s ease-in-out;
 
@@ -107,7 +108,7 @@
       }
     }
 
-    a {
+    &__link {
 
       &::before {
         position: absolute;
@@ -120,7 +121,7 @@
     }
 
     &:hover {
-      h3 {
+      .blog-article__title {
         color: var(--color-hover);
       }
     }

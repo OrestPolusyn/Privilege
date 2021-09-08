@@ -28,7 +28,7 @@
     }
   }
 
-  h1 {
+  &__title {
     @include H2;
     margin-bottom: 8px;
 
@@ -37,16 +37,15 @@
     }
   }
 
-  p {
+  &__text {
     @include body;
     margin-bottom: 25px;
-
 
     @include mobile-m {
       margin-bottom: 10px;
     }
 
-    &+span {
+    &+.single-info__price {
       @include subtitle;
       margin-bottom: 43px;
       display: inline-block;
@@ -57,7 +56,7 @@
       }
     }
 
-    span {
+    &__price {
       display: block;
     }
   }
@@ -108,7 +107,7 @@
   }
 
   &__color {
-    span {
+    .single-info__btn {
       &:not(.custom-checkbox__content) {
         margin-bottom: 26px;
         display: inline-block;
@@ -124,7 +123,6 @@
     @include mobile-m {
       margin-bottom: 15px;
     }
-
   }
 
   &__thumb-img {
@@ -175,13 +173,13 @@
       max-height: 0;
       transition: all 0.3s ease-in;
       box-sizing: content-box;
+    }
 
-      p {
-        font-size: 12px;
-        line-height: 1.2;
-        margin-bottom: 12px;
-        letter-spacing: 0.03em;
-      }
+    &__text {
+      font-size: 12px;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      letter-spacing: 0.03em;
     }
   }
 }
