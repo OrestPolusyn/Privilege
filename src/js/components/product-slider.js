@@ -39,4 +39,6 @@ galleryThumbs.controller.control = galleryPreview;
 
 if (document.querySelector('.gallery__thumbs')) {
   galleryThumbs.update();
+  console.log(document.querySelector('.gallery__thumbs'));
 }
+

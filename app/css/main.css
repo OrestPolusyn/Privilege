@@ -6,7 +6,9 @@
   --color-disabled: #e2e2e2;
   --color-silver: #9d9d9d;
   --color-red: #bb0d0d;
-  --color-filter:#dadada; }
+  --color-filter: #dadada;
+  --color-form: #fdfbfa;
+  --color-border-form: #9d9d9d; }
 
 .burger {
   display: none;
@@ -295,7 +297,7 @@
       .header__action-icon {
         width: 18px;
         height: 18px; } }
-  .header .haeder-adv {
+  .header .header-adv {
     background-color: var(--color-black);
     font: normal 400 14px/1.1 "CervoNeue", sans-serif;
     font-size: 16px;
@@ -305,11 +307,21 @@
     color: #ffffff;
     text-align: center;
     text-transform: uppercase;
-    padding: 10px 0; }
+    padding: 10px 0;
+    position: relative;
+    display: flex;
+    justify-content: center; }
     @media (max-width: 576px) {
-      .header .haeder-adv {
+      .header .header-adv {
         font-size: 14px;
         padding: 30px 0; } }
+    .header .header-adv__close {
+      position: absolute;
+      right: 20px; }
+    .header .header-adv__close-icon {
+      height: 16px;
+      width: 16px;
+      fill: #fff; }
   .header.out {
     transform: translateY(-100%); }
   .header__shadow {
@@ -643,10 +655,10 @@
         padding-top: 170px; } }
   .purpose__item {
     position: relative;
-    cursor: pointer;
     padding-left: 54px;
     justify-self: center;
-    align-self: flex-start; }
+    align-self: flex-start;
+    cursor: pointer; }
     @media (max-width: 1024px) {
       .purpose__item {
         padding-left: 30px; } }
@@ -664,7 +676,8 @@
       max-width: 300px;
       margin-left: auto;
       transform: translateX(8px);
-      letter-spacing: -0.01em; }
+      letter-spacing: -0.01em;
+      cursor: default; }
       @media (max-width: 1024px) {
         .purpose__item--text {
           grid-area: 1 / 2 / 2 / 4;
@@ -2769,18 +2782,27 @@ input[type="search"]::-webkit-search-results-decoration {
       border-radius: 7px;
       width: 5px;
       background-color: var(--color-golden); }
+  .designers-page__item:not(:last-child) {
+    margin-right: 15px; }
+    @media (max-width: 768px) {
+      .designers-page__item:not(:last-child) {
+        margin-right: 22px; } }
   .designers-page__btn {
     text-transform: uppercase;
     font-size: 18px;
     transition: color 0.3s ease-in-out;
     white-space: nowrap;
     padding: 5px;
-    cursor: pointer; }
-    @media (max-width: 1024px) {
-      .designers-page__btn:not(:last-child) {
-        margin-right: 10px; } }
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.2; }
     .designers-page__btn:hover {
       color: var(--color-golden); }
+    @media (max-width: 475px) {
+      .designers-page__btn {
+        font-size: 14px;
+        font-weight: 700; } }
   .designers-page__inner .title {
     text-align: left;
     margin-bottom: 34px; }
@@ -2940,17 +2962,24 @@ input[type="search"]::-webkit-search-results-decoration {
       margin-right: 30px; }
       @media (max-width: 768px) {
         .cart .cart-product__image {
-          margin-right: 0;
           margin-bottom: 30px; } }
+      @media (max-width: 576px) {
+        .cart .cart-product__image {
+          margin-right: 10px; } }
     .cart .cart-product__label {
       display: flex;
       align-items: center; }
       .cart .cart-product__label:not(:last-child) {
         margin-right: 20px; }
+        @media (max-width: 1024px) {
+          .cart .cart-product__label:not(:last-child) {
+            margin-right: 0; } }
       @media (max-width: 1024px) {
         .cart .cart-product__label {
           margin-right: 0;
-          margin-bottom: 30px; } }
+          margin-bottom: 30px;
+          justify-content: space-between;
+          width: 100%; } }
     .cart .cart-product__content {
       display: flex;
       align-items: center;
@@ -2978,13 +3007,18 @@ input[type="search"]::-webkit-search-results-decoration {
       line-height: 1.2;
       letter-spacing: -0.03em; }
     .cart .cart-product .choices {
-      width: 94px;
+      max-width: 94px;
+      width: 100%;
       margin-left: 16px; }
       .cart .cart-product .choices__inner {
         height: 56px; }
         @media (max-width: 1024px) {
           .cart .cart-product .choices__inner {
             height: 44px; } }
+      @media (max-width: 1024px) {
+        .cart .cart-product .choices {
+          max-width: 152px;
+          margin-left: 50px; } }
       .cart .cart-product .choices[data-type*=select-one]:after {
         right: 27px; }
         @media (max-width: 1024px) {
@@ -3234,6 +3268,73 @@ input[type="search"]::-webkit-search-results-decoration {
         @media (max-width: 768px) {
           .privacy-policy__tab--active::before {
             width: 20px; } }
+
+.authorization {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+  margin-bottom: 100px; }
+  @media (max-width: 768px) {
+    .authorization {
+      padding-top: 60px;
+      margin-bottom: 60px; } }
+  @media (max-width: 475px) {
+    .authorization {
+      margin-bottom: 40px;
+      padding: 40px 20px 0; } }
+
+.authorization-form {
+  padding: 40px;
+  border: 1px solid var(--color-golden);
+  background-color: var(--color-form);
+  max-width: 465px;
+  width: 100%; }
+  @media (max-width: 768px) {
+    .authorization-form {
+      padding: 20px; } }
+  .authorization-form .title {
+    text-align: center;
+    text-transform: capitalize; }
+  .authorization-form__area {
+    display: block;
+    width: 100%;
+    margin-bottom: 24px;
+    border: 1px solid var(--color-border-form);
+    height: 40px;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+    margin-top: 5px;
+    outline-color: var(--color-golden); }
+    .authorization-form__area:hover {
+      border-color: var(--color-golden);
+      outline-style: solid;
+      outline-width: 1px; }
+    .authorization-form__area:active {
+      border-color: var(--color-golden);
+      outline-style: solid;
+      outline-width: 1px; }
+    .authorization-form__area:focus {
+      border-color: var(--color-golden);
+      outline-style: solid;
+      outline-width: 1px; }
+  .authorization-form__link {
+    display: block;
+    margin-bottom: 24px;
+    color: var(--color-golden); }
+  .authorization-form__btn {
+    margin-bottom: 24px;
+    width: 100%; }
+  .authorization-form__text {
+    text-align: center;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.7; }
+    @media (max-width: 475px) {
+      .authorization-form__text {
+        font-size: 12px; } }
+    .authorization-form__text .authorization-form__link {
+      display: inline; }
 
 .footer {
   background-color: var(--color-black);

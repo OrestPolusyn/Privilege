@@ -266,7 +266,7 @@
     }
   }
 
-  .haeder-adv {
+  .header-adv {
     background-color: var(--color-black);
     font: $font-medium;
     font-size: 16px;
@@ -277,10 +277,24 @@
     text-align: center;
     text-transform: uppercase;
     padding: 10px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
 
     @include mobile-m {
       font-size: 14px;
       padding: 30px 0;
+    }
+
+    &__close {
+      position: absolute;
+      right: 20px;
+    }
+
+    &__close-icon {
+      height: 16px;
+      width: 16px;
+      fill: $white;
     }
   }
 
@@ -372,7 +386,8 @@
 
     &:hover {
       @include hover-full;
-      &::after{
+
+      &::after {
         background-color: var(--color-golden);
       }
     }

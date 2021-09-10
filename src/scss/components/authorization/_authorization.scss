@@ -1,0 +1,87 @@
+.authorization {
+  @include flex-all-center;
+  padding-top: 100px;
+  margin-bottom: 100px;
+
+  @include mobile {
+    padding-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  @include mobile-s {
+    margin-bottom: 40px;
+    padding: 40px 20px 0;
+  }
+}
+
+.authorization-form {
+  padding: 40px;
+  border: 1px solid var(--color-golden);
+  background-color: var(--color-form);
+  max-width: 465px;
+  width: 100%;
+
+  @include mobile {
+    padding: 20px;
+  }
+
+  .title {
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  &__area {
+    display: block;
+    width: 100%;
+    margin-bottom: 24px;
+    border: 1px solid var(--color-border-form);
+    height: 40px;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+    margin-top: 5px;
+    outline-color: var(--color-golden);
+
+
+    &:hover {
+      border-color: var(--color-golden);
+      outline-style: solid;
+      outline-width: 1px;
+    }
+
+    &:active {
+      border-color: var(--color-golden);
+      outline-style: solid;
+      outline-width: 1px;
+    }
+
+    &:focus {
+      border-color: var(--color-golden);
+      outline-style: solid;
+      outline-width: 1px;
+    }
+  }
+
+  &__link {
+    display: block;
+    margin-bottom: 24px;
+    color: var(--color-golden);
+  }
+
+  &__btn {
+    margin-bottom: 24px;
+    width: 100%;
+  }
+
+  &__text {
+    text-align: center;
+    @include body;
+
+    @include mobile-s {
+      font-size: 12px;
+    }
+
+    .authorization-form__link {
+      display: inline;
+    }
+  }
+}

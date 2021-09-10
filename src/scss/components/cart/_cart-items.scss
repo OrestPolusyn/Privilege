@@ -139,8 +139,11 @@
       margin-right: 30px;
 
       @include mobile {
-        margin-right: 0;
         margin-bottom: 30px;
+      }
+
+      @include mobile-m {
+        margin-right: 10px;
       }
     }
 
@@ -149,11 +152,17 @@
 
       &:not(:last-child) {
         margin-right: 20px;
+
+        @include tablet {
+          margin-right: 0;
+        }
       }
 
       @include tablet {
         margin-right: 0;
         margin-bottom: 30px;
+        justify-content: space-between;
+        width: 100%;
       }
     }
 
@@ -184,7 +193,8 @@
     }
 
     .choices {
-      width: 94px;
+      max-width: 94px;
+      width: 100%;
       margin-left: 16px;
 
       &__inner {
@@ -193,6 +203,11 @@
         @include tablet {
           height: 44px;
         }
+      }
+
+      @include tablet {
+        max-width: 152px;
+        margin-left: 50px;
       }
 
       &[data-type*=select-one]:after {
