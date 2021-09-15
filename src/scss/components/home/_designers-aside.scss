@@ -16,6 +16,14 @@
     }
   }
 
+  &__list {
+    @include tablet {
+      column-count: 2;
+      gap: 20px;
+    }
+
+  }
+
   &__link {
     text-transform: uppercase;
     font: $font-medium;

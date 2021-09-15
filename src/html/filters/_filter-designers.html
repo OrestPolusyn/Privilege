@@ -1,74 +1,62 @@
 <form class="accordion__filter filter-designers" action="#">
 
   <div class="accordion__filter-search ">
-  @include('../parts/_search-field.html',{
-  class:"search__accordion"
-  })
+    @include('../parts/_search-field.html',{
+    class:"search__accordion",
+    type:"checkbox"
+    })
   </div>
 
   <ul class="accordion__checkboxes">
 
     <li class="accordion__checkbox">
-      <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
-        <span class="custom-checkbox__content">
-          agr
-        </span>
-      </label>
+      @include('../parts/_checkbox.html',{
+      text:"agr",
+      type:"checkbox"
+      })
     </li>
 
     <li class="accordion__checkbox">
-      <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
-        <span class="custom-checkbox__content">
-          ambush
-        </span>
-      </label>
+      @include('../parts/_checkbox.html',{
+      text:"ambush",
+      type:"checkbox"
+      })
     </li>
 
     <li class="accordion__checkbox">
-      <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
-        <span class="custom-checkbox__content">
-          AMI Paris
-        </span>
-      </label>
+      @include('../parts/_checkbox.html',{
+      text:" AMI Paris",
+      type:"checkbox"
+      })
     </li>
 
     <li class="accordion__checkbox">
-      <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
-        <span class="custom-checkbox__content">
-          Amiri
-        </span>
-      </label>
+      @include('../parts/_checkbox.html',{
+      text:"Amiri",
+      type:"checkbox"
+      })
     </li>
 
     <li class="accordion__checkbox">
-      <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
-        <span class="custom-checkbox__content">
-          ASICS
-        </span>
-      </label>
+      @include('../parts/_checkbox.html',{
+      text:"ASICS",
+      type:"checkbox"
+      })
     </li>
 
     <li class="accordion__checkbox">
-      <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
-        <span class="custom-checkbox__content">
-          AV Vatter
-        </span>
-      </label>
+      @include('../parts/_checkbox.html',{
+      text:" AV Vatter",
+      type:"checkbox"
+      })
     </li>
 
     <li class="accordion__checkbox">
-      <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
-        <span class="custom-checkbox__content">
-          agr
-        </span>
-      </label>
+      @include('../parts/_checkbox.html',{
+      text:"agr",
+      type:"checkbox"
+      })
+
     </li>
 
   </ul>

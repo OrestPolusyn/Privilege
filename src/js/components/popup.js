@@ -1,11 +1,9 @@
-const designersSec = document.querySelector('.designers'),
-  popupClose = document.querySelector('.popup')
-
 if (designersSec) {
+  
   window.addEventListener('scroll', function (e) {
     e.preventDefault();
     if (window.pageYOffset > designersSec.offsetTop - 100 && !popupClose.classList.contains('popup--close')) {
-      document.querySelector('.popup').classList.add('popup--active');
+     popUp[_classList][_addClass]('popup--active');
     }
   })
 

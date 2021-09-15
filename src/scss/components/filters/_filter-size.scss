@@ -18,6 +18,19 @@
     &--disabled {
       border-color: var(--color-disabled);
       color: var(--color-disabled);
+
+      .custom-checkbox:hover {
+        color: var(--color-disabled);
+
+        .custom-checkbox__content::before {
+          border-color: var(--color-disabled);
+        }
+      }
+
+      .custom-checkbox__field:disabled {
+        border-color: var(--color-disabled);
+        color: var(--color-disabled);
+      }
     }
 
     .custom-checkbox {
@@ -79,10 +92,5 @@
       border-color: var(--color-golden);
     }
 
-    &.custom-checkbox--disabled,
-    &.custom-checkbox--disabled .custom-checkbox__content::before {
-      border-color: var(--color-disabled);
-      color: var(--color-disabled);
-    }
   }
 }

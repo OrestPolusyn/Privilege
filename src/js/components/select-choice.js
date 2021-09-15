@@ -1,8 +1,10 @@
-const elementChoice = document.querySelectorAll('.js-choice');
+const elementChoices = Array.from(elementChoice);
 
-elementChoice.forEach(el => {
-  const choicesNum = new Choices(el, {
-    searchEnabled: false,
-    itemSelectText: ''
+if (!!elementChoices.length) {
+  elementChoices.forEach(el => {
+    const choicesNum = new Choices(el, {
+      searchEnabled: false,
+      itemSelectText: ''
+    });
   });
-});
+}

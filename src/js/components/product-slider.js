@@ -1,4 +1,4 @@
-let galleryPreview = new Swiper('.gallery__preview', {
+let galleryPreviewConfig = {
   slidesPerView: 1,
   loop: true,
   loopedSlides: 10,
@@ -14,9 +14,9 @@ let galleryPreview = new Swiper('.gallery__preview', {
   preloadImages: false,
   lazy: true,
   loop: true,
-});
+};
 
-let galleryThumbs = new Swiper('.gallery__thumbs', {
+let galleryThumbsConfig = {
   autoHeight: true,
   slidesPerView: 4,
   slideToClickedSlide: true,
@@ -32,13 +32,4 @@ let galleryThumbs = new Swiper('.gallery__thumbs', {
   lazy: {
     loadPrevNext: true,
   }
-});
-
-galleryPreview.controller.control = galleryThumbs;
-galleryThumbs.controller.control = galleryPreview;
-
-if (document.querySelector('.gallery__thumbs')) {
-  galleryThumbs.update();
-  console.log(document.querySelector('.gallery__thumbs'));
 }
-

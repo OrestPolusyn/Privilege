@@ -75,7 +75,7 @@ const scripts = () => {
     .pipe(gulpif(isProd, uglify().on("error", notify.onError())))
     .pipe(dest('./app/js/'))
   return src(
-      ['./src/js/global.js', './src/js/components/**.js', './src/js/main.js'])
+      ['./src/js/config.js', './src/js/components/**.js', './src/js/main.js'])
     .pipe(gulpif(!isProd, sourcemaps.init()))
     .pipe(babel({
       presets: ['@babel/env']
@@ -93,7 +93,7 @@ const scriptsBackend = () => {
     .pipe(concat('./node_modules/swiper/swiper-bundle.js'))
     .pipe(gulpif(isProd, uglify().on("error", notify.onError())))
     .pipe(dest('./app/js/'))
-  return src(['./src/js/functions/**.js', './src/js/components/**.js', './src/js/main.js' ])
+  return src(['./src/js/functions/**.js', './src/js/components/**.js', './src/js/main.js'])
     .pipe(dest('./app/js'))
 };
 

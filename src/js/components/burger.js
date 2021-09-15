@@ -1,8 +1,5 @@
-const burger = document.querySelector('.burger'),
-  menuMobile = document.querySelector('.header__menu');
-
 burger.addEventListener('click', (e) => {
-  e.currentTarget.classList.toggle('burger--open');
-  menuMobile.classList.toggle('header__menu--open');
-  dropdownMenu.classList.remove('header__dropdown--show');
+  e.currentTarget[_classList][_toggleClass]('burger--open');
+  menuMobile[_classList][_toggleClass]('header__menu--open');
+  dropdownMenu[_classList][_toggleClass]('header__dropdown--show');
 });

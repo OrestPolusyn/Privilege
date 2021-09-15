@@ -108,9 +108,15 @@
       }
     }
 
+    &__date {
+      display: block;
+      margin-bottom: 8px;
+    }
+
     &__link {
 
       &::before {
+        content: '';
         position: absolute;
         top: 0;
         bottom: 0;

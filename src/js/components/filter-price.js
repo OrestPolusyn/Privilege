@@ -1,5 +1,3 @@
-const rangeSlider = document.querySelector('.filter-price__slider');
-
 if (rangeSlider) {
   noUiSlider.create(rangeSlider, {
     start: [20, 5000],

@@ -1,6 +1,6 @@
 const itemLink = document.querySelectorAll('.privacy-policy__tab');
 
-document.querySelectorAll('.privacy-policy__link[href^="#"').forEach(link => {
+document.querySelectorAll('.privacy-policy__link[href^="#"]').forEach(link => {
 
   link.addEventListener('click', function (e) {
     e.preventDefault();
@@ -13,15 +13,13 @@ document.querySelectorAll('.privacy-policy__link[href^="#"').forEach(link => {
 
     let href = this.getAttribute('href').substring(1);
 
-    const scrollTarget = document.getElementById(href);
-
-    const topOffset = document.querySelector('.privacy-policy__quick').offsetHeight;
-    // const topOffset = 0; 
-    const elementPosition = scrollTarget.getBoundingClientRect().top;
-    const offsetPosition = elementPosition - topOffset;
+    const scrollTarget = document.getElementById(href),
+      topOffset = document.querySelector('.privacy-policy__quick').offsetHeight,
+      elementPosition = scrollTarget.getBoundingClientRect().top,
+      offsetPosition = elementPosition - topOffset;
 
 
-    window.scrollBy({
+    windowScrollClick = window.scrollBy({
       top: offsetPosition,
       behavior: 'smooth'
     });

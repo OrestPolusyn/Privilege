@@ -1,10 +1,12 @@
-let paginationBtn = document.querySelectorAll('.pagination__item');
+const paginationBtns = Array.from(paginationBtn);
 
-paginationBtn.forEach(item => {
-  item.addEventListener('click', (e) => {
-    paginationBtn.forEach(el => {
-      el.classList.remove('active');
-    });
-    item.classList.add('active')
-  })
-});
+if (!!paginationBtns) {
+  paginationBtns.forEach(item => {
+    item.addEventListener('click', (e) => {
+      paginationBtn.forEach(el => {
+        el[_classList][_removeClass]('active');
+      });
+      item[_classList][_addClass]('active')
+    })
+  });
+}
