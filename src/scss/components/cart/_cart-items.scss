@@ -138,12 +138,59 @@
     &__action {
       @include body;
       font-weight: 400;
+      @include flex-all-sb;
+
+      @include tablet {
+        flex-wrap: wrap;
+      }
     }
 
-    &__number {
+    &__box {
+      @include flex-v-center;
+      position: relative;
+      max-width: 245px;
+      width: 100%;
+      margin-bottom: 20px;
 
-      .choices__item {
-        font-size: 50px;
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      input[type=number] {
+        -moz-appearance: textfield;
+      }
+
+      &:not(:last-child) {
+        margin-right: 20px;
+
+        @include tablet {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &__label {
+      @include flex-v-center;
+
+    }
+
+    &__size {
+      max-width: 150px;
+      width: 100%;
+
+      @include tablet {
+        max-width: 245px;
+      }
+
+      label {
+        width: 100%;
+      }
+
+      .choices {
+        width: 100%;
+        max-width: 153px;
       }
     }
 
@@ -158,25 +205,6 @@
 
       @include mobile-m {
         margin-right: 10px;
-      }
-    }
-
-    &__label {
-      @include flex-v-center;
-
-      &:not(:last-child) {
-        margin-right: 20px;
-
-        @include tablet {
-          margin-right: 0;
-        }
-      }
-
-      @include tablet {
-        margin-right: 0;
-        margin-bottom: 30px;
-        justify-content: space-between;
-        width: 100%;
       }
     }
 
@@ -207,9 +235,11 @@
     }
 
     .choices {
-      max-width: 94px;
-      width: 100%;
       margin-left: 16px;
+
+      @include tablet {
+        margin-left: auto;
+      }
 
       &__inner {
         height: 56px;
@@ -217,11 +247,6 @@
         @include tablet {
           height: 44px;
         }
-      }
-
-      @include tablet {
-        max-width: 152px;
-        margin-left: 50px;
       }
 
       &[data-type*=select-one]:after {
@@ -280,36 +305,19 @@
       }
     }
 
-    &__action {
-      @include flex-all-sb;
-
-      @include tablet {
-        flex-wrap: wrap;
-      }
-    }
-
-    &__label-box {
-      margin-left: 16px;
-      position: relative;
-
-      input::-webkit-outer-spin-button,
-      input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-      }
-
-      input[type=number] {
-        -moz-appearance: textfield;
-      }
-    }
-
     &__number {
-      max-width: 152px;
+      max-width: 154px;
       min-width: 95px;
       width: 100%;
       outline: transparent;
       padding: 0 40px;
       font-size: 20px;
+      margin-left: 21px;
+
+
+      .choices__item {
+        font-size: 50px;
+      }
     }
 
     &__btn {
@@ -322,6 +330,16 @@
 
       &.plus {
         right: 0;
+      }
+
+      &.minus {
+        left: 50%;
+        transform: translateX(-76%);
+
+        @include desktop {
+          transform: translateX(-50%);
+
+        }
       }
 
       &::before {

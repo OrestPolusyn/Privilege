@@ -48,10 +48,10 @@
   &__item {
     &:not(:last-child) {
       margin-right: 15px;
-      
+
       @include mobile {
         margin-right: 22px;
-       }
+      }
     }
   }
 
@@ -68,7 +68,7 @@
       color: var(--color-golden);
     }
 
-    @include mobile-s{
+    @include mobile-s {
       font-size: 14px;
       font-weight: 700;
     }
@@ -103,9 +103,14 @@
     }
 
 
-    li {
+    .designers-page__item {
       margin-bottom: 24px;
+
+      &--hidden {
+        display: none;
+      }
     }
+
   }
 
   &__promo {

@@ -70,6 +70,7 @@
       &__content {
         padding-left: 32px;
 
+
         &::before {
           border-color: var(--color-silver);
           top: 2px;
@@ -141,7 +142,6 @@
         top: 2px;
       }
     }
-
   }
 
   &__filter-search {
@@ -167,19 +167,26 @@
       display: none;
     }
   }
-
 }
 
 .accordion-active {
 
   &.accordion__name {
     padding-bottom: 8px;
+    background-position: 0 100%;
   }
 
   &+.accordion__filter {
     opacity: 1;
     padding-top: 24px;
     overflow: visible;
+    transition: all 0.2s ease-in;
+
+    &--open {
+    transition: all 0.2s ease-in;
+    max-height: 100%;
+    }
+
   }
 
   &.accordion__name {
@@ -187,5 +194,4 @@
       transform: translateY(-50%) rotate(180deg);
     }
   }
-
 }

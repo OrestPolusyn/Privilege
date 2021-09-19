@@ -1,6 +1,6 @@
-const paginationBtns = Array.from(paginationBtn);
+const paginationBtns = Array.from(document.querySelectorAll('.pagination__item'));
 
-if (!!paginationBtns) {
+if (paginationBtns.length > 0) {
   paginationBtns.forEach(item => {
     item.addEventListener('click', (e) => {
       paginationBtn.forEach(el => {

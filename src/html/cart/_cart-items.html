@@ -1,8 +1,8 @@
 <div class="cart__list">
 
-  <article class="cart-product">
+  <article class="cart-product" data-product-id="1" data-product-price="250.00">
 
-    <button class="cart-product__delete" type="button">
+    <button class="cart-product__delete" type="button" data-product-id="1">
       <span class="sr-only">
         Delete product from list
       </span>
@@ -15,53 +15,59 @@
     <div class="cart-product__inner">
 
       <div class="cart-product__content">
-        <h2 class="cart-product__title">Burberry</h2>
+        <h2 class="cart-product__title">
+          <a class="cart-product__link" href="#">
+            Burberry
+          </a>
+        </h2>
         <span class="cart-product__price">$250.00</span>
       </div>
 
-      <p class="cart-product__text">B-Runner asymmetrical sneakers</p>
+      <p class="cart-product__text">
+        <a class="cart-product__link" href="#">
+          B-Runner asymmetrical sneakers
+        </a>
+      </p>
 
       <div class="cart-product__action">
 
+        <div class="cart-product__box">
+          <button class="cart-product__btn  minus" type="button">
+            <span class="sr-only">
+              Minus
+            </span>
+          </button>
 
-        <label class="cart-product__label" for="numbers">
-          Quantity:
-          <div class="cart-product__label-box">
-            <button class="cart-product__btn  minus" type="button">
-              <span class="sr-only">
-                Minus
-              </span>
-
-
-            </button>
-
+          <label class="cart-product__label">
+            <span>Quantity:</span>
             <input class="cart-product__number choices__inner" type="number" value="1" min="1" disabled>
+          </label>
 
-            <button class="cart-product__btn plus" type="button">
-              <span class="sr-only">
-                Minus
-              </span>
-            </button>
+          <button class="cart-product__btn plus" type="button">
+            <span class="sr-only">
+              Minus
+            </span>
+          </button>
 
-          </div>
-        </label>
+        </div>
 
-        <label class="cart-product__label" for="numbers">
-          Size:
-          <select class="cart-product__size js-choice" name="number" id="number">
-            <option value="42">42</option>
-            <option value="43">43</option>
-            <option value="44">44</option>
-          </select>
-        </label>
+        <div class="cart-product__box cart-product__size">
+          <label class="cart-product__label">
+            <span> Size:</span>
+            <select class=" js-choice" name="number">
+              <option value="42">42</option>
+              <option value="43">43</option>
+              <option value="44">44</option>
+            </select> </label>
+        </div>
       </div>
     </div>
 
   </article>
 
-  <article class="cart-product">
+  <article class="cart-product" data-product-id="1" data-product-price="250.00">
 
-    <button class="cart-product__delete" type="button">
+    <button class="cart-product__delete" type="button" data-product-id="1">
       <span class="sr-only">
         Delete product from list
       </span>
@@ -74,47 +80,54 @@
     <div class="cart-product__inner">
 
       <div class="cart-product__content">
-        <h2 class="cart-product__title">Burberry</h2>
+        <h2 class="cart-product__title">
+          <a class="cart-product__link" href="#">
+            Burberry
+          </a>
+        </h2>
         <span class="cart-product__price">$250.00</span>
       </div>
 
-      <p class="cart-product__text">B-Runner asymmetrical sneakers</p>
+      <p class="cart-product__text">
+        <a class="cart-product__link" href="#">
+          B-Runner asymmetrical sneakers
+        </a>
+      </p>
 
       <div class="cart-product__action">
 
+        <div class="cart-product__box">
+          <button class="cart-product__btn  minus" type="button">
+            <span class="sr-only">
+              Minus
+            </span>
+          </button>
 
-        <label class="cart-product__label" for="numbers">
-          Quantity:
-          <div class="cart-product__label-box">
-            <button class="cart-product__btn  minus" type="button">
-              <span class="sr-only">
-                Minus
-              </span>
-
-
-            </button>
-
+          <label class="cart-product__label">
+            <span>Quantity:</span>
             <input class="cart-product__number choices__inner" type="number" value="1" min="1" disabled>
+          </label>
 
-            <button class="cart-product__btn plus" type="button">
-              <span class="sr-only">
-                Minus
-              </span>
-            </button>
+          <button class="cart-product__btn plus" type="button">
+            <span class="sr-only">
+              Minus
+            </span>
+          </button>
 
-          </div>
-        </label>
+        </div>
 
-        <label class="cart-product__label" for="numbers">
-          Size:
-          <select class="cart-product__size js-choice" name="number" id="number">
-            <option value="42">42</option>
-            <option value="43">43</option>
-            <option value="44">44</option>
-          </select>
-        </label>
+        <div class="cart-product__box cart-product__size">
+          <label class="cart-product__label">
+            <span> Size:</span>
+            <select class=" js-choice" name="number">
+              <option value="42">42</option>
+              <option value="43">43</option>
+              <option value="44">44</option>
+            </select> </label>
+        </div>
       </div>
     </div>
 
   </article>
+
 </div>

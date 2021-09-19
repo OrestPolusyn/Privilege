@@ -52,11 +52,11 @@
         background-color: var(--color-golden);
       }
     }
+  }
 
-    p {
-      @include body;
-      margin-bottom: 24px;
-    }
+  &__text {
+    @include body;
+    margin-bottom: 24px;
   }
 
   &__quick {
@@ -64,7 +64,7 @@
     width: 100%;
     background-color: $white;
     position: sticky;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
     top: 50px;
 
     @include tablet {
@@ -80,13 +80,18 @@
       top: 0;
       padding-top: 30px;
     }
+
+    &--down {
+      padding-top: 150px;
+    }
   }
 
   .title-quick {
     margin-bottom: 24px;
   }
 
-  &__tab {
+  &__link {
+    display: block;
     margin-bottom: 30px;
     @include hover-full;
     position: relative;
@@ -143,5 +148,9 @@
         }
       }
     }
+
+
   }
+
+
 }

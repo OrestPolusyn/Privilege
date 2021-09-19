@@ -1,27 +1,23 @@
-const itemLink = document.querySelectorAll('.privacy-policy__tab');
+const sections = Array.from(document.querySelectorAll("section[id]"));
 
-document.querySelectorAll('.privacy-policy__link[href^="#"]').forEach(link => {
+window.addEventListener("scroll", navHighlighter);
 
-  link.addEventListener('click', function (e) {
-    e.preventDefault();
+function navHighlighter() {
 
-    itemLink.forEach(item => {
-      item.classList.remove("privacy-policy__tab--active");
-    });
+  let scrollY = window.pageYOffset;
 
-    this.parentElement.classList.add("privacy-policy__tab--active");
+  sections.forEach(current => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop,
+      sectionId = current.getAttribute("id");
 
-    let href = this.getAttribute('href').substring(1);
-
-    const scrollTarget = document.getElementById(href),
-      topOffset = document.querySelector('.privacy-policy__quick').offsetHeight,
-      elementPosition = scrollTarget.getBoundingClientRect().top,
-      offsetPosition = elementPosition - topOffset;
-
-
-    windowScrollClick = window.scrollBy({
-      top: offsetPosition,
-      behavior: 'smooth'
-    });
+    if (
+      scrollY > sectionTop &&
+      scrollY <= sectionTop + sectionHeight
+    ) {
+      document.querySelector(".privacy-policy__link[href*=" + sectionId + "]").classList.add("privacy-policy__link--active");
+    } else {
+      document.querySelector(".privacy-policy__link[href*=" + sectionId + "]").classList.remove("privacy-policy__link--active");
+    }
   });
-});
+}
