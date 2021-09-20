@@ -672,10 +672,10 @@
     @media (max-width: 768px) {
       .purpose__item {
         padding-left: 20px; } }
-    .purpose__item--clothing {
+    .purpose__item--first {
       grid-area: 1 / 1 / 3 / 2; }
       @media (max-width: 1024px) {
-        .purpose__item--clothing {
+        .purpose__item--first {
           grid-area: 2 / 1 / 4 / 3; } }
     .purpose__item--text {
       grid-area: 1 / 2 / 2 / 3;
@@ -704,27 +704,27 @@
       @media (max-width: 475px) {
         .purpose__item--text {
           transform: translateY(-75%); } }
-    .purpose__item--accessories {
+    .purpose__item--second {
       grid-area: 1 / 3 / 3 / 4; }
       @media (max-width: 1024px) {
-        .purpose__item--accessories {
+        .purpose__item--second {
           grid-area: 2 / 3 / 4 / 5; } }
-    .purpose__item--grooming {
+    .purpose__item--third {
       grid-area: 3 / 1 / 5 / 2; }
       @media (max-width: 1024px) {
-        .purpose__item--grooming {
+        .purpose__item--third {
           grid-area: 6 / 1 / 8 / 3; } }
-    .purpose__item--shoes {
+    .purpose__item--fourth {
       grid-area: 2 / 2 / 4 / 3;
       transform: translateY(40px); }
       @media (max-width: 1024px) {
-        .purpose__item--shoes {
+        .purpose__item--fourth {
           grid-area: 4 / 2 / 6 / 4;
           transform: translateY(0); } }
-    .purpose__item--gift {
+    .purpose__item--fifth {
       grid-area: 3 / 3 / 5 / 4; }
       @media (max-width: 1024px) {
-        .purpose__item--gift {
+        .purpose__item--fifth {
           grid-area: 6 / 3 / 8 / 5; } }
     .purpose__item:hover .purpose__link-text {
       background-position: 0 100%; }
@@ -784,6 +784,14 @@
     height: 100%;
     position: absolute;
     left: 0; }
+    .purpose__link::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 10; }
   .purpose__link-text {
     -ms-writing-mode: tb-rl;
     writing-mode: tb-rl;
@@ -1011,7 +1019,10 @@
     max-width: 290px;
     width: 100%;
     margin-bottom: 24px;
-    overflow-x: hidden; }
+    overflow-x: hidden;
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: left top; }
     @media (max-width: 1024px) {
       .additional__item {
         margin-bottom: 50px; } }
@@ -1028,23 +1039,6 @@
     @media (max-width: 475px) {
       .additional__item {
         margin: 0 0 50px; } }
-    .additional__item::before {
-      position: absolute;
-      content: '';
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      height: 50px;
-      width: 50px;
-      top: 0;
-      left: 0;
-      background-image: url("../img/sprite.svg#like"); }
-    .additional__item--track::before {
-      background-image: url("../img/sprite.svg#track"); }
-    .additional__item--shirt::before {
-      background-image: url("../img/sprite.svg#shirt"); }
-    .additional__item--like::before {
-      background-image: url("../img/sprite.svg#like"); }
   .additional__inner {
     padding-left: 76px;
     border-bottom: 2px solid var(--color-golden);
@@ -1279,12 +1273,13 @@
     margin-bottom: 15px;
     transition: color 0.3s ease-in-out; }
   .product__link::before {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
-    bottom: 0; }
+    bottom: 0;
+    z-index: 10; }
   .product__text {
     margin-bottom: 15px;
     font-weight: 300;
@@ -1298,8 +1293,7 @@
   .product:hover {
     filter: drop-shadow(0px 16px 24px rgba(0, 0, 0, 0.06)) drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.04)) drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.04)); }
     .product:hover .product__title {
-      color: var(--color-golden);
-      filter: drop-shadow(0px 16px 24px rgba(0, 0, 0, 0.06)) drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.04)) drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.04)); }
+      color: var(--color-golden); }
 
 .accordion__name {
   padding-bottom: 24px;
@@ -2448,7 +2442,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .sidebar {
   width: 100%;
   transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  position: absolute;
+  position: sticky;
   top: 0;
   bottom: 0;
   opacity: 0;
@@ -2761,11 +2755,11 @@ input[type="search"]::-webkit-search-results-decoration {
       max-height: 0;
       transition: all 0.3s ease-in;
       box-sizing: content-box; }
-    .single-info .accordion__text {
-      font-size: 12px;
-      line-height: 1.2;
-      margin-bottom: 12px;
-      letter-spacing: 0.03em; }
+      .single-info .accordion__content p {
+        font-size: 12px;
+        line-height: 1.2;
+        margin-bottom: 12px;
+        letter-spacing: 0.03em; }
 
 .accordion-active + .accordion__content {
   max-height: 100%;

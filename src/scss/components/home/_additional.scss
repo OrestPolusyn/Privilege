@@ -29,6 +29,9 @@
     width: 100%;
     margin-bottom: 24px;
     overflow-x: hidden;
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: left top;
 
     @include tablet {
       margin-bottom: 50px;
@@ -54,28 +57,6 @@
       margin: 0 0 50px;
     }
 
-    &::before {
-      position: absolute;
-      content: '';
-      @include bg-cover;
-      height: 50px;
-      width: 50px;
-      top: 0;
-      left: 0;
-      background-image: url('../img/sprite.svg#like');
-    }
-
-    &--track::before {
-      background-image: url('../img/sprite.svg#track');
-    }
-
-    &--shirt::before {
-      background-image: url('../img/sprite.svg#shirt');
-    }
-
-    &--like::before {
-      background-image: url('../img/sprite.svg#like');
-    }
   }
 
   &__inner {

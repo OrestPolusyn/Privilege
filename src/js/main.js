@@ -15,12 +15,16 @@ window.addEventListener('scroll', function () {
   if (windowScrolled > headerScroll && windowScrolled > scrollPrev && !burger[_classList].contains('burger--open')) {
     headerTop[_classList][_addClass]('out');
     headerTop[_classList][_removeClass]('header__shadow');
-    policyLink[_classList][_removeClass]('privacy-policy__quick--down');
+    if (policyLink) {
+      policyLink[_classList][_removeClass]('privacy-policy__quick--down');
+    }
 
   } else {
     headerTop[_classList][_removeClass]('out');
     headerTop[_classList][_addClass]('header__shadow');
-    policyLink[_classList][_addClass]('privacy-policy__quick--down');
+    if (policyLink) {
+      policyLink[_classList][_addClass]('privacy-policy__quick--down');
+    }
 
   }
 
@@ -28,9 +32,14 @@ window.addEventListener('scroll', function () {
 });
 
 headerItems.forEach(function (item) {
-
   item.addEventListener('mouseover', function (e) {
-    dropdownMenu[_classList][_addClass]('header__dropdown--show');
+
+    const linkId = item.dataset.menuId,
+      dropdownId = dropdownMenu.dataset.dropdownId;
+
+    if (linkId === dropdownId) {
+      dropdownMenu[_classList][_addClass]('header__dropdown--show');
+    }
   });
 
   dropdownMenu.addEventListener('mouseleave', function (e) {

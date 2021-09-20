@@ -16,12 +16,13 @@
 
   &__link {
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       left: 0;
       right: 0;
       top: 0;
       bottom: 0;
+      z-index: 10;
     }
   }
 
@@ -40,7 +41,6 @@
 
     .product__title {
       color: var(--color-golden);
-      filter: drop-shadow(0px 16px 24px rgba(0, 0, 0, 0.06)) drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.04)) drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.04));
     }
   }
 }

@@ -159,17 +159,24 @@ if (designersLetters.length > 0 && !!designersLists.length > 0) {
 }
 "use strict";
 
-var rangeSlider = document.querySelector('.filter-price__slider');
+var rangeSlider = document.querySelector('.filter-price__slider'),
+    inputDataNumber = document.querySelector('.filter-price__inner'),
+    minPrice = document.querySelector('.filter-price__slider .min'),
+    maxPrice = document.querySelector('.filter-price__slider .max');
 
 if (rangeSlider) {
+  var inputDatasetFrom = inputDataNumber.dataset.priceFrom,
+      inputDatasetTo = inputDataNumber.dataset.priceTo;
+  minPrice.textContent = "$" + inputDatasetFrom.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1.');
+  maxPrice.textContent = "$" + inputDatasetTo.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1.');
   noUiSlider.create(rangeSlider, {
-    start: [20, 5000],
+    start: [inputDatasetFrom, inputDatasetTo],
     behaviour: 'tap',
     connect: true,
     step: 1,
     range: {
-      'min': [0],
-      'max': [10000]
+      'min': +inputDatasetFrom,
+      'max': +inputDatasetTo
     },
     format: wNumb({
       decimals: 3,
@@ -313,7 +320,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 var galleryPreviewConfig = _defineProperty({
   slidesPerView: 1,
   loop: true,
-  loopedSlides: 10,
   effect: "fade",
   navigation: {
     nextEl: ".swiper-button-next",
@@ -332,7 +338,6 @@ var galleryThumbsConfig = (_galleryThumbsConfig = {
   slidesPerView: 4,
   slideToClickedSlide: true,
   spaceBetween: 30,
-  loopedSlides: 30,
   loop: true,
   direction: 'vertical',
   preloadImages: false,
@@ -460,20 +465,29 @@ window.addEventListener('scroll', function () {
 
     headerTop[_classList][_removeClass]('header__shadow');
 
-    policyLink[_classList][_removeClass]('privacy-policy__quick--down');
+    if (policyLink) {
+      policyLink[_classList][_removeClass]('privacy-policy__quick--down');
+    }
   } else {
     headerTop[_classList][_removeClass]('out');
 
     headerTop[_classList][_addClass]('header__shadow');
 
-    policyLink[_classList][_addClass]('privacy-policy__quick--down');
+    if (policyLink) {
+      policyLink[_classList][_addClass]('privacy-policy__quick--down');
+    }
   }
 
   scrollPrev = windowScrolled;
 });
 headerItems.forEach(function (item) {
   item.addEventListener('mouseover', function (e) {
-    dropdownMenu[_classList][_addClass]('header__dropdown--show');
+    var linkId = item.dataset.menuId,
+        dropdownId = dropdownMenu.dataset.dropdownId;
+
+    if (linkId === dropdownId) {
+      dropdownMenu[_classList][_addClass]('header__dropdown--show');
+    }
   });
   dropdownMenu.addEventListener('mouseleave', function (e) {
     dropdownMenu[_classList][_removeClass]('header__dropdown--show');

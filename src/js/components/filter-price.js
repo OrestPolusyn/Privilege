@@ -1,14 +1,24 @@
-const rangeSlider = document.querySelector('.filter-price__slider');
+const rangeSlider = document.querySelector('.filter-price__slider'),
+  inputDataNumber = document.querySelector('.filter-price__inner'),
+  minPrice = document.querySelector('.filter-price__slider .min'),
+  maxPrice = document.querySelector('.filter-price__slider .max');
+
 
 if (rangeSlider) {
+  let inputDatasetFrom = inputDataNumber.dataset.priceFrom,
+    inputDatasetTo = inputDataNumber.dataset.priceTo;
+
+  minPrice.textContent = `$` + inputDatasetFrom.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1.');
+  maxPrice.textContent = `$` + inputDatasetTo.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1.');
+
   noUiSlider.create(rangeSlider, {
-    start: [20, 5000],
+    start: [inputDatasetFrom, inputDatasetTo],
     behaviour: 'tap',
     connect: true,
     step: 1,
     range: {
-      'min': [0],
-      'max': [10000]
+      'min': +inputDatasetFrom,
+      'max': +inputDatasetTo
     },
     format: wNumb({
       decimals: 3,

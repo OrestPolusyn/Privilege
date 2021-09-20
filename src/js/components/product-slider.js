@@ -1,7 +1,6 @@
 let galleryPreviewConfig = {
   slidesPerView: 1,
   loop: true,
-  loopedSlides: 10,
   effect: "fade",
   navigation: {
     nextEl: ".swiper-button-next",
@@ -21,7 +20,6 @@ let galleryThumbsConfig = {
   slidesPerView: 4,
   slideToClickedSlide: true,
   spaceBetween: 30,
-  loopedSlides: 30,
   loop: true,
   direction: 'vertical',
   preloadImages: false,
