@@ -1,58 +1,62 @@
 <aside class="designers__sidebar">
   <h2 class="title">designers</h2>
+  <ul class="designers__list tabs">
+    @loop("../../parts/_aside-list.html",[{
+    "tag":"button",
+    "attribute":"type='button'",
+    "data-attr":"data-tabs-path='burberryz'",
+    "text":"Burberryz",
+    "active":"tabs__btn--active" 
+  },
 
-  <ul class="designers__list">
+    {
+    "tag":"button",
+    "attribute":"type='button'",
+    "data-attr":"data-tabs-path='gucci'",
+    "text":"Gucci",
+    "active":""
+    },
 
-    <li class="tabs__item">
-      <button class="tabs__btn  tabs__btn--active" type="button" data-tabs-path="burberryz">
-        Burberryz
-      </button>
-    </li>
+    {
+    "tag":"button",
+    "attribute":"type='button'",
+    "data-attr":"data-tabs-path='mr.p'",
+    "text":"Mr. p",
+    "active":""
+    },
 
-    <li class="tabs__item">
-      <button class="tabs__btn" type="button" data-tabs-path="gucci">
-        Gucci
-      </button>
-    </li>
+    {
+    "tag":"button",
+    "attribute":"type='button'",
+    "data-attr":"data-tabs-path='balenciaga'",
+    "text":"Balenciaga",
+    "active":""
+    },
 
-    <li class="tabs__item">
-      <button class="tabs__btn" type="button" data-tabs-path="mr.p">
-        Mr. p
-      </button>
-    </li>
+    {
+    "tag":"button",
+    "attribute":"type='button'",
+    "data-attr":"data-tabs-path='nike'",
+    "text":"Nike",
+    "active":""
+    },
 
-    <li class="tabs__item">
-      <button class="tabs__btn" type="button" data-tabs-path="balenciaga">
-        Balenciaga
-      </button>
-    </li>
+    {
+    "tag":"button",
+    "attribute":"type='button'",
+    "data-attr":"data-tabs-path='givenchy'",
+    "text":"Givenchy",
+    "active":""
+    },
 
-    <li class="tabs__item">
-      <button class="tabs__btn" type="button" data-tabs-path="nike">
-        Nike
-      </button>
-    </li>
-
-    <li class="tabs__item">
-      <button class="tabs__btn" type="button" data-tabs-path="givenchy">
-        Givenchy
-      </button>
-    </li>
-
-    <li class="tabs__item">
-      <button class="tabs__btn" type="button" data-tabs-path="celine">
-        Celine
-      </button>
-    </li>
-
-    <li class="tabs__item">
-      <button class="tabs__btn" type="button" data-tabs-path="incotex">
-        Incotex
-      </button>
-    </li>
-
+    {
+    "tag":"button",
+    "attribute":"type='button'",
+    "data-attr":"data-tabs-path='incotex'",
+    "text":"Incotex",
+    "active":""
+    }])
   </ul>
-
   <a class="designers__link" href="#">
     view all
   </a>

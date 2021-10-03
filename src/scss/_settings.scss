@@ -111,3 +111,34 @@ button {
 .overflow {
   overflow: hidden;
 }
+
+.all-link {
+  position: relative;
+  padding-right: 25px;
+  @include body-sec;
+  @include hover-bl;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: var(--color-black);
+    mask-image: url('../img/sprite.svg#arrow-footer');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 8px;
+    width: 14px;
+    right: 0;
+    bottom: 50%;
+    transition: background-color 0.3s linear;
+    transform: rotate(-90deg) translateX(-30%);
+  }
+
+  &:hover {
+    @include hover-full;
+
+    &::after {
+      background-color: var(--color-golden);
+    }
+  }
+}

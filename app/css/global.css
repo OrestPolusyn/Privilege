@@ -36,7 +36,8 @@
   --color-red: #bb0d0d;
   --color-filter: #dadada;
   --color-form: #fdfbfa;
-  --color-border-form: #9d9d9d; }
+  --color-border-form: #9d9d9d;
+  --account-bg: rgba(191, 147, 102, 0.03); }
 
 .burger {
   display: none;
@@ -194,5 +195,41 @@ button {
 
 .overflow {
   overflow: hidden; }
+
+.all-link {
+  position: relative;
+  padding-right: 25px;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.2;
+  color: var(--color-black);
+  overflow: hidden;
+  background: linear-gradient(to right, var(--color-golden), var(--color-golden) 50%, var(--color-black) 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 0.3s ease;
+  text-decoration: none; }
+  .all-link::after {
+    content: "";
+    position: absolute;
+    background-color: var(--color-black);
+    -webkit-mask-image: url("../img/sprite.svg#arrow-footer");
+    mask-image: url("../img/sprite.svg#arrow-footer");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 8px;
+    width: 14px;
+    right: 0;
+    bottom: 50%;
+    transition: background-color 0.3s linear;
+    transform: rotate(-90deg) translateX(-30%); }
+  .all-link:hover {
+    background-position: 0 100%; }
+    .all-link:hover::after {
+      background-color: var(--color-golden); }
 
 /*# sourceMappingURL=global.css.map */

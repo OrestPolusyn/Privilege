@@ -102,31 +102,6 @@
       }
     }
 
-    &__delete {
-      position: relative;
-      height: 14px;
-      width: 14px;
-      margin: 4px 36px 0 4px;
-
-      &::before {
-        content: '';
-        position: absolute;
-        height: 14px;
-        left: -5px;
-        top: 0;
-        width: 23px;
-        mask-image: url(../img/sprite.svg#close);
-        background-color: var(--color-black);
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-      }
-
-      @include tablet {
-        margin: 4px 10px 0 0;
-      }
-    }
-
     &__icon {
       height: 14px;
       width: 14px;

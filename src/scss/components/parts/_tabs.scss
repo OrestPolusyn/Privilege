@@ -8,6 +8,10 @@
     column-gap: 20px;
   }
 
+  &__item {
+    margin-bottom: 25px;
+  }
+
   &__btn {
     position: relative;
     cursor: pointer;
@@ -15,7 +19,6 @@
     @include H4;
     transition: background 0.3s ease-in-out,
       padding 0.3s ease-in-out;
-    margin-bottom: 25px;
 
     @include mobile-m {
       font-size: 14px;

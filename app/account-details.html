@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
-  <title>P R I V I L E G E | Shop cart</title>
+  <title>P R I V I L E G E | Account Details</title>
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
@@ -284,217 +284,108 @@
 
 </header>
 
-  <main class="main cart">
+  <main class="main dashboard">
     <div class="container">
 
       <h1 class="main-title">
-        Cart
+        Account Details
       </h1>
 
-      <span class="main-title__subtitle">
-        2 Items
-      </span>
+      <div class="dashboard__inner">
 
-      <section class="cart__inner">
+        <section class="dashboard__section account">
 
-        <div class="cart__list">
+          <div class="account__change">
 
-  <article class="cart-product" data-product-id="1" data-product-price="250.00">
+            <img class="account__empty" src="img/no-avatar.jpg" alt="Empty photo" width="240" height="240">
 
-    <button class="btn-delete" type="button" data-product-id="1">
-      <span class="sr-only">
-        Delete product from list
-      </span>
-    </button>
+            <img class="account__img" src="img/account-details.jpg" alt="Avatar" width="240" height="240">
 
+            <label class="account__input">
+              Change photo
+              
+              <input class="sr-only" type="file" accept="image/*">
+              
+              <svg class="account__icon">
+                <use xlink:href="img/sprite.svg#camera"></use>
+              </svg>
+            </label>
+          </div>
 
-    <img class="cart-product__image" src="img/single-page/shoes-big.jpg" alt="B-Runner asymmetrical sneakers"
-      width="190">
+          <form class="account__form" action="#" name="personal-data">
 
-    <div class="cart-product__inner">
+  <label class="account__label">
+    Email or mobile
+    <input class="account__area" type="email" placeholder="Email or mobile">
+  </label>
 
-      <div class="cart-product__content">
-        <h2 class="cart-product__title">
-          <a class="cart-product__link" href="#">
-            Burberry
-          </a>
-        </h2>
-        <span class="cart-product__price">$250.00</span>
+  <label class="account__label">
+    Last name
+    <input class="account__area" type="text" placeholder="Last name">
+  </label>
+
+  <label class="account__label ">
+    Country
+    <img class="account__label-country" src="img/flag.jpg" alt="Country" height="16" width="16">
+    <input class="account__area account__area--country" type="text" placeholder="Ukraine">
+  </label>
+
+  <label class="account__label">
+    Town/City
+    <input class="account__area" type="text" placeholder="Town/City">
+  </label>
+
+  <label class="account__label">
+    Address
+    <input class="account__area" type="text" placeholder="Address">
+  </label>
+
+  <label class="account__label">
+    Mobile
+    <input class="account__area" type="tel" placeholder="Mobile">
+  </label>
+
+  <label class="account__label account__label--textarea">
+    Note
+    <textarea class="account__area account__textarea" placeholder="Message"></textarea>
+  </label>
+
+  <button class="account__btn btn-shop" type="submit">
+    Save
+  </button>
+</form>
+
+        </section>
+
+        <ul class="dashboard__links tabs">
+          <li class="tabs__item">
+  <a class="tabs__btn tabs__btn--active" href='#' >
+    Dashboard
+  </a>
+</li><li class="tabs__item">
+  <a class="tabs__btn tabs__btn" href='#' >
+    Account details
+  </a>
+</li><li class="tabs__item">
+  <a class="tabs__btn tabs__btn" href='#' >
+    My orders
+  </a>
+</li><li class="tabs__item">
+  <a class="tabs__btn tabs__btn" href='#' >
+    Wish list
+  </a>
+</li><li class="tabs__item">
+  <a class="tabs__btn tabs__btn" href='#' >
+    Gift cards & Promo codes
+  </a>
+</li><li class="tabs__item">
+  <a class="tabs__btn tabs__btn" href='#' >
+    Settings
+  </a>
+</li>
+        </ul>
+
       </div>
-
-      <p class="cart-product__text">
-        <a class="cart-product__link" href="#">
-          B-Runner asymmetrical sneakers
-        </a>
-      </p>
-
-      <div class="cart-product__action">
-
-        <div class="cart-product__box">
-          <button class="cart-product__btn  minus" type="button">
-            <span class="sr-only">
-              Minus
-            </span>
-          </button>
-
-          <label class="cart-product__label">
-            <span>Quantity:</span>
-            <input class="cart-product__number choices__inner" type="number" value="1" min="1" disabled>
-          </label>
-
-          <button class="cart-product__btn plus" type="button">
-            <span class="sr-only">
-              Minus
-            </span>
-          </button>
-
-        </div>
-
-        <div class="cart-product__box cart-product__size">
-          <label class="cart-product__label">
-            <span> Size:</span>
-            <select class=" js-choice" name="number">
-              <option value="42">42</option>
-              <option value="43">43</option>
-              <option value="44">44</option>
-            </select> </label>
-        </div>
-      </div>
-    </div>
-
-  </article>
-
-  <article class="cart-product" data-product-id="1" data-product-price="250.00">
-
-    <button class="btn-delete" type="button" data-product-id="1">
-      <span class="sr-only">
-        Delete product from list
-      </span>
-    </button>
-
-
-    <img class="cart-product__image" src="img/single-page/shoes-big.jpg" alt="B-Runner asymmetrical sneakers"
-      width="190">
-
-    <div class="cart-product__inner">
-
-      <div class="cart-product__content">
-        <h2 class="cart-product__title">
-          <a class="cart-product__link" href="#">
-            Burberry
-          </a>
-        </h2>
-        <span class="cart-product__price">$250.00</span>
-      </div>
-
-      <p class="cart-product__text">
-        <a class="cart-product__link" href="#">
-          B-Runner asymmetrical sneakers
-        </a>
-      </p>
-
-      <div class="cart-product__action">
-
-        <div class="cart-product__box">
-          <button class="cart-product__btn  minus" type="button">
-            <span class="sr-only">
-              Minus
-            </span>
-          </button>
-
-          <label class="cart-product__label">
-            <span>Quantity:</span>
-            <input class="cart-product__number choices__inner" type="number" value="1" min="1" disabled>
-          </label>
-
-          <button class="cart-product__btn plus" type="button">
-            <span class="sr-only">
-              Minus
-            </span>
-          </button>
-
-        </div>
-
-        <div class="cart-product__box cart-product__size">
-          <label class="cart-product__label">
-            <span> Size:</span>
-            <select class=" js-choice" name="number">
-              <option value="42">42</option>
-              <option value="43">43</option>
-              <option value="44">44</option>
-            </select> </label>
-        </div>
-      </div>
-    </div>
-
-  </article>
-
-</div>
-
-        <aside class="cart__summary">
-
-  <div class="cart__summary-box">
-
-    <h3 class="cart__summary-title title-quick">
-      Order summary
-    </h3>
-
-    <div class="cart__summary-count">
-      <span class="cart__summary-text">
-        Item Sub-Total
-      </span>
-
-      <span class="cart__summary-item">
-        $
-        <span class="cart__summary-price price-subtotal">250.00</span>
-      </span>
-    </div>
-
-    <div class="cart__summary-count">
-      <span class="cart__summary-text">
-        Shipping
-      </span>
-
-      <span class="cart__summary-item">
-        $
-        <span class="cart__summary-price price-shipping">25.00</span>
-      </span>
-    </div>
-
-    <div class="cart__summary-total">
-      <span class="cart__summary-item">
-        Total:
-      </span>
-
-      <span class="cart__summary-item ">
-        $
-        <span class="cart__summary-price price-total">
-          275.00
-        </span>
-      </span>
-    </div>
-
-    <button class="cart__summary btn-shop" type="button">
-      Checkout
-    </button>
-
-  </div>
-
-</aside>
-
-      </section>
-
-      <div class="cart__empty">
-
-        <h2 class="title">
-          You don’t have any items
-        </h2>
-
-        <button class="btn-shop" type="button">
-          Buy now
-        </button>
-      </div>
-
     </div>
   </main>
 

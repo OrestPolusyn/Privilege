@@ -30,7 +30,7 @@ var cartPlus = Array.from(document.querySelectorAll('.plus')),
     priceTotal = document.querySelector('.price-total'),
     priceShipping = document.querySelector('.price-shipping'),
     subtotalItems = document.querySelector('.price-subtotal');
-var deleteCardItemButton = Array.from(document.querySelectorAll('.cart-product__delete')),
+var deleteCardItemButton = Array.from(document.querySelectorAll('.btn-delete')),
     cartItems = Array.from(document.querySelectorAll('.cart-product'));
 
 function calculateCartPrice() {

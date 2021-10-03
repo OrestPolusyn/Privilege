@@ -1,0 +1,31 @@
+<div class="dashboard__details">
+  <div class="dashboard__details-top">
+    <h2 class="dashboard__title">
+      Gift cards & promocodes
+    </h2>
+
+    <a href="#" class="all-link" href="#">
+      See All
+    </a>
+  </div>
+
+  <div class="dashboard__data">
+    <ul class="dashboard__list">
+
+      @loop("../parts/_dashboard-list.html",[{
+      text: "Summer sale",
+      number:"-15%"
+      },
+      {
+      text: "Summer sale",
+      number:"-15%"
+      }])
+    </ul>
+    
+    <p class="dashboard__text">
+      You don’t have any items
+    </p>
+  </div>
+
+
+</div>

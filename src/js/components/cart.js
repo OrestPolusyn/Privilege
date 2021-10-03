@@ -4,7 +4,7 @@ const cartPlus = Array.from(document.querySelectorAll('.plus')),
   priceShipping = document.querySelector('.price-shipping'),
   subtotalItems = document.querySelector('.price-subtotal');
 
-const deleteCardItemButton = Array.from(document.querySelectorAll('.cart-product__delete')),
+const deleteCardItemButton = Array.from(document.querySelectorAll('.btn-delete')),
   cartItems = Array.from(document.querySelectorAll('.cart-product'));
 
 

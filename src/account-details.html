@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>P R I V I L E G E | Account Details</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  @include('html/_header.html')
+
+  <main class="main dashboard">
+    <div class="container">
+
+      <h1 class="main-title">
+        Account Details
+      </h1>
+
+      <div class="dashboard__inner">
+
+        <section class="dashboard__section account">
+
+          <div class="account__change">
+
+            <img class="account__empty" src="img/no-avatar.jpg" alt="Empty photo" width="240" height="240">
+
+            <img class="account__img" src="img/account-details.jpg" alt="Avatar" width="240" height="240">
+
+            <label class="account__input">
+              Change photo
+              
+              <input class="sr-only" type="file" accept="image/*">
+              
+              <svg class="account__icon">
+                <use xlink:href="img/sprite.svg#camera"></use>
+              </svg>
+            </label>
+          </div>
+
+          @include('html/account-details/_details-form.html')
+
+        </section>
+
+        <ul class="dashboard__links tabs">
+          @loop("html/parts/_aside-list.html",[{
+          "tag":"a",
+          "attribute":"href='#'",
+          "data-attr":"",
+          "text":"Dashboard",
+          "active":"tabs__btn--active"
+          },
+          {
+          "tag":"a",
+          "attribute":"href='#'",
+          "data-attr":"",
+          "text":"Account details",
+          "active":"tabs__btn"
+          },
+          {
+          "tag":"a",
+          "attribute":"href='#'",
+          "data-attr":"",
+          "text":"My orders",
+          "active":"tabs__btn"
+          },
+          {
+          "tag":"a",
+          "attribute":"href='#'",
+          "data-attr":"",
+          "text":"Wish list",
+          "active":"tabs__btn"
+          },
+          {
+          "tag":"a",
+          "attribute":"href='#'",
+          "data-attr":"",
+          "text":"Gift cards & Promo codes",
+          "active":"tabs__btn"
+          },
+          {
+          "tag":"a",
+          "attribute":"href='#'",
+          "data-attr":"",
+          "text":"Settings",
+          "active":"tabs__btn"
+          }
+          ])
+        </ul>
+
+      </div>
+    </div>
+  </main>
+
+  @include('html/_footer.html')
+
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

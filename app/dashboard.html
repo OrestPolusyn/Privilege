@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
-  <title>P R I V I L E G E | Shop cart</title>
+  <title>P R I V I L E G E | Dashboard</title>
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
@@ -284,217 +284,327 @@
 
 </header>
 
-  <main class="main cart">
+  <main class="main dashboard">
     <div class="container">
 
       <h1 class="main-title">
-        Cart
+        Dashboard
       </h1>
 
-      <span class="main-title__subtitle">
-        2 Items
-      </span>
+      <div class="dashboard__inner">
 
-      <section class="cart__inner">
+        <section class="dashboard__section">
 
-        <div class="cart__list">
+          <div class="dashboard__wrapper dashboard__wrapper--top">
+            <div class="dashboard__details">
+  <div class="dashboard__details-top">
+    <h2 class="dashboard__title">
+      Account details
+    </h2>
 
-  <article class="cart-product" data-product-id="1" data-product-price="250.00">
+    <a href="#" class="all-link" href="#">
+      See All
+    </a>
+  </div>
 
-    <button class="btn-delete" type="button" data-product-id="1">
-      <span class="sr-only">
-        Delete product from list
-      </span>
-    </button>
+  <div class="dashboard__data dashboard__data--customer">
+    <div class="dashboard__data-top">
 
+      <img class="dashboard__img" src="img/dashboard-avatar.jpg" alt="John Dou" width="96" height="96">
 
-    <img class="cart-product__image" src="img/single-page/shoes-big.jpg" alt="B-Runner asymmetrical sneakers"
-      width="190">
-
-    <div class="cart-product__inner">
-
-      <div class="cart-product__content">
-        <h2 class="cart-product__title">
-          <a class="cart-product__link" href="#">
-            Burberry
-          </a>
+      <div class="dashboard__data-name">
+        <h2 class="dashboard__title">
+          John Dou
         </h2>
-        <span class="cart-product__price">$250.00</span>
-      </div>
 
-      <p class="cart-product__text">
-        <a class="cart-product__link" href="#">
-          B-Runner asymmetrical sneakers
-        </a>
-      </p>
-
-      <div class="cart-product__action">
-
-        <div class="cart-product__box">
-          <button class="cart-product__btn  minus" type="button">
-            <span class="sr-only">
-              Minus
-            </span>
-          </button>
-
-          <label class="cart-product__label">
-            <span>Quantity:</span>
-            <input class="cart-product__number choices__inner" type="number" value="1" min="1" disabled>
-          </label>
-
-          <button class="cart-product__btn plus" type="button">
-            <span class="sr-only">
-              Minus
-            </span>
-          </button>
-
-        </div>
-
-        <div class="cart-product__box cart-product__size">
-          <label class="cart-product__label">
-            <span> Size:</span>
-            <select class=" js-choice" name="number">
-              <option value="42">42</option>
-              <option value="43">43</option>
-              <option value="44">44</option>
-            </select> </label>
-        </div>
+        <p class="dashboard__email">
+          registration@price.com
+        </p>
       </div>
     </div>
 
-  </article>
+    <table class="dashboard__table">
+      <tbody>
+        <tr class="dashboard__table-item">
+          <td>
+            Mobile:
+          </td>
+          <td class="dashboard__mobile">
+            +380 93 333 22 22
+          </td>
+        </tr>
 
-  <article class="cart-product" data-product-id="1" data-product-price="250.00">
+        <tr class="dashboard__table-item">
+          <td>
+            Address:
+          </td>
+          <td>
+            1 ail Lane, Biggin Hill, Kent,
+            TN16 3SB
+          </td>
+        </tr>
 
-    <button class="btn-delete" type="button" data-product-id="1">
-      <span class="sr-only">
-        Delete product from list
-      </span>
-    </button>
+        <tr class="dashboard__table-item">
+          <td>
+            Notes:
+          </td>
+          <td>
+            Lorem ipsum sem congue ultricies, eget rutrum pharetra magna sit, auctor malesuada,
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+            <div class="dashboard__details">
+  <div class="dashboard__details-top">
+    <h2 class="dashboard__title">
+      My orders
+    </h2>
+
+    <a href="#" class="all-link" href="#">
+      See All
+    </a>
+  </div>
+
+  <div class="dashboard__data dashboard__data--orders">
+
+    <ul class="dashboard__list">
+         <li class="dashboard__item">
+     <a href="#">
+       Burberry sneakers
+     </a>
+     <span>
+       $ 250.00
+     </span>
+   </li>   <li class="dashboard__item">
+     <a href="#">
+       Burberry sneakers
+     </a>
+     <span>
+       $ 250.00
+     </span>
+   </li>   <li class="dashboard__item">
+     <a href="#">
+       Burberry sneakers
+     </a>
+     <span>
+       $ 250.00
+     </span>
+   </li>   <li class="dashboard__item">
+     <a href="#">
+       Burberry sneakers
+     </a>
+     <span>
+       $ 250.00
+     </span>
+   </li>   <li class="dashboard__item">
+     <a href="#">
+       Burberry sneakers
+     </a>
+     <span>
+       $ 250.00
+     </span>
+   </li>
+    </ul>
+
+    <p class="dashboard__text">
+      You don’t have any items
+    </p>
+  </div>
+
+</div>
+          </div>
+
+          <div class="dashboard__details">
+  <div class="dashboard__details-top">
+    <h2 class="dashboard__title">
+      Wish list
+    </h2>
+
+    <a href="#" class="all-link" href="#">
+      See All
+    </a>
+  </div>
+
+  <div class="dashboard__data">
+
+    <ul class="dashboard__wish-list">
+      <li class="dashboard__wish-item">
+
+        <button class="btn-delete" type="button" data-product-id="1">
+          <span class="sr-only">
+            Delete product from list
+          </span>
+        </button>
+
+        <article class="product">
+
+  <img class="product__image" src="img/catalog-list/shoes.jpg" alt="Burberry" width="320" height="350">
 
 
-    <img class="cart-product__image" src="img/single-page/shoes-big.jpg" alt="B-Runner asymmetrical sneakers"
-      width="190">
+  <h3 class="product__title">
+    <a class="product__link" href="#">
+      Burberry
+    </a>
+  </h3>
 
-    <div class="cart-product__inner">
+  <p class="product__text">B-Runner asymmetrical sneakers</p>
 
-      <div class="cart-product__content">
-        <h2 class="cart-product__title">
-          <a class="cart-product__link" href="#">
-            Burberry
-          </a>
-        </h2>
-        <span class="cart-product__price">$250.00</span>
-      </div>
+  <span class="product__price">$ 250.00</span>
 
-      <p class="cart-product__text">
-        <a class="cart-product__link" href="#">
-          B-Runner asymmetrical sneakers
-        </a>
-      </p>
+</article>
+      </li>
+      
+      <li class="dashboard__wish-item">
 
-      <div class="cart-product__action">
+        <button class="btn-delete" type="button" data-product-id="1">
+          <span class="sr-only">
+            Delete product from list
+          </span>
+        </button>
 
-        <div class="cart-product__box">
-          <button class="cart-product__btn  minus" type="button">
-            <span class="sr-only">
-              Minus
-            </span>
-          </button>
+        <article class="product">
 
-          <label class="cart-product__label">
-            <span>Quantity:</span>
-            <input class="cart-product__number choices__inner" type="number" value="1" min="1" disabled>
-          </label>
+  <img class="product__image" src="img/catalog-list/shoes.jpg" alt="Burberry" width="320" height="350">
 
-          <button class="cart-product__btn plus" type="button">
-            <span class="sr-only">
-              Minus
-            </span>
-          </button>
 
-        </div>
+  <h3 class="product__title">
+    <a class="product__link" href="#">
+      Burberry
+    </a>
+  </h3>
 
-        <div class="cart-product__box cart-product__size">
-          <label class="cart-product__label">
-            <span> Size:</span>
-            <select class=" js-choice" name="number">
-              <option value="42">42</option>
-              <option value="43">43</option>
-              <option value="44">44</option>
-            </select> </label>
-        </div>
-      </div>
-    </div>
+  <p class="product__text">B-Runner asymmetrical sneakers</p>
 
-  </article>
+  <span class="product__price">$ 250.00</span>
+
+</article>
+      </li>
+    </ul>
+
+    <p class="dashboard__text">
+      You don’t have any items
+    </p>
+  </div>
+
 
 </div>
 
-        <aside class="cart__summary">
+          <div class="dashboard__wrapper dashboard__wrapper--bottom">
 
-  <div class="cart__summary-box">
+            <div class="dashboard__details">
+  <div class="dashboard__details-top">
+    <h2 class="dashboard__title">
+      Gift cards & promocodes
+    </h2>
 
-    <h3 class="cart__summary-title title-quick">
-      Order summary
-    </h3>
+    <a href="#" class="all-link" href="#">
+      See All
+    </a>
+  </div>
 
-    <div class="cart__summary-count">
-      <span class="cart__summary-text">
-        Item Sub-Total
-      </span>
+  <div class="dashboard__data">
+    <ul class="dashboard__list">
 
-      <span class="cart__summary-item">
-        $
-        <span class="cart__summary-price price-subtotal">250.00</span>
-      </span>
-    </div>
+         <li class="dashboard__item">
+     <a href="#">
+       Summer sale
+     </a>
+     <span>
+       -15%
+     </span>
+   </li>   <li class="dashboard__item">
+     <a href="#">
+       Summer sale
+     </a>
+     <span>
+       -15%
+     </span>
+   </li>
+    </ul>
+    
+    <p class="dashboard__text">
+      You don’t have any items
+    </p>
+  </div>
 
-    <div class="cart__summary-count">
-      <span class="cart__summary-text">
-        Shipping
-      </span>
 
-      <span class="cart__summary-item">
-        $
-        <span class="cart__summary-price price-shipping">25.00</span>
-      </span>
-    </div>
+</div>
 
-    <div class="cart__summary-total">
-      <span class="cart__summary-item">
-        Total:
-      </span>
+            <div class="dashboard__details">
+  <div class="dashboard__details-top">
+    <h2 class="dashboard__title">
+      Settings
+    </h2>
 
-      <span class="cart__summary-item ">
-        $
-        <span class="cart__summary-price price-total">
-          275.00
+    <a href="#" class="all-link" href="#">
+      See All
+    </a>
+  </div>
+
+  <div class="dashboard__data">
+
+    <ul class="dashboard__list">
+      <li class="dashboard__item">
+        <label class="dashboard__label">
+          Email notification checkbox
+          <input class="dashboard__checkbox" type="checkbox" id="dashboard__checkbox"> </label>
+      </li>
+
+      <li class="dashboard__item">
+        <p>
+          Your card
+        </p>
+        <span>
+          **** 6565
         </span>
-      </span>
-    </div>
+      </li>
+    </ul>
 
-    <button class="cart__summary btn-shop" type="button">
-      Checkout
-    </button>
+    <p class="dashboard__text">
+      You don’t have any items
+    </p>
 
   </div>
 
-</aside>
 
-      </section>
+</div>
+          </div>
 
-      <div class="cart__empty">
+        </section>
 
-        <h2 class="title">
-          You don’t have any items
-        </h2>
+        <ul class="dashboard__links tabs">
+          <li class="tabs__item">
+  <a class="tabs__btn tabs__btn--active" href='#' >
+    Dashboard
+  </a>
+</li><li class="tabs__item">
+  <a class="tabs__btn tabs__btn" href='#' >
+    Account details
+  </a>
+</li><li class="tabs__item">
+  <a class="tabs__btn tabs__btn" href='#' >
+    My orders
+  </a>
+</li><li class="tabs__item">
+  <a class="tabs__btn tabs__btn" href='#' >
+    Wish list
+  </a>
+</li><li class="tabs__item">
+  <a class="tabs__btn tabs__btn" href='#' >
+    Gift cards & Promo codes
+  </a>
+</li><li class="tabs__item">
+  <a class="tabs__btn tabs__btn" href='#' >
+    Settings
+  </a>
+</li>
+        </ul>
 
-        <button class="btn-shop" type="button">
-          Buy now
-        </button>
       </div>
-
     </div>
   </main>
 
