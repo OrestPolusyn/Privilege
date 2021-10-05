@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
-  <title>P R I V I L E G E | Dashboard</title>
+  <title>P R I V I L E G E | Wish list</title>
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
@@ -20,28 +20,57 @@
     <div class="container">
 
       <h1 class="main-title">
-        Dashboard
+        Wish list
       </h1>
+
+      <span class="main-title__subtitle">
+        4 Items
+      </span>
+
 
       <div class="dashboard__inner">
 
-        <section class="dashboard__section">
 
-          <div class="dashboard__wrapper dashboard__wrapper--top">
-            @include('html/account-pages/dashboard/_account-details.html')
+        <section class="dashboard__section wish">
 
-            @include('html/account-pages/dashboard/_account-orders.html')
-          </div>
+          @include('html/filters/_filter-by.html')
 
-          @include('html/account-pages/dashboard/_account-wish.html')
+          <ul class="wish__items">
+            <li class="wish__item" data-product-id="1">
+              @include('html/account-pages/wish-page/_wish-item.html',{
+              btn_text:"save",
+              dataId:"1"
+              })
+            </li>
 
-          <div class="dashboard__wrapper dashboard__wrapper--bottom">
+            <li class="wish__item wish__item--unavailable" data-product-id="2">
+              @include('html/account-pages/wish-page/_wish-item.html',{
+              btn_text:"unavailable",
+              dataId:"2"
+              })
+            </li>
 
-            @include('html/account-pages/dashboard/_account-gift.html')
+            <li class="wish__item " data-product-id="3">
+              @include('html/account-pages/wish-page/_wish-item.html',{
+              btn_text:"save",
+              dataId:"3"
+              })
+            </li>
 
-            @include('html/account-pages/dashboard/_account-settings.html')
-          </div>
+            <li class="wish__item" data-product-id="4">
+              @include('html/account-pages/wish-page/_wish-item.html',{
+              btn_text:"save",
+              dataId:"4"
+              })
+            </li>
 
+          </ul>
+
+          <h2 class="title">
+            You don’t have any items
+          </h2>
+
+          <img class="gift__img" src="img/icons/like-wish.png" alt="Click like" width="80" height="80">
         </section>
 
         <ul class="dashboard__links tabs">

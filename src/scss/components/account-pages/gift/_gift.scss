@@ -1,0 +1,99 @@
+.gift {
+  &__box {
+    margin-bottom: 40px;
+  }
+
+  .dashboard-title {
+    margin-bottom: 15px;
+  }
+
+  &__item {
+    @include flex-all-sb;
+    border: 1px solid var(--color-golden);
+    background-color: var(--account-bg);
+    padding: 20px 40px;
+    margin-bottom: 25px;
+  }
+
+  &__discount {
+    @include subtitle;
+    max-width: 70px;
+    text-transform: uppercase;
+    width: 100%;
+    display: block;
+    margin-right: 25px;
+  }
+
+  &__info {
+    margin-right: auto;
+  }
+
+
+  &__item-title {
+    @include H4;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &__end {
+    @include body;
+    color: var(--color-gift);
+    text-transform: capitalize;
+  }
+
+  &__promo {
+    border: 1px solid var(--color-black);
+    @include flex-all-center;
+  }
+
+  &__promocode {
+    text-transform: uppercase;
+    background-color: var(--color-white);
+    @include body;
+    padding: 12px 35px;
+  }
+
+  &__form {
+    max-width: 315px;
+    width: 100%;
+
+    .gift__text {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__enter {
+    margin-bottom: 25px;
+  }
+
+  &__area {
+    width: 100%;
+    border: 2px solid transparent;
+    outline: var(--color-golden);
+    border-bottom-color: var(--color-golden);
+    margin-bottom: 25px;
+
+    &::placeholder {
+      font-size: 10px;
+      color: var(--color-border-form);
+    }
+  }
+
+  &__btn {
+    max-width: 230px;
+    width: 100%;
+  }
+
+  &__result {
+    @include body;
+  }
+
+  .title {
+    margin-bottom: 40px;
+  }
+
+  &__img {
+    width: 80px;
+    height: 80px;
+  }
+}

@@ -29,7 +29,11 @@
 @import "components/cart/cart-styles";
 @import "components/privacy-policy/privacy-policy";
 @import "components/authorization/authorization";
-@import "components/dashboard/dashboard";
-@import "components/account-details/account-details";
+@import "components/account-pages/dashboard/dashboard";
+@import "components/account-pages/account-details/account-details";
+@import "components/account-pages/gift/gift";
+@import "components/account-pages/wish-page/wish";
+@import "components/account-pages/orders-page/orders";
+
 
 @import "components/footer";

@@ -6,6 +6,7 @@
 
   &__image {
     margin-bottom: 22px;
+    max-width: 330px;
   }
 
   &__title {
@@ -29,6 +30,7 @@
   &__text {
     margin-bottom: 15px;
     @include body-sec;
+    display: block;
   }
 
   &__price {

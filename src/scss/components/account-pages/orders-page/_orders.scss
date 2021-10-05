@@ -1,0 +1,33 @@
+.orders {
+  .product {
+    @include flex-v-center;
+
+    &__image {
+      margin-right: 30px;
+    }
+  }
+
+  &__items{
+    margin-bottom: 40px;
+  }
+
+  .dashboard-title {
+    margin-bottom: 25px;
+    position: relative;
+
+    &::after {
+      content: attr(data-text);
+      position: relative;
+      display: inline-block;
+      background-color: var(--color-golden);
+      color: $white;
+      font: $font-medium;
+      font-size: 16px;
+      line-height: 1.5;
+      padding: 8px 5px;
+      text-transform: capitalize;
+      margin-left: 20px;
+      letter-spacing: 0.3em;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 <div class="dashboard__details">
   <div class="dashboard__details-top">
-    <h2 class="dashboard__title">
+    <h2 class="dashboard-title">
       Wish list
     </h2>
 
@@ -12,7 +12,7 @@
   <div class="dashboard__data">
 
     <ul class="dashboard__wish-list">
-      <li class="dashboard__wish-item">
+      <li class="dashboard__wish-item" data-product-id="1">
 
         <button class="btn-delete" type="button" data-product-id="1">
           <span class="sr-only">
@@ -20,7 +20,7 @@
           </span>
         </button>
 
-        @include('../_product.html',{
+        @include('../../_product.html',{
         image:"catalog-list/shoes.jpg",
         title:"Burberry",
         text:"B-Runner asymmetrical sneakers",
@@ -30,15 +30,15 @@
         })
       </li>
       
-      <li class="dashboard__wish-item">
+      <li class="dashboard__wish-item" data-product-id="2">
 
-        <button class="btn-delete" type="button" data-product-id="1">
+        <button class="btn-delete" type="button" data-product-id="2">
           <span class="sr-only">
             Delete product from list
           </span>
         </button>
 
-        @include('../_product.html',{
+        @include('../../_product.html',{
         image:"catalog-list/shoes.jpg",
         title:"Burberry",
         text:"B-Runner asymmetrical sneakers",
