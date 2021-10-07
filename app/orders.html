@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
-  <title>P R I V I L E G E | Shop cart</title>
+  <title>P R I V I L E G E | My orders</title>
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
@@ -284,217 +284,145 @@
 
 </header>
 
-  <main class="main cart">
+  <main class="main dashboard">
     <div class="container">
 
       <h1 class="main-title">
-        Cart
+        My orders
       </h1>
 
-      <span class="main-title__subtitle">
-        2 Items
-      </span>
 
-      <section class="cart__inner">
+      <div class="dashboard__inner">
 
-        <div class="cart__list">
+        <section class="dashboard__section orders">
+          <p class="dashboard-title" data-text="delivery">
+            Current
+          </p>
 
-  <article class="cart-product" data-product-id="1" data-product-price="250.00">
+          <ul class="orders__items">
 
-    <button class="btn-delete" type="button" data-product-id="1">
-      <span class="sr-only">
-        Delete product from list
-      </span>
-    </button>
+            <li class="orders__item">
+               <article class="product">
 
+  <img class="product__image" src="img/catalog-list/shoes.jpg" alt="Burberry" width="332" height="">
 
-    <img class="cart-product__image" src="img/single-page/shoes-big.jpg" alt="B-Runner asymmetrical sneakers"
-      width="190">
-
-    <div class="cart-product__inner">
-
-      <div class="cart-product__content">
-        <h2 class="cart-product__title">
-          <a class="cart-product__link" href="#">
-            Burberry
-          </a>
-        </h2>
-        <span class="cart-product__price">$250.00</span>
-      </div>
-
-      <p class="cart-product__text">
-        <a class="cart-product__link" href="#">
-          B-Runner asymmetrical sneakers
-        </a>
-      </p>
-
-      <div class="cart-product__action">
-
-        <div class="cart-product__box">
-          <button class="cart-product__btn  minus" type="button">
-            <span class="sr-only">
-              Minus
-            </span>
-          </button>
-
-          <label class="cart-product__label">
-            <span>Quantity:</span>
-            <input class="cart-product__number choices__inner" type="number" value="1" min="1" disabled>
-          </label>
-
-          <button class="cart-product__btn plus" type="button">
-            <span class="sr-only">
-              Minus
-            </span>
-          </button>
-
-        </div>
-
-        <div class="cart-product__box cart-product__size">
-          <label class="cart-product__label">
-            <span> Size:</span>
-            <select class=" js-choice" name="number">
-              <option value="42">42</option>
-              <option value="43">43</option>
-              <option value="44">44</option>
-            </select> </label>
-        </div>
-      </div>
-    </div>
-
-  </article>
-
-  <article class="cart-product" data-product-id="1" data-product-price="250.00">
-
-    <button class="btn-delete" type="button" data-product-id="1">
-      <span class="sr-only">
-        Delete product from list
-      </span>
-    </button>
-
-
-    <img class="cart-product__image" src="img/single-page/shoes-big.jpg" alt="B-Runner asymmetrical sneakers"
-      width="190">
-
-    <div class="cart-product__inner">
-
-      <div class="cart-product__content">
-        <h2 class="cart-product__title">
-          <a class="cart-product__link" href="#">
-            Burberry
-          </a>
-        </h2>
-        <span class="cart-product__price">$250.00</span>
-      </div>
-
-      <p class="cart-product__text">
-        <a class="cart-product__link" href="#">
-          B-Runner asymmetrical sneakers
-        </a>
-      </p>
-
-      <div class="cart-product__action">
-
-        <div class="cart-product__box">
-          <button class="cart-product__btn  minus" type="button">
-            <span class="sr-only">
-              Minus
-            </span>
-          </button>
-
-          <label class="cart-product__label">
-            <span>Quantity:</span>
-            <input class="cart-product__number choices__inner" type="number" value="1" min="1" disabled>
-          </label>
-
-          <button class="cart-product__btn plus" type="button">
-            <span class="sr-only">
-              Minus
-            </span>
-          </button>
-
-        </div>
-
-        <div class="cart-product__box cart-product__size">
-          <label class="cart-product__label">
-            <span> Size:</span>
-            <select class=" js-choice" name="number">
-              <option value="42">42</option>
-              <option value="43">43</option>
-              <option value="44">44</option>
-            </select> </label>
-        </div>
-      </div>
-    </div>
-
-  </article>
-
-</div>
-
-        <aside class="cart__summary">
-
-  <div class="cart__summary-box">
-
-    <h3 class="cart__summary-title title-quick">
-      Order summary
+  <div class="product__box">
+    <h3 class="product__title">
+      <a class="product__link" href="#">
+        Burberry
+      </a>
     </h3>
 
-    <div class="cart__summary-count">
-      <span class="cart__summary-text">
-        Item Sub-Total
-      </span>
+    <p class="product__text">
+      B-Runner asymmetrical sneakers      
+    </p>
 
-      <span class="cart__summary-item">
-        $
-        <span class="cart__summary-price price-subtotal">250.00</span>
-      </span>
-    </div>
+    <span class="product__text">
+      Size: 42
+    </span>
 
-    <div class="cart__summary-count">
-      <span class="cart__summary-text">
-        Shipping
-      </span>
-
-      <span class="cart__summary-item">
-        $
-        <span class="cart__summary-price price-shipping">25.00</span>
-      </span>
-    </div>
-
-    <div class="cart__summary-total">
-      <span class="cart__summary-item">
-        Total:
-      </span>
-
-      <span class="cart__summary-item ">
-        $
-        <span class="cart__summary-price price-total">
-          275.00
-        </span>
-      </span>
-    </div>
-
-    <button class="cart__summary btn-shop" type="button">
-      Checkout
-    </button>
-
+    <span class="product__price">$ 250.00</span>
   </div>
 
-</aside>
+</article>
+            </li>
 
-      </section>
+            <li class="orders__item">
+               <article class="product">
 
-      <div class="cart__empty">
+  <img class="product__image" src="img/catalog-list/shoes.jpg" alt="Burberry" width="332" height="">
 
-        <h2 class="title">
-          You don’t have any items
-        </h2>
+  <div class="product__box">
+    <h3 class="product__title">
+      <a class="product__link" href="#">
+        Burberry
+      </a>
+    </h3>
 
-        <button class="btn-shop" type="button">
-          Buy now
-        </button>
+    <p class="product__text">
+      B-Runner asymmetrical sneakers      
+    </p>
+
+    <span class="product__text">
+      Size: 42
+    </span>
+
+    <span class="product__price">$ 250.00</span>
+  </div>
+
+</article>
+            </li>
+          </ul>
+
+          <h2 class="dashboard-title " data-text="Delivered">
+            Previous
+          </h2>
+          <ul class="orders__items">
+
+            <li class="orders__item">
+               <article class="product">
+
+  <img class="product__image" src="img/catalog-list/shoes.jpg" alt="Burberry" width="332" height="">
+
+  <div class="product__box">
+    <h3 class="product__title">
+      <a class="product__link" href="#">
+        Burberry
+      </a>
+    </h3>
+
+    <p class="product__text">
+      B-Runner asymmetrical sneakers      
+    </p>
+
+    <span class="product__text">
+      Size: 42
+    </span>
+
+    <span class="product__price">$ 250.00</span>
+  </div>
+
+</article>
+            </li>
+
+          </ul>
+
+          <h2 class="title">
+            You don’t have any items
+          </h2>
+
+          <img class="gift__img" src="img/icons/orders.png" alt="Orders package" width="80" height="80">
+        </section>
+
+        <ul class="dashboard__links tabs">
+          <li class="tabs__item">
+  <a class="tabs__btn tabs__btn--active" href='#' >
+    Dashboard
+  </a>
+</li><li class="tabs__item">
+  <a class="tabs__btn tabs__btn" href='#' >
+    Account details
+  </a>
+</li><li class="tabs__item">
+  <a class="tabs__btn tabs__btn" href='#' >
+    My orders
+  </a>
+</li><li class="tabs__item">
+  <a class="tabs__btn tabs__btn" href='#' >
+    Wish list
+  </a>
+</li><li class="tabs__item">
+  <a class="tabs__btn tabs__btn" href='#' >
+    Gift cards & Promo codes
+  </a>
+</li><li class="tabs__item">
+  <a class="tabs__btn tabs__btn" href='#' >
+    Settings
+  </a>
+</li>
+        </ul>
+
       </div>
-
     </div>
   </main>
 

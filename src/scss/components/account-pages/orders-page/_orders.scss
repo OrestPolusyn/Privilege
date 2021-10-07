@@ -2,13 +2,25 @@
   .product {
     @include flex-v-center;
 
+    @include mobile-m {
+      display: block;
+      margin: 0 auto;
+    }
+
     &__image {
       margin-right: 30px;
     }
   }
 
-  &__items{
+  &__items {
     margin-bottom: 40px;
+  }
+
+  &__item {
+    @include mobile-m {
+      max-width: 330px;
+      margin: 0 auto 30px;
+    }
   }
 
   .dashboard-title {

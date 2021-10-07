@@ -117,6 +117,7 @@ button {
   padding-right: 25px;
   @include body-sec;
   @include hover-bl;
+  white-space: nowrap;
 
   &::after {
     content: "";

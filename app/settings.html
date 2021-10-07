@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
-  <title>P R I V I L E G E | Shop cart</title>
+  <title>P R I V I L E G E | Settings </title>
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
@@ -284,217 +284,157 @@
 
 </header>
 
-  <main class="main cart">
+  <main class="main dashboard">
     <div class="container">
 
       <h1 class="main-title">
-        Cart
+        Settings
       </h1>
 
-      <span class="main-title__subtitle">
-        2 Items
-      </span>
+      <div class="dashboard__inner">
 
-      <section class="cart__inner">
+        <section class="dashboard__section settings">
 
-        <div class="cart__list">
+          <div class="settings__wrapper">
+             <h2 class="dashboard-title">
+   Payment method
+ </h2>
 
-  <article class="cart-product" data-product-id="1" data-product-price="250.00">
+ <div class="settings__payment">
 
-    <button class="btn-delete" type="button" data-product-id="1">
-      <span class="sr-only">
-        Delete product from list
-      </span>
-    </button>
+  <div class="settings__card">
+    <span>
+      Your Card
+    </span>
 
+    <span>
+    * * * * 5554
+    </span>
+  </div>
 
-    <img class="cart-product__image" src="img/single-page/shoes-big.jpg" alt="B-Runner asymmetrical sneakers"
-      width="190">
+  <label class="dashboard__input">
+    Edit
+    <input class="sr-only" type="file" accept="image/*">
 
-    <div class="cart-product__inner">
+    <svg class="dashboard__icon">
+      <use xlink:href="img/sprite.svg#edit"></use>
+    </svg>
+  </label>
+ </div>
 
-      <div class="cart-product__content">
-        <h2 class="cart-product__title">
-          <a class="cart-product__link" href="#">
-            Burberry
-          </a>
-        </h2>
-        <span class="cart-product__price">$250.00</span>
-      </div>
+            <h2 class="dashboard-title">
+  Change password
+</h2>
 
-      <p class="cart-product__text">
-        <a class="cart-product__link" href="#">
-          B-Runner asymmetrical sneakers
-        </a>
-      </p>
+<form class="settings__password" action="#">
 
-      <div class="cart-product__action">
+  <label class="settings__label">
+    Old Password
+    <input class="settings__area" type="password" name="old-password" placeholder="Old Password">
+  </label>
 
-        <div class="cart-product__box">
-          <button class="cart-product__btn  minus" type="button">
-            <span class="sr-only">
-              Minus
-            </span>
-          </button>
+  <label class="settings__label">
+    New Password
+    <input class="settings__area" type="password" name="new-password" placeholder="New Password">
+  </label>
 
-          <label class="cart-product__label">
-            <span>Quantity:</span>
-            <input class="cart-product__number choices__inner" type="number" value="1" min="1" disabled>
-          </label>
+  <label class="settings__label">
+    Confirm Password
+    <input class="settings__area" type="password" name="confirm-password" placeholder="Confirm Password">
+  </label>
 
-          <button class="cart-product__btn plus" type="button">
-            <span class="sr-only">
-              Minus
-            </span>
-          </button>
+  <button class="btn-shop">
+    Save
+  </button>
 
-        </div>
+</form>
 
-        <div class="cart-product__box cart-product__size">
-          <label class="cart-product__label">
-            <span> Size:</span>
-            <select class=" js-choice" name="number">
-              <option value="42">42</option>
-              <option value="43">43</option>
-              <option value="44">44</option>
-            </select> </label>
-        </div>
-      </div>
-    </div>
+          </div>
 
-  </article>
-
-  <article class="cart-product" data-product-id="1" data-product-price="250.00">
-
-    <button class="btn-delete" type="button" data-product-id="1">
-      <span class="sr-only">
-        Delete product from list
-      </span>
-    </button>
+          <div class="settings__wrapper">
+            <h2 class="dashboard-title">
+  Notification
+</h2>
 
 
-    <img class="cart-product__image" src="img/single-page/shoes-big.jpg" alt="B-Runner asymmetrical sneakers"
-      width="190">
+<ul class="dashboard__list">
+  <li class="dashboard__item">
+    <label class="dashboard__label">
+      Email notification
+      <input class="dashboard__checkbox" type="checkbox" name="email-notification">
+    </label>
+  </li>
 
-    <div class="cart-product__inner">
+  <li class="dashboard__item">
+    <label class="dashboard__label">
+      Marketing SMS
+      <input class="dashboard__checkbox" type="checkbox" name="marketing-sms">
+    </label>
+  </li>
+</ul>
 
-      <div class="cart-product__content">
-        <h2 class="cart-product__title">
-          <a class="cart-product__link" href="#">
-            Burberry
-          </a>
-        </h2>
-        <span class="cart-product__price">$250.00</span>
-      </div>
+<div class="settings__inner language">
 
-      <p class="cart-product__text">
-        <a class="cart-product__link" href="#">
-          B-Runner asymmetrical sneakers
-        </a>
-      </p>
+  <div class="language__choose">
 
-      <div class="cart-product__action">
+    <label class="language__choose-name" for="language">
+      Language:
+    </label>
 
-        <div class="cart-product__box">
-          <button class="cart-product__btn  minus" type="button">
-            <span class="sr-only">
-              Minus
-            </span>
-          </button>
+    <select class="language__choose-item js-choice" name="language" id="language">
+      <option class="language__choose-value" value=" Eng">Eng</option>
+      <option class="language__choose-value" value=" Rus">Rus</option>
+      <option class="language__choose-value" value="Arab">Arab</option>
+    </select>
+  </div>
 
-          <label class="cart-product__label">
-            <span>Quantity:</span>
-            <input class="cart-product__number choices__inner" type="number" value="1" min="1" disabled>
-          </label>
+  <div class="language__choose">
+    <label class="language__choose-name" for="currency">
+      Currency:
+    </label>
 
-          <button class="cart-product__btn plus" type="button">
-            <span class="sr-only">
-              Minus
-            </span>
-          </button>
-
-        </div>
-
-        <div class="cart-product__box cart-product__size">
-          <label class="cart-product__label">
-            <span> Size:</span>
-            <select class=" js-choice" name="number">
-              <option value="42">42</option>
-              <option value="43">43</option>
-              <option value="44">44</option>
-            </select> </label>
-        </div>
-      </div>
-    </div>
-
-  </article>
-
-</div>
-
-        <aside class="cart__summary">
-
-  <div class="cart__summary-box">
-
-    <h3 class="cart__summary-title title-quick">
-      Order summary
-    </h3>
-
-    <div class="cart__summary-count">
-      <span class="cart__summary-text">
-        Item Sub-Total
-      </span>
-
-      <span class="cart__summary-item">
-        $
-        <span class="cart__summary-price price-subtotal">250.00</span>
-      </span>
-    </div>
-
-    <div class="cart__summary-count">
-      <span class="cart__summary-text">
-        Shipping
-      </span>
-
-      <span class="cart__summary-item">
-        $
-        <span class="cart__summary-price price-shipping">25.00</span>
-      </span>
-    </div>
-
-    <div class="cart__summary-total">
-      <span class="cart__summary-item">
-        Total:
-      </span>
-
-      <span class="cart__summary-item ">
-        $
-        <span class="cart__summary-price price-total">
-          275.00
-        </span>
-      </span>
-    </div>
-
-    <button class="cart__summary btn-shop" type="button">
-      Checkout
-    </button>
+    <select class="language__choose-item js-choice" name="currency" id="currency">
+      <option class="language__choose-value" value="$">$</option>
+      <option class="language__choose-value" value=" &#8381;"> &#8381;</option>
+      <option class="language__choose-value" value="&#1583;"> &#1583;</option>
+    </select>
 
   </div>
 
-</aside>
+</div>
+          </div>
 
-      </section>
+        </section>
 
-      <div class="cart__empty">
+        <ul class="dashboard__links tabs">
+          <li class="tabs__item">
+  <a class="tabs__btn tabs__btn--active" href='#' >
+    Dashboard
+  </a>
+</li><li class="tabs__item">
+  <a class="tabs__btn tabs__btn" href='#' >
+    Account details
+  </a>
+</li><li class="tabs__item">
+  <a class="tabs__btn tabs__btn" href='#' >
+    My orders
+  </a>
+</li><li class="tabs__item">
+  <a class="tabs__btn tabs__btn" href='#' >
+    Wish list
+  </a>
+</li><li class="tabs__item">
+  <a class="tabs__btn tabs__btn" href='#' >
+    Gift cards & Promo codes
+  </a>
+</li><li class="tabs__item">
+  <a class="tabs__btn tabs__btn" href='#' >
+    Settings
+  </a>
+</li>
+        </ul>
 
-        <h2 class="title">
-          You don’t have any items
-        </h2>
-
-        <button class="btn-shop" type="button">
-          Buy now
-        </button>
       </div>
-
     </div>
   </main>
 

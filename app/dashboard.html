@@ -298,7 +298,7 @@
           <div class="dashboard__wrapper dashboard__wrapper--top">
             <div class="dashboard__details">
   <div class="dashboard__details-top">
-    <h2 class="dashboard__title">
+    <h2 class="dashboard-title">
       Account details
     </h2>
 
@@ -360,7 +360,7 @@
 
             <div class="dashboard__details">
   <div class="dashboard__details-top">
-    <h2 class="dashboard__title">
+    <h2 class="dashboard-title">
       My orders
     </h2>
 
@@ -420,7 +420,7 @@
 
           <div class="dashboard__details">
   <div class="dashboard__details-top">
-    <h2 class="dashboard__title">
+    <h2 class="dashboard-title">
       Wish list
     </h2>
 
@@ -432,7 +432,7 @@
   <div class="dashboard__data">
 
     <ul class="dashboard__wish-list">
-      <li class="dashboard__wish-item">
+      <li class="dashboard__wish-item" data-product-id="1">
 
         <button class="btn-delete" type="button" data-product-id="1">
           <span class="sr-only">
@@ -444,23 +444,30 @@
 
   <img class="product__image" src="img/catalog-list/shoes.jpg" alt="Burberry" width="320" height="350">
 
+  <div class="product__box">
+    <h3 class="product__title">
+      <a class="product__link" href="#">
+        Burberry
+      </a>
+    </h3>
 
-  <h3 class="product__title">
-    <a class="product__link" href="#">
-      Burberry
-    </a>
-  </h3>
+    <p class="product__text">
+      B-Runner asymmetrical sneakers      
+    </p>
 
-  <p class="product__text">B-Runner asymmetrical sneakers</p>
+    <span class="product__text">
+      
+    </span>
 
-  <span class="product__price">$ 250.00</span>
+    <span class="product__price">$ 250.00</span>
+  </div>
 
 </article>
       </li>
-      
-      <li class="dashboard__wish-item">
 
-        <button class="btn-delete" type="button" data-product-id="1">
+      <li class="dashboard__wish-item" data-product-id="2">
+
+        <button class="btn-delete" type="button" data-product-id="2">
           <span class="sr-only">
             Delete product from list
           </span>
@@ -470,16 +477,23 @@
 
   <img class="product__image" src="img/catalog-list/shoes.jpg" alt="Burberry" width="320" height="350">
 
+  <div class="product__box">
+    <h3 class="product__title">
+      <a class="product__link" href="#">
+        Burberry
+      </a>
+    </h3>
 
-  <h3 class="product__title">
-    <a class="product__link" href="#">
-      Burberry
-    </a>
-  </h3>
+    <p class="product__text">
+      B-Runner asymmetrical sneakers      
+    </p>
 
-  <p class="product__text">B-Runner asymmetrical sneakers</p>
+    <span class="product__text">
+      
+    </span>
 
-  <span class="product__price">$ 250.00</span>
+    <span class="product__price">$ 250.00</span>
+  </div>
 
 </article>
       </li>
@@ -497,7 +511,7 @@
 
             <div class="dashboard__details">
   <div class="dashboard__details-top">
-    <h2 class="dashboard__title">
+    <h2 class="dashboard-title">
       Gift cards & promocodes
     </h2>
 
@@ -536,7 +550,7 @@
 
             <div class="dashboard__details">
   <div class="dashboard__details-top">
-    <h2 class="dashboard__title">
+    <h2 class="dashboard-title">
       Settings
     </h2>
 
@@ -703,30 +717,30 @@
         </ul>
       </div>
 
-      <div class="footer__inner">
+      <div class="footer__inner language">
 
-        <div class="footer__choose">
+        <div class="language__choose">
 
-          <label class="footer__choose-name" for="language">
+          <label class="language__choose-name" for="language">
             Language:
           </label>
 
-          <select class="footer__choose-item js-choice" name="language" id="language">
-            <option class="footer__choose-value" value=" Eng">Eng</option>
-            <option class="footer__choose-value" value=" Rus">Rus</option>
-            <option class="footer__choose-value" value="Arab">Arab</option>
+          <select class="language__choose-item js-choice" name="language" id="language">
+            <option class="language__choose-value" value=" Eng">Eng</option>
+            <option class="language__choose-value" value=" Rus">Rus</option>
+            <option class="language__choose-value" value="Arab">Arab</option>
           </select>
         </div>
 
-        <div class="footer__choose">
-          <label class="footer__choose-name" for="currency">
+        <div class="language__choose">
+          <label class="language__choose-name" for="currency">
             Currency:
           </label>
 
-          <select class="footer__choose-item js-choice" name="currency" id="currency">
-            <option class="footer__choose-value" value="$">$</option>
-            <option class="footer__choose-value" value=" &#8381;"> &#8381;</option>
-            <option class="footer__choose-value" value="&#1583;"> &#1583;</option>
+          <select class="language__choose-item js-choice" name="currency" id="currency">
+            <option class="language__choose-value" value="$">$</option>
+            <option class="language__choose-value" value=" &#8381;"> &#8381;</option>
+            <option class="language__choose-value" value="&#1583;"> &#1583;</option>
           </select>
 
         </div>

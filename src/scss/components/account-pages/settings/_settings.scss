@@ -1,0 +1,106 @@
+.settings {
+  display: flex;
+
+  @include mobile {
+    display: block;
+  }
+
+  .dashboard-title {
+    margin-bottom: 25px;
+  }
+
+
+  &__wrapper {
+    max-width: 515px;
+    width: 100%;
+    margin-right: 40px;
+
+    @include mobile {
+      margin: 0 auto;
+    }
+
+    &:not(:last-child) {
+      @include mobile {
+        margin-bottom: 30px;
+      }
+    }
+
+    &:last-child {
+      max-width: 270px;
+
+      @include mobile {
+        max-width: 515px;
+
+      }
+    }
+  }
+
+  &__password {
+    width: 100%;
+  }
+
+  &__label {
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  &__area {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .dashboard__list {
+    margin-bottom: 40px;
+  }
+
+  .dashboard__item {
+    border: none;
+    padding: 0;
+    margin-bottom: 15px;
+  }
+
+  .language {
+    @include flex;
+
+    &__choose {
+      display: block;
+    }
+
+    .choices[data-type*=select-one]:after {
+      background-color: var(--color-black);
+    }
+  }
+
+  &__icon {
+    height: 24px;
+    width: 24px;
+  }
+
+  &__payment {
+    margin-bottom: 50px;
+    display: flex;
+  }
+
+  &__card {
+    margin-right: 40px;
+
+    span {
+      display: block;
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+
+      &:last-child {
+        font: $font-medium;
+      }
+    }
+  }
+
+  .dashboard__input {
+    max-width: 140px;
+    padding: 15px 0;
+  }
+}

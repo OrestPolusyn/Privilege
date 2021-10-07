@@ -3,14 +3,35 @@
   &__items {
     @include flex;
     flex-wrap: wrap;
+
+    @include mobile {
+      justify-content: center;
+    }
   }
 
   &__item {
     max-width: 330px;
     width: 100%;
 
+    @include mobile {
+      max-width: 250px;
+    }
+
+    @include mobile-m {
+      max-width: 350px;
+      margin-bottom: 50px;
+    }
+
     &:nth-child(odd) {
       margin-right: 8em;
+
+      @include mobile {
+        margin-right: 2em;
+      }
+
+      @include mobile-m {
+        margin-right: 0;
+      }
     }
 
     &:not(:nth-child(n+2)) {

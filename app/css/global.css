@@ -37,7 +37,8 @@
   --color-filter: #dadada;
   --color-form: #fdfbfa;
   --color-border-form: #9d9d9d;
-  --account-bg: rgba(191, 147, 102, 0.03); }
+  --account-bg: rgba(191, 147, 102, 0.03);
+  --color-gift:#7d7d7d; }
 
 .burger {
   display: none;
@@ -211,7 +212,8 @@ button {
   background-size: 200% 100%;
   background-position: 100%;
   transition: background-position 0.3s ease;
-  text-decoration: none; }
+  text-decoration: none;
+  white-space: nowrap; }
   .all-link::after {
     content: "";
     position: absolute;
